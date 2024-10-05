@@ -24,9 +24,10 @@ export default [
       'react-refresh': reactRefresh,
     },
     rules: {
+      'no-unused-vars': 'warn',
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
+      ...react.configs['jsx-runtime'].rules, // Ensure you're using the jsx-runtime settings
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
