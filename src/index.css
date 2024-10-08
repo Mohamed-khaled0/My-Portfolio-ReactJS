@@ -33,9 +33,6 @@ html{
   box-sizing: border-box;
 }
 
-.light {
-  --primary:#fff;
-}
 
 body{
   font-family: "Roboto", sans-serif;
