@@ -18,19 +18,19 @@ export default function Header() {
         <nav>
           <ul className="flex">
             <li>
-              <a href="">About</a>
+              <a href=""><span className="icon-home"></span> About</a>
             </li>
             <li>
-              <a href="">Projects</a>
+              <a href=""><span className="icon-folders"></span> Projects</a>
             </li>
             <li>
-              <a href="">Education</a>
+              <a href=""><span className="icon-education"></span> Education</a>
             </li>
             <li>
-              <a href="">Skills</a>
+              <a href=""><span className="icon-gears"></span> Skills</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href=""><span className="icon-phone"></span> Contact</a>
             </li>
           </ul>
         </nav>

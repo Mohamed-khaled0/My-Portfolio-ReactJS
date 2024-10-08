@@ -43,9 +43,7 @@
 .icon-home:before {
   content: "\f015";
 }
-.icon-cogs:before {
-  content: "\f085";
-}
+
 .icon-gears:before {
   content: "\f085";
 }
