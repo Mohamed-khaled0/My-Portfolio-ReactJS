@@ -1,0 +1,74 @@
+
+section.hero{
+    margin-top: 3rem;
+}
+/* ======================
+        Left Section 
+========================*/
+section.hero .parent-avatar.flex{
+align-items: end;
+}
+
+section.hero .avatar{
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(244, 165, 96);
+    padding: 1px;
+}
+
+
+section.hero .left-section{
+    flex-grow: 1;
+
+}
+
+section.hero .title{
+color: var(--title);
+font-size: 2rem;
+line-height: 3rem;
+margin: 24px 0;
+}
+
+section.hero .sub-title{
+    color: var(--subtitle);
+}
+
+
+section.hero  button{
+    margin: 26px 12px 0 0 ;
+    background-color: rgba(0, 0, 0, 0.295);
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    transition: 0.3s ;
+    line-height: 1.5rem;
+    transition: 0.3s ;
+}
+
+section.hero button:hover{
+    background-color: rgba(0, 0, 0, 0.695);
+}
+
+
+/* Icons  */
+section button .icon-download,
+section button .icon-github,
+section button .icon-linkedin{
+color: var(--subtitle);
+font-size: 1.2rem;
+}
+
+section button:hover .icon-download,
+section button .icon-github:hover,
+section button .icon-linkedin:hover{
+color: var(--icon-hover);
+}
+
+
+
+/* ======================
+Right Section 
+========================*/
+

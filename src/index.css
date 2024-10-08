@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-html{
+html {
   letter-spacing: 0.2px;
 }
 :root {
@@ -26,57 +26,78 @@ html{
   --icon-hover: #333;
 }
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-body{
+body {
   font-family: "Roboto", sans-serif;
   color: #fff;
   background-color: var(--primary);
 }
 
-.container{
-width: 80%;
-border: 2px solid var(--border);
-margin: 0 auto;
-background-color: var(--secondary);
-border-radius: 5px;
+.container {
+  width: 80%;
+  border: 2px solid var(--border);
+  margin: 0 auto;
+  background-color: var(--secondary);
+  border-radius: 5px;
+  padding: 0 var(--container-padding);
 }
 
 .divider {
   border-bottom: 1px solid var(--border);
   margin: 3rem 0;
+  width: calc(100% + var(--container-padding) + var(--container-padding));
+  margin-left: calc(var(--container-padding) * -1);
 }
 
-li{
+@media (max-width: 1000px) {
+  .container {
+    --container-padding: 1.7rem;
+    width: 90%;
+    padding: 0 var(--container-padding);
+  }
+
+  .divider {
+    width: calc(100% + var(--container-padding) + var(--container-padding));
+    margin-left: calc(var(--container-padding) * -1);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0 1.7rem;
+  }
+}
+
+li {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: initial;
-  transition: 0.2s ;
+  transition: 0.2s;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.border{
-  border:2px solid red
+.border {
+  border: 2px solid red;
 }
 
-button{
-  all:unset;
+button {
+  all: unset;
   cursor: pointer;
 }
 
-button:active{
+button:active {
   scale: 0.9;
 }

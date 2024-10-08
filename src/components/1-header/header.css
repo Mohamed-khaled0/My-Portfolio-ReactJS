@@ -29,7 +29,7 @@ header.flex {
   header ul li a {
     color: var(--title);
     opacity: 0.9;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
   }
 
@@ -67,7 +67,7 @@ header.flex {
   
   header .fixed ul.modal {
     animation: mymove 0.7s 1;
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
     margin-top: 2rem;
     border-radius: 1rem;
@@ -96,6 +96,8 @@ header.flex {
     text-align: right;
     border: none;
     padding: 0.2rem 0 0rem 0;
+    margin-bottom: -1rem;
+
   }
   
   /* =================
