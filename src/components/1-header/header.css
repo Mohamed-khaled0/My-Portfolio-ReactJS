@@ -1,8 +1,10 @@
 /* ================ 
+    Table of Contents
+===================
 1- Header 
 2- Modal (Pop Up) 
 3- IconButton 
-4- Media query (Responsive Design) 
+4- Media Query (Responsive Design) 
 ===================*/
 
 /* =================
@@ -32,8 +34,7 @@ header.flex {
     font-size: 1rem;
     font-weight: 500;
   }
-
-
+  
   header ul li a:hover {
     color: var(--blue);
     opacity: 1;
@@ -44,15 +45,15 @@ header.flex {
   }
   
   /* =================
-  2- Modal (Pop Up) 
-  =================== */
+    2- Modal (Pop Up) 
+    =================== */
   header .fixed {
     position: fixed;
     inset: 0;
     background-color: rgba(40, 40, 48, 0.9);
     z-index: 15;
-    backdrop-filter: blur(5px);    
-}
+    backdrop-filter: blur(5px);
+  }
   
   @keyframes mymove {
     0% {
@@ -80,11 +81,11 @@ header.flex {
     border-bottom: 1px solid var(--border);
     padding: 1rem 0 0.7rem 0;
   }
-
+  
   header ul li a span {
     color: var(--subtitle);
   }
-
+  
   header .fixed ul.modal li a {
     font-size: 1rem;
   }
@@ -98,12 +99,11 @@ header.flex {
     border: none;
     padding: 0.2rem 0 0rem 0;
     margin-bottom: -1rem;
-
   }
   
   /* =================
-  3- Icon Button 
-  =================== */
+    3- Icon Button 
+    =================== */
   header .icon-menu,
   header button.mode {
     background-color: var(--bgHeader);
@@ -113,24 +113,25 @@ header.flex {
     border-radius: 50%;
     text-align: center;
     color: var(--subtitle);
-    border: 1px solid  rgba(93, 188, 252,.2);;
+    border: 1px solid rgba(93, 188, 252, 0.2);
     transition: 0.3s;
   }
- 
-
+  
   header .icon-menu {
     display: none;
   }
-
+  
   header .icon-menu:hover,
   header button.mode:hover {
     color: var(--title);
-    border: 1px solid  rgba(93, 188, 252,.9);;
+    border: 1px solid rgba(93, 188, 252, 0.9);
   }
-  header ul li a span{
+  
+  header ul li a span {
     color: var(--subtitle);
     transition: 0.3s;
   }
+  
   header .icon-close {
     font-size: 1.5rem;
     color: var(--subtitle);
@@ -142,24 +143,22 @@ header.flex {
     rotate: 180deg;
   }
   
-  
   /* =================
-  4- Media query (Responsive Design) 
-  =================== */
+    4- Media Query (Responsive Design) 
+    =================== */
   @media (max-width: 650px) {
     header.flex nav {
       display: none;
     }
+    
     header .icon-menu {
       display: block;
     }
-      
-
   }
   
   @media (max-width: 900px) {
-     header ul li a span {
-        display: none;
-     }
-    
+    header ul li a span {
+      display: none;
+    }
   }
+  

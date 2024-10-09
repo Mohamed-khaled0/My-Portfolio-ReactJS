@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import "./main.css";
 import myProjects from "./ProjectsData";
 
-
-
 export default function Main() {
   let [currentActive, setCurrentActive] = useState("all");
   let [arr, setArr] = useState(myProjects);
@@ -18,16 +16,14 @@ export default function Main() {
       return checkOnCategory[0] === buttonCategory;
     });
     setArr(newArr);
-  }
-
-
+  };
 
   return (
     <main className="flex">
       <section className="flex left-section  ">
         <button
           onClick={() => {
-            handelClick("all")
+            handelClick("all");
           }}
           className={currentActive === "all" ? "active" : null}
         >
@@ -36,7 +32,7 @@ export default function Main() {
 
         <button
           onClick={() => {
-            handelClick("css")
+            handelClick("css");
           }}
           className={currentActive === "css" ? "active" : null}
         >
@@ -45,7 +41,7 @@ export default function Main() {
 
         <button
           onClick={() => {
-            handelClick("js")
+            handelClick("js");
           }}
           className={currentActive === "js" ? "active" : null}
         >
@@ -54,7 +50,7 @@ export default function Main() {
 
         <button
           onClick={() => {
-            handelClick("react")
+            handelClick("react");
           }}
           className={currentActive === "react" ? "active" : null}
         >
@@ -65,17 +61,30 @@ export default function Main() {
       <section className="right-section flex  ">
         {arr.map((item) => {
           return (
-            <article key={item.imgPath} className="card" >
-              <img width={270} height={170}  src={item.imgPath} alt={item.imgPath}  />
-              <div style={{ width: "270px" }} className="box" >
+            <article key={item.imgPath} className="card">
+              <img
+                width={270}
+                height={170}
+                src={item.imgPath}
+                alt={item.imgPath}
+              />
+              <div style={{ width: "270px" }} className="box">
                 <h1 className="title">{item.projectTitle}</h1>
                 <p className="sub-title">{item.projectSubtitle}</p>
                 <div className="flex icons">
                   <div style={{ gap: "10px" }} className="flex">
-                    <a  className="icon-link" target="_blank" href={item.liveDemo}></a>
-                    <a  className="icon-github" target="_blank" href={item.githubLink}></a>
+                    <a
+                      className="icon-link"
+                      target="_blank"
+                      href={item.liveDemo}
+                    ></a>
+                    <a
+                      className="icon-github"
+                      target="_blank"
+                      href={item.githubLink}
+                    ></a>
                   </div>
-                  <a className="link flex" href="" >
+                  <a className="link flex" href="">
                     more
                     <span
                       style={{ alignSelf: "end" }}

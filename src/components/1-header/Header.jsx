@@ -1,8 +1,14 @@
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
 import "./header.css";
 
 export default function Header() {
-  const [showModal, setShowModal] = useState(false);
+  let [showModal, setShowModal] = useState(false);
+  let [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    document.body.classList.add(theme);
+  }, [theme]);
 
   return (
     <div>
@@ -18,19 +24,29 @@ export default function Header() {
         <nav>
           <ul className="flex">
             <li>
-              <a href=""><span className="icon-home"></span> About</a>
+              <a href="">
+                <span className="icon-home"></span> About
+              </a>
             </li>
             <li>
-              <a href=""><span className="icon-folders"></span> Projects</a>
+              <a href="">
+                <span className="icon-folders"></span> Projects
+              </a>
             </li>
             <li>
-              <a href=""><span className="icon-education"></span> Education</a>
+              <a href="">
+                <span className="icon-education"></span> Education
+              </a>
             </li>
             <li>
-              <a href=""><span className="icon-gears"></span> Skills</a>
+              <a href="">
+                <span className="icon-gears"></span> Skills
+              </a>
             </li>
             <li>
-              <a href=""><span className="icon-phone"></span> Contact</a>
+              <a href="">
+                <span className="icon-phone"></span> Contact
+              </a>
             </li>
           </ul>
         </nav>

@@ -1,9 +1,33 @@
+/* 
+Table of Contents:
+1. Font Import
+2. Global Styles
+3. Root Variables
+4. Light Theme Variables
+5. Reset Styles
+6. Body Styles
+7. Container Styles
+8. Divider Styles
+9. List Styles
+10. Link Styles
+11. Flexbox Styles
+12. Border Styles
+13. Button Styles
+14. Scrollbar Styles
+15. Scroll To Top Button Styles
+16. Responsive Styles
+*/
+
+/* 1. Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/* 2. Global Styles */
 html {
   letter-spacing: 0.2px;
   scroll-behavior: smooth;
 }
+
+/* 3. Root Variables */
 :root {
   --primary: #000;
   --secondary: rgb(24 24 27);
@@ -16,6 +40,7 @@ html {
   --container-padding: 4rem;
 }
 
+/* 4. Light Theme Variables */
 .light {
   --primary: rgb(250, 250, 250);
   --secondary: rgb(255, 255, 255);
@@ -27,18 +52,21 @@ html {
   --icon-hover: #333;
 }
 
+/* 5. Reset Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 6. Body Styles */
 body {
   font-family: "Roboto", sans-serif;
   color: #fff;
   background-color: var(--primary);
 }
 
+/* 7. Container Styles */
 .container {
   width: 80%;
   border: 2px solid var(--border);
@@ -48,6 +76,7 @@ body {
   padding: 0 var(--container-padding);
 }
 
+/* 8. Divider Styles */
 .divider {
   border-bottom: 1px solid var(--border);
   margin: 3rem 0;
@@ -55,58 +84,59 @@ body {
   margin-left: calc(var(--container-padding) * -1);
 }
 
-
-
+/* 9. List Styles */
 li {
   list-style: none;
 }
 
+/* 10. Link Styles */
 a {
   text-decoration: none;
   color: initial;
   transition: 0.2s;
 }
 
+/* 11. Flexbox Styles */
 .flex {
   display: flex;
   align-items: center;
 }
 
+/* 12. Border Styles */
 .border {
   border: 2px solid red;
 }
 
+/* 13. Button Styles */
 button {
   all: unset;
   cursor: pointer;
 }
 
-
-
-/*  scrollbar */
+/* 14. Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 0.8rem;
- }
- 
+}
+
 ::-webkit-scrollbar-track {
   border: 7px solid #292c3b;
   box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   background-color: #d4d4d8;
-  }
- 
+}
+
 ::-webkit-scrollbar-thumb {
-  background: rgba(93, 188, 252,0.6);
+  background: rgba(93, 188, 252, 0.6);
   border-radius: 3px;
   transition: 0.3s;
 }
- 
+
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(93, 188, 252,1);
+  background: rgba(93, 188, 252, 1);
 }
- 
-/* Scroll To Top btn */
-.scroll2Top{
+
+/* 15. Scroll To Top Button Styles */
+.scroll2Top {
   background-color: rgba(25, 118, 210, 0.75);
   width: 2.6rem;
   height: 2.6rem;
@@ -115,18 +145,15 @@ button {
   position: fixed;
   bottom: 2rem;
   right: 2%;
-  border: 1px solid rgba(255, 255, 255,.3);
+  border: 1px solid rgba(255, 255, 255, .3);
   color: var(--title);
 }
 
-.scroll2Top:hover{
+.scroll2Top:hover {
   background-color: rgba(25, 118, 210, 1);
-
 }
 
-
-
-/* Responsive */
+/* 16. Responsive Styles */
 @media (max-width: 1000px) {
   .container {
     --container-padding: 1.7rem;
@@ -146,7 +173,7 @@ button {
     padding: 0 1.7rem;
   }
 
-  .scroll2Top{
+  .scroll2Top {
     opacity: .5;
     width: 2rem;
     height: 2rem;

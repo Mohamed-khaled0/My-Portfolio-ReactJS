@@ -1,4 +1,14 @@
 /* ======================
+        Table of Contents
+=========================
+1- Hero Section
+2- Left Section
+3- Button Icons
+4- Right Section
+5- Responsive Design
+*/
+
+/* ======================
         Hero Section 
 ========================*/
 section.hero {
@@ -15,7 +25,7 @@ section.hero .parent-avatar.flex {
 section.hero .avatar {
     width: 200px;
     border-radius: 50%;
-    border: 2px solid  rgba(93, 188, 252,.5);;
+    border: 2px solid rgba(93, 188, 252, .5);
     padding: 1px;
 }
 
@@ -34,7 +44,7 @@ section.hero .sub-title {
     color: var(--subtitle);
 }
 
-section.hero  button {
+section.hero button {
     margin: 26px 12px 0 0;
     background-color: rgba(36, 37, 46, 1);
     width: 7rem;
@@ -54,9 +64,8 @@ section.hero button:hover {
     opacity: 1;
 }
 
-section.hero button:active{
+section.hero button:active {
     scale: 0.97;
-
 }
 
 /* ======================
@@ -78,17 +87,12 @@ section button .icon-linkedin:hover {
 /* ======================
         Right Section 
 ========================*/
-section.hero .right-section {
-    /* Additional styling for the right section can be added here */
-}
+/* Add styles for the right section here if needed */
 
-
-
-
-/* Responsive  */
-@media (max-width:600px) {
+/* Responsive Design */
+@media (max-width: 600px) {
     section.hero button {
-        margin:20px 6px 0 0;
+        margin: 20px 6px 0 0;
         width: 7rem;
         height: 40px;
         border-radius: 5px;
@@ -96,6 +100,4 @@ section.hero .right-section {
         padding: 2px;
         font-size: .9rem;
     }
-    
-      
 }
