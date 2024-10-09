@@ -16,7 +16,7 @@ main.flex .left-section {
     gap: 10px;
 }
 
-main section.left-section.flex button {
+ main section.left-section.flex button {
     background-color: rgba(36, 37, 46, 1);
     width: 12rem;
     padding: 0.75rem 0;
@@ -37,6 +37,10 @@ main section.left-section.flex button.active {
     border: 0.0001px solid var(--blue);
 }
 
+.light main section.left-section.flex button.active {
+    border: 0.0001px solid #000;
+
+}
 /* 2- Right Section (Projects) */
 main section.right-section.flex {
     flex-grow: 1;
@@ -47,6 +51,7 @@ main section.right-section.flex {
 }
 
 .card {
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, .2) ,1px 1px 1px rgba(0, 0, 0, .2);
     border: 1px solid rgba(93, 188, 252, 0.3);
     transition: 0.3s;
     border-radius: 5px;
@@ -56,12 +61,23 @@ main section.right-section.flex {
     );
 }
 
+.light .card{
+    border: #000;
+}
+
 .card:hover {
+    background-color: rgba(248  , 248, 248);
     border: 1px solid var(--blue);
     rotate: 1deg;
     scale: 1.01;
     cursor: pointer;
 }
+
+.light  .card:hover{
+    border: 1px solid black;
+
+}
+
 
 .card img {
     border-radius: 5px;

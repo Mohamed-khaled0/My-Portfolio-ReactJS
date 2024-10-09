@@ -114,13 +114,21 @@ header.flex {
     text-align: center;
     color: var(--subtitle);
     border: 1px solid rgba(93, 188, 252, 0.2);
+    box-shadow: 1px 1px 40px rgba(93, 188, 252, 0.1) ;
     transition: 0.3s;
   }
   
   header .icon-menu {
     display: none;
   }
+
+ 
+
+  header .icon-sun{
+    color: var(--blue);
+  }
   
+
   header .icon-menu:hover,
   header button.mode:hover {
     color: var(--title);
