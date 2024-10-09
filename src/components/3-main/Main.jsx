@@ -16,7 +16,7 @@ export default function Main() {
     {["1","2","3",2,3,5].map((item) => {
       return(
         <article key={item} className='card '>
-        <img  width={270} src="./myimg.jpg" alt="" />
+        <img  width={270} src="crud-js.png" alt="" />
         <div style={{width: "270px"}} className="box ">
           <h1 className='title'>Landing Page</h1>
           <p className='sub-title'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, magni.</p>

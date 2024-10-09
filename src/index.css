@@ -2,6 +2,7 @@
 
 html {
   letter-spacing: 0.2px;
+  scroll-behavior: smooth;
 }
 :root {
   --primary: #000;
@@ -120,6 +121,7 @@ button:active {
   right: 2%;
   border: 1px solid rgba(255, 255, 255,.3);
   transition: 0.3s;
+  color: var(--title);
 }
 
 .scroll2Top:hover{
