@@ -34,7 +34,6 @@ main section.left-section.flex button:hover {
 main section.left-section.flex button.active {
   opacity: 1;
   font-weight: bold;
-  letter-spacing: 0.6px;
   padding: 0.85rem 0;
   border: 1px solid var(--blue);
 }
