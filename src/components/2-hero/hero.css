@@ -34,7 +34,7 @@ section.hero .sub-title {
     color: var(--subtitle);
 }
 
-section.hero button {
+section.hero  button {
     margin: 26px 12px 0 0;
     background-color: rgba(36, 37, 46, 1);
     width: 7rem;
@@ -47,10 +47,16 @@ section.hero button {
     text-transform: capitalize;
     font-size: 1.05rem;
     transition: 0.3s;
+    color: var(--title);
 }
 
 section.hero button:hover {
     opacity: 1;
+}
+
+section.hero button:active{
+    scale: 0.97;
+
 }
 
 /* ======================
