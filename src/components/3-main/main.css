@@ -93,7 +93,7 @@ main section.right-section.flex {
   cursor: pointer;
 }
 
-.card .icon-external-link:hover,
+.card .icon-link:hover,
 .card .icon-github:hover {
   color: var(--icon-hover);
   cursor: pointer;

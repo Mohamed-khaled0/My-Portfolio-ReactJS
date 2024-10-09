@@ -56,14 +56,14 @@ section.hero button:hover {
 /* ======================
         Button Icons
 ========================*/
-section button .icon-download,
+section button .icon-cloud-download,
 section button .icon-github,
 section button .icon-linkedin {
     color: var(--subtitle);
     font-size: 1.2rem;
 }
 
-section button:hover .icon-download,
+section button:hover .icon-cloud-download,
 section button .icon-github:hover,
 section button .icon-linkedin:hover {
     color: var(--icon-hover);

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9347kg');
-  src:  url('fonts/icomoon.eot?9347kg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?9347kg') format('truetype'),
-    url('fonts/icomoon.woff?9347kg') format('woff'),
-    url('fonts/icomoon.svg?9347kg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?g5xstw');
+  src:  url('fonts/icomoon.eot?g5xstw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?g5xstw') format('truetype'),
+    url('fonts/icomoon.woff?g5xstw') format('woff'),
+    url('fonts/icomoon.svg?g5xstw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -43,9 +43,6 @@
 .icon-home:before {
   content: "\f015";
 }
-.icon-download:before {
-  content: "\f019";
-}
 .icon-cogs:before {
   content: "\f085";
 }
@@ -64,8 +61,17 @@
 .icon-linkedin:before {
   content: "\f0e1";
 }
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
 .icon-moon-o:before {
   content: "\f186";
+}
+.icon-paper-plane:before {
+  content: "\f1d8";
+}
+.icon-send:before {
+  content: "\f1d8";
 }
 .icon-sun:before {
   content: "\e905";

@@ -14,7 +14,7 @@ export default function Hero() {
       <h1 className='title'>Software engineer mainly focused on Web Development </h1>
 
       <p className='sub-title'>I'm currently intern as a web developer at Information Technology Institute ITI. I spend my day working on projects with HTML , CSS , Tailwind , JavaScript , TypeScript , React.js .</p>
-      <button><a href="#" className='icon-download'></a> Resume</button>
+      <button><a href="#" className='icon-cloud-download'></a> Resume</button>
       <button><a href="#" className='icon-github'></a> Github</button>
       <button><a href="#" className='icon-linkedin'></a> LinkedIn</button>
       </div>
