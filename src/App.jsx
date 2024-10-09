@@ -4,6 +4,7 @@ import Header from './components/1-header/Header'
 import Main from './components/3-main/Main'
 import Contact from './components/4-contact/Contact'
 import Footer from './components/5-footer/Footer'
+import Scroll2Top from './components/Scroll2Top.jsx';
 
 function App() {
 
@@ -17,11 +18,9 @@ function App() {
       <Contact />
       <div className='divider'/>
       <Footer />
-      <a href="#up">
-      <button className='scroll2Top icon-arrow-up '></button>
-      </a>
+      <Scroll2Top />
     </div>
   )
 }
 
-export default App
+export default App;

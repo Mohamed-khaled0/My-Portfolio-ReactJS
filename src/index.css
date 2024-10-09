@@ -116,7 +116,6 @@ button {
   bottom: 2rem;
   right: 2%;
   border: 1px solid rgba(255, 255, 255,.3);
-  transition: 0.3s;
   color: var(--title);
 }
 
@@ -151,5 +150,6 @@ button {
     opacity: .5;
     width: 2rem;
     height: 2rem;
+    font-size: 1rem;
   }
 }
