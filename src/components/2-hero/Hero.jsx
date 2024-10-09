@@ -10,7 +10,9 @@ export default function Hero() {
       <div className="parent-avatar flex">
         <img  className="avatar" src="./myimg.jpg" alt="" />
       </div>
-      <h1 className='title'>Hi, Im Mohamed Khaled ,Front End Developer </h1>
+      <h1 className='title'>Hi 👋🏻 I’m Mohamed Khaled </h1>
+      <h1 className='title'>Software engineer mainly focused on Web Development </h1>
+
       <p className='sub-title'>I'm currently intern as a web developer at Information Technology Institute ITI. I spend my day working on projects with HTML , CSS , Tailwind , JavaScript , TypeScript , React.js .</p>
       <button><a href="#" className='icon-download'></a> Resume</button>
       <button><a href="#" className='icon-github'></a> Github</button>

@@ -12,7 +12,7 @@ html {
   --bgHeader: rgb(39, 39, 42);
   --blue: rgb(93, 188, 252);
   --icon-hover: #d4d4d8;
-  --container-padding: 4.8rem;
+  --container-padding: 4rem;
 }
 
 .light {

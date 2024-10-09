@@ -50,8 +50,9 @@ header.flex {
     position: fixed;
     inset: 0;
     background-color: rgba(40, 40, 48, 0.9);
-    z-index: 2;
-  }
+    z-index: 15;
+    backdrop-filter: blur(5px);    
+}
   
   @keyframes mymove {
     0% {
@@ -112,10 +113,11 @@ header.flex {
     border-radius: 50%;
     text-align: center;
     color: var(--subtitle);
-    border: 1px solid rgba(244, 165, 96, 0.2);
+    border: 1px solid  rgba(93, 188, 252,.2);;
     transition: 0.3s;
   }
-  
+ 
+
   header .icon-menu {
     display: none;
   }
@@ -123,7 +125,7 @@ header.flex {
   header .icon-menu:hover,
   header button.mode:hover {
     color: var(--title);
-    border: 1px solid rgba(244, 165, 96, 0.8);
+    border: 1px solid  rgba(93, 188, 252,.9);;
   }
   header ul li a span{
     color: var(--subtitle);
