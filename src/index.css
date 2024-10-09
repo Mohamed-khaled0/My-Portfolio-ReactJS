@@ -113,6 +113,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* 14. Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 0.8rem;
