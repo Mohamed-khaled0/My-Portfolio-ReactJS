@@ -1,3 +1,30 @@
-footer{
+footer.flex{
+justify-content: space-between;
+padding-bottom: 2rem;
 
+}
+
+footer ul.flex {
+    gap: 1rem;
+}
+
+footer ul.flex li a{
+    color: var(--subtitle);
+    font-size: .9rem;
+}
+
+footer ul.flex li a:hover{
+color: var(--blue);
+
+}
+
+footer.flex p{
+    color: rgb(113, 113, 122);
+}
+
+@media (max-width:800px) {
+    footer.flex{
+        flex-direction: column;
+        gap:1rem;
+        }
 }
