@@ -54,25 +54,7 @@ body {
   margin-left: calc(var(--container-padding) * -1);
 }
 
-@media (max-width: 1000px) {
-  .container {
-    --container-padding: 1.7rem;
-    width: 90%;
-    padding: 0 var(--container-padding);
-  }
 
-  .divider {
-    width: calc(100% + var(--container-padding) + var(--container-padding));
-    margin-left: calc(var(--container-padding) * -1);
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 98%;
-    padding: 0 1.7rem;
-  }
-}
 
 li {
   list-style: none;
@@ -102,8 +84,10 @@ button:active {
   scale: 0.9;
 }
 
-/*  scrollbar */
 
+
+
+/*  scrollbar */
 ::-webkit-scrollbar {
   width: 0.8rem;
  }
@@ -124,3 +108,50 @@ button:active {
   background: #555;
 }
  
+/* Scroll To Top btn */
+.scroll2Top{
+  background-color: rgba(25, 118, 210, 0.75);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2%;
+  border: 1px solid rgba(255, 255, 255,.3);
+  transition: 0.3s;
+}
+
+.scroll2Top:hover{
+  background-color: rgba(25, 118, 210, 1);
+
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .container {
+    --container-padding: 1.7rem;
+    width: 90%;
+    padding: 0 var(--container-padding);
+  }
+
+  .divider {
+    width: calc(100% + var(--container-padding) + var(--container-padding));
+    margin-left: calc(var(--container-padding) * -1);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0 1.7rem;
+  }
+
+  .scroll2Top{
+    opacity: .5;
+    width: 2rem;
+    height: 2rem;
+  }
+}

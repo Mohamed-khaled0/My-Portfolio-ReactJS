@@ -118,8 +118,9 @@ section.contact-us .icon-envelope-o {
     }
   
     section.contact-us .submit {
-      width: 30%;
+      width: 35%;
       align-self: center;
+      font-size: 0.8rem;
     }
   }
   
