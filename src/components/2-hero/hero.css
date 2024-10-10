@@ -9,9 +9,20 @@ section.hero {
     justify-content: center; /* Center items horizontally */
 }
 
-/* ======================
-        Left Section 
-========================*/
+
+section.hero .title{
+    width: 60%;
+    text-align: center;
+    line-height: 2.4rem;
+}
+section.hero .sub-title{
+    width: 60%;
+    text-align: center;
+    line-height: 1.8rem;
+
+}
+
+
 section.hero .parent-avatar.flex {
     flex-direction: column; /* Column layout for avatar and text */
     align-items: center; /* Center align items */
@@ -19,10 +30,11 @@ section.hero .parent-avatar.flex {
 }
 
 section.hero .avatar {
-    width: 200px;
+    width: 150px;
     border-radius: 50%;
     border: 2px solid rgba(93, 188, 252, .5);
     padding: 2px;
+    margin-bottom: 10px;
 }
 
 section.hero .left-section {
@@ -32,12 +44,7 @@ section.hero .left-section {
     align-items: center; /* Center align buttons */
 }
 
-/* Button Group */
-.button-group {
-    display: flex; /* Flexbox for buttons */
-    flex-direction: row; /* Row layout for buttons */
-    justify-content: center; /* Center buttons */
-}
+
 
 /* Button styles */
 section.hero .left-section button {
@@ -64,6 +71,9 @@ section.hero .left-section button:hover {
 /* ======================
         Responsive Design 
 ========================*/
+
+
+
 @media (max-width: 600px) {
     section.hero .avatar {
         display: none; 
@@ -74,9 +84,21 @@ section.hero .left-section button:hover {
         height: 28px;
         line-height: 1rem;
         font-size: 1.0rem;
+        width: auto;
     } 
 
-    section.hero .sub-title {
-        font-size: .8rem;
+
+    section.hero .title{
+        width: 80%;
+        line-height: 1.5rem;
+        font-size: 1.3rem;
+
     }
+    section.hero .sub-title{
+        margin-top: 20px;
+        width: 80%;
+        line-height: 1.5rem;
+        font-size: .9rem;
+
+}
 }

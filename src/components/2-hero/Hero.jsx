@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
 
           <p className="sub-title">
-            I'm currently interning as a web developer at the Information Technology
+           currently interning as a web developer at the Information Technology
             Institute (ITI). I spend my day working on projects with HTML, CSS,
             Tailwind, JavaScript, TypeScript, and React.js.
           </p>

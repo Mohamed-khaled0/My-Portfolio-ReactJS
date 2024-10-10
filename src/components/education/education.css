@@ -23,11 +23,12 @@ h2 {
 .education-card:hover {
     background-color:var(--card) ; 
     scale: 1.02;
+    rotate: -1deg;
 }
 
 .education-card-left img {
     width: 150px;
-    height: 100px;
+    height: 115px;
     border-radius: 8px;
     object-fit: cover;
 }
