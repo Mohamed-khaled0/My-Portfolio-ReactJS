@@ -21,7 +21,7 @@ export default function Main() {
   };
 
   return (
-    <main className="flex">
+    <main id="projects" className="flex">
       <section className="flex left-section">
         <button
           onClick={() => handelClick("all")}
@@ -54,9 +54,9 @@ export default function Main() {
           {arr.map((item) => (
             <motion.article
               layout
-              initial={{ transform: "scale(0.4)" }}
+              initial={{ transform: "scale(0.7)" }}
               animate={{ transform: "scale(1)" }}
-              transition={{ type: "spring", damping: 8, stiffness: 50 }}
+              transition={{ type: "spring", damping: 6, stiffness: 80 }}
               key={item.imgPath}
               className="card"
             >

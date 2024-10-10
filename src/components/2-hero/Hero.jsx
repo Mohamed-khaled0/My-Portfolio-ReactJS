@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   let lottieRef = useRef();
   return (
-    <section className="hero flex">
+    <section id="main" className="hero flex">
       <div className="left-section ">
         <div className="parent-avatar flex">
           <img

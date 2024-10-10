@@ -32,27 +32,27 @@ export default function Header() {
         <nav>
           <ul className="flex">
             <li>
-              <a href="">
+              <a href="#main">
                 About
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#projects">
                 Projects
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#education">
                 Education
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#skills">
                  Skills
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="#contact">
                Contact
               </a>
             </li>
