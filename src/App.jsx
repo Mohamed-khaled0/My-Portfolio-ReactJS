@@ -8,6 +8,7 @@ import Scroll2Top from './components/Scroll2Top.jsx';
 import Certifications from './components/7-certificates/Certifications'
 import Education from './components/6-education/Education'
 import Skills from './components/4-skills/Skills'
+import Experience from './components/5-experience/Experience'
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
       <Main />
       <div className='divider'/>
       <Skills />
+     <div className='divider'/>
+     <Experience />
      <div className='divider'/>
      <Education  />
       <div className='divider'/>

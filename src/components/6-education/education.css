@@ -18,12 +18,15 @@ h2 {
     transition: 0.3s ;
 }
 
+.education-card-right h3 svg, 
+.education-card-right ul li svg {
+    margin-right: 10px;
+    color: var(--icon-hover); /* Adjust the icon color as needed */
+}
 
 
 .education-card:hover {
     background-color:var(--card) ; 
-    scale: 1.02;
-    rotate: -1deg;
 }
 
 .education-card-left img {

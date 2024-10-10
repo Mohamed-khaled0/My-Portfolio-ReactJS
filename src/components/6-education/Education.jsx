@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import {  FaUniversity } from 'react-icons/fa';
 import './Education.css';
 
 const Education = () => {
@@ -10,24 +11,24 @@ const Education = () => {
         gpa: 'GPA 3/4',
         major: '- Major in Computer Science',
         minor: '- Minor in Web Applications',
-        imageUrl: "./thebes-logo.png" 
+        imageUrl: "./thebes-logo.png"
     };
 
     return (
         <section id="education">
-            <h2>Education</h2>
+            <h2>Education </h2>
             <div className="education-card">
                 <div className="education-card-left">
                     <img src={educationData.imageUrl} alt="Thebes Academy Logo" />
                 </div>
                 <div className="education-card-right">
-                    <h3>{educationData.title}</h3>
+                    <h3><FaUniversity /> {educationData.title}</h3>
                     <p>{educationData.institution}</p>
                     <p>{educationData.yearRange}</p>
                     <p>{educationData.gpa}</p>
                     <ul>
-                        <li>{educationData.major}</li>
-                        <li>{educationData.minor}</li>
+                        <li>  {educationData.major}</li>
+                        <li> {educationData.minor}</li>
                     </ul>
                 </div>
             </div>
