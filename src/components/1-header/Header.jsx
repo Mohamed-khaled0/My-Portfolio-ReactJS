@@ -33,27 +33,27 @@ export default function Header() {
           <ul className="flex">
             <li>
               <a href="">
-                <span className="icon-home"></span> About
+                About
               </a>
             </li>
             <li>
               <a href="">
-                <span className="icon-folders"></span> Projects
+                Projects
               </a>
             </li>
             <li>
               <a href="">
-                <span className="icon-education"></span> Education
+                Education
               </a>
             </li>
             <li>
               <a href="">
-                <span className="icon-gears"></span> Skills
+                 Skills
               </a>
             </li>
             <li>
               <a href="">
-                <span className="icon-phone"></span> Contact
+               Contact
               </a>
             </li>
           </ul>

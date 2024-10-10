@@ -20,6 +20,7 @@ section.hero {
 ========================*/
 section.hero .parent-avatar.flex {
     align-items: end;
+    min-height: 200px;
 }
 
 section.hero .avatar {

@@ -4,15 +4,21 @@ import Lottie from "lottie-react";
 import "./hero.css";
 import devAnimation from "../../../src/animations/dev1.json";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
-  let lottieRef =useRef()
+  let lottieRef = useRef();
   return (
     <section className="hero flex">
       <div className="left-section ">
         <div className="parent-avatar flex">
-          <img className="avatar" src="./myimg.jpg" alt="" />
+          <img
+            className="avatar"
+            src="./myimg.jpg"
+            alt=""
+          />
         </div>
+
         <h1 className="title">Hi 👋🏻 I’m Mohamed Khaled </h1>
         <h1 className="title">
           Software engineer mainly focused on Web Development{" "}

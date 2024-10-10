@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./main.css";
 import myProjects from "./ProjectsData";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Main() {
   let [currentActive, setCurrentActive] = useState("all");
@@ -9,59 +10,61 @@ export default function Main() {
 
   let handelClick = (buttonCategory) => {
     setCurrentActive(buttonCategory);
+    if (buttonCategory === "all") {
+      setArr(myProjects);
+      return;
+    }
     let newArr = myProjects.filter((item) => {
-      let checkOnCategory = item.category.filter((myNewItem) => {
-        return myNewItem === buttonCategory;
-      });
-      return checkOnCategory[0] === buttonCategory;
+      return item.category.includes(buttonCategory);
     });
     setArr(newArr);
   };
 
   return (
     <main className="flex">
-      <section className="flex left-section  ">
+      <section className="flex left-section">
         <button
-          onClick={() => {
-            handelClick("all");
-          }}
-          className={currentActive === "all" ? "active" : null}
+          onClick={() => handelClick("all")}
+          className={currentActive === "all" ? "active" : ""}
         >
           All projects
         </button>
-
         <button
-          onClick={() => {
-            handelClick("css");
-          }}
-          className={currentActive === "css" ? "active" : null}
+          onClick={() => handelClick("css")}
+          className={currentActive === "css" ? "active" : ""}
         >
           HTML & CSS
         </button>
-
         <button
-          onClick={() => {
-            handelClick("js");
-          }}
-          className={currentActive === "js" ? "active" : null}
+          onClick={() => handelClick("js")}
+          className={currentActive === "js" ? "active" : ""}
         >
           JavaScript
         </button>
-
         <button
-          onClick={() => {
-            handelClick("react");
-          }}
-          className={currentActive === "react" ? "active" : null}
+          onClick={() => handelClick("react")}
+          className={currentActive === "react" ? "active" : ""}
         >
           ReactJS
         </button>
       </section>
 
-      <section className="right-section flex  ">
-        {arr.map((item) => {
-          return (
-            <article key={item.imgPath} className="card">
+      <section className="right-section flex">
+        <AnimatePresence>
+          {arr.map((item) => (
+            <motion.article
+              layout
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{
+                type: "spring",
+                damping: 15,
+                stiffness: 50,
+              }}
+              key={item.imgPath}
+              className="card"
+            >
               <img
                 width={270}
                 height={170}
@@ -84,7 +87,11 @@ export default function Main() {
                       href={item.githubLink}
                     ></a>
                   </div>
-                  <a className="link flex" href={item.githubRepos} target="_blank">
+                  <a
+                    className="link flex"
+                    href={item.githubRepos}
+                    target="_blank"
+                  >
                     more
                     <span
                       style={{ alignSelf: "end" }}
@@ -93,9 +100,9 @@ export default function Main() {
                   </a>
                 </div>
               </div>
-            </article>
-          );
-        })}
+            </motion.article>
+          ))}
+        </AnimatePresence>
       </section>
     </main>
   );
