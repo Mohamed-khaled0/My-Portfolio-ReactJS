@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiMysql, SiPostman, SiVisualstudiocode } from 'react-icons/si';
-import './Skills.css';
+import './skills.css';
 
 import { 
   FaHtml5, 
