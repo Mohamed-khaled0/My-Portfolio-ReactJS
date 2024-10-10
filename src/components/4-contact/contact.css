@@ -37,7 +37,7 @@ section.contact-us #message {
     all: unset;
     background-color: rgba(63, 63, 70, 0.15);
     border: 1px solid rgb(63 63 70);
-    width: 16rem;
+    width: 30rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: 0.3s;
@@ -97,6 +97,9 @@ section.contact-us .submit:hover {
     scale: 0.97;
 }
 
+section.contact-us .animation{
+    translate: -8px -60px;
+}
 /* =====================================
     6- Responsive Design (media queries)
 ======================================== */
@@ -136,4 +139,14 @@ section.contact-us .submit:hover {
         align-self: center;
         font-size: 0.8rem;
     }
+    section.contact-us .icon-envelope-o {
+        font-size: 1.3rem;
+    }
+
+    section.contact-us .title {
+        font-size: 1.3rem;
+        margin-bottom: .7rem;
+    }
+
+
 }

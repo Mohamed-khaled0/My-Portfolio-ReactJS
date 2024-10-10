@@ -54,14 +54,9 @@ export default function Main() {
           {arr.map((item) => (
             <motion.article
               layout
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{
-                type: "spring",
-                damping: 15,
-                stiffness: 50,
-              }}
+              initial={{ transform: "scale(0.4)" }}
+              animate={{ transform: "scale(1)" }}
+              transition={{ type: "spring", damping: 8, stiffness: 50 }}
               key={item.imgPath}
               className="card"
             >

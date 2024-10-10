@@ -27,7 +27,7 @@ export default function Hero() {
         <p className="sub-title">
           I'm currently intern as a web developer at Information Technology
           Institute ITI. I spend my day working on projects with HTML , CSS ,
-          Tailwind , JavaScript , TypeScript , React.js .
+          Tailwind , JavaScript ,TypeScript , React.js.
         </p>
         <a href="#" target="_blank">
           <button>
