@@ -5,18 +5,16 @@ import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import doneAnimation from "../../../src/animations/done.json";
 import contactAnimation from "../../../src/animations/contact.json";
+import { FiSend } from 'react-icons/fi'; // Import the Send icon
 
 const Contact = () => {
-  // Make sure to change this id "mgvewbyg"
-  // Website like https://formspree.io/forms
   const [state, handleSubmit] = useForm("mgvewbyg");
   
-
   return (
     <section id="contact" className="contact-us">
       <h1 className="title">
         <span className="icon-envelope-o"> </span>
-        Get in touch
+        Contact Me
       </h1>
       <p className="sub-title">
         My inbox is always open. Whether you have a question or want to share
@@ -60,7 +58,12 @@ const Contact = () => {
           </div>
 
           <button type="submit" disabled={state.submitting} className="submit">
-            {state.submitting ? "Submitting ..." : "Submit"}
+            {state.submitting ? "Submitting ..." : (
+              <>
+                <FiSend style={{ marginRight: "8px" }} /> {/* Add the icon here */}
+                Submit
+              </>
+            )}
           </button>
 
           {state.succeeded && (

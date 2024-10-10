@@ -74,7 +74,7 @@ body {
 
 /* 7. Container Styles */
 .container {
-  width: 90%;
+  width: 88%;
   border: 2px solid var(--border);
   margin: 0 auto;
   background-color: var(--secondary);
@@ -148,7 +148,7 @@ button:disabled{
 
 /* 15. Scroll To Top Button Styles */
 .scroll2Top {
-  background-color: rgba(25, 118, 210, 0.75);
+  background-color:var(--header-color);
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;

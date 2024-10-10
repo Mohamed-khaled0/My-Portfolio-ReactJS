@@ -11,15 +11,16 @@ section.hero {
 
 
 section.hero .title{
-    width: 60%;
+    width: 70%;
     text-align: center;
     line-height: 2.4rem;
+    color: var(--title);
 }
 section.hero .sub-title{
-    width: 60%;
+    width: 70%;
     text-align: center;
     line-height: 1.8rem;
-
+color: var(--subtitle);
 }
 
 
@@ -56,7 +57,7 @@ section.hero .left-section button {
     text-align: center;
     padding: 5px;
     line-height: 1.5rem;
-    opacity: 0.5;
+    opacity: 0.9;
     text-transform: capitalize;
     font-size: 1.05rem;
     transition: 0.3s;
@@ -64,15 +65,37 @@ section.hero .left-section button {
     color: var(--title);
 }
 
+
+.light section.hero .left-section button {
+    color: white;
+}
 section.hero .left-section button:hover {
     opacity: 1; /* Fully visible on hover */
+    border: 1px solid var(--blue);
 }
 
 /* ======================
         Responsive Design 
 ========================*/
 
+@media (max-width: 1200px) {
 
+
+    section.hero .title{
+        margin-top: 20px;
+        width: 80%;
+        line-height: 1.2rem;
+        font-size: 1.3rem;
+
+    }
+    section.hero .sub-title{
+        margin-top: 20px;
+        width: 90%;
+        line-height: 1.5rem;
+        font-size: .9rem;
+
+}
+}
 
 @media (max-width: 600px) {
     section.hero .avatar {

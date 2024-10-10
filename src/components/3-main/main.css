@@ -23,10 +23,9 @@ main.flex .left-section {
     text-align: center;
     font-size: 1.05rem;
     text-transform: capitalize;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 5px;
-    border: 1px solid rgb(63 63 70);
-
+    border: 1px solid rgb(105, 105, 129);
     transition: 0.3s;
 }
 
@@ -36,17 +35,17 @@ main section.left-section.flex button:hover {
 
 main section.left-section.flex button.active {
     opacity: 1;
-    border: 0.0001px solid var(--blue);
+    border: 1px solid var(--blue);
 }
 
 .light main section.left-section.flex button.active {
-    border: 0.0001px solid #000;
+    border: 1px solid var(--blue);
 
 }
 /* 2- Right Section (Projects) */
 main section.right-section.flex {
     flex-grow: 1;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 2rem;
