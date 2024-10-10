@@ -13,12 +13,12 @@
 header.flex {
     justify-content: space-between;
     padding: 0 3rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
   header.flex nav {
     background-color:var(--header-color);
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 55px;
     box-shadow: 1px 1px 20px rgba(49, 48, 48, 0.2);
   }
