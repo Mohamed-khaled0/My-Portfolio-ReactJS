@@ -53,10 +53,10 @@ export default function Main() {
         <AnimatePresence>
           {arr.map((item) => (
             <motion.article
-              layout
-              initial={{ transform: "scale(0.7)" }}
-              animate={{ transform: "scale(1)" }}
-              transition={{ type: "spring", damping: 6, stiffness: 80 }}
+              // layout
+              // initial={{ transform: "scale(0.7)" }}
+              // animate={{ transform: "scale(1)" }}
+              // transition={{ type: "spring", damping: 6, stiffness: 80 }}
               key={item.imgPath}
               className="card"
             >

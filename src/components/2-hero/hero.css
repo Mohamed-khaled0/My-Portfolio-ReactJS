@@ -12,14 +12,21 @@
         Hero Section 
 ========================*/
 section.hero {
+    display: flex;
+    
     margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ======================
         Left Section 
 ========================*/
 section.hero .parent-avatar.flex {
-    align-items: end;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 section.hero .avatar {
@@ -27,6 +34,7 @@ section.hero .avatar {
     border-radius: 50%;
     border: 2px solid rgba(93, 188, 252, .5);
     padding: 1px;
+    
 }
 
 section.hero .left-section {
@@ -66,6 +74,7 @@ section.hero .sub-title {
     border: 1px solid rgb(63 63 70);
     color: var(--title);
 }
+
 section.hero .left-section button:hover {
     opacity: 1; /* Fully visible on hover */
 }

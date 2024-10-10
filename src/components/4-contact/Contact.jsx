@@ -7,6 +7,8 @@ import doneAnimation from "../../../src/animations/done.json";
 import contactAnimation from "../../../src/animations/contact.json";
 
 const Contact = () => {
+  // Make sure to change this id "mgvewbyg"
+  // Website like https://formspree.io/forms
   const [state, handleSubmit] = useForm("mgvewbyg");
   
 

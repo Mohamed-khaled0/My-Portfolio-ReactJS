@@ -46,17 +46,17 @@ export default function Hero() {
           </button>
         </a>
       </div>
-
+{/* 
       <div className="right-section animation ">
         <Lottie
           lottieRef={lottieRef}
           className=""
           onLoadedImages={() => {
-            // https://lottiefiles.com/  if you want to change the animation
+            https://lottiefiles.com/  if you want to change the animation
           }}
           animationData={devAnimation}
         />
-      </div>
+      </div> */}
     </section>
   );
 }
