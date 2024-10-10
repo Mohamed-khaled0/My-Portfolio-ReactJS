@@ -2,6 +2,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
+import Lottie from "lottie-react";
+import doneAnimation from "../../../src/animations/done.json";
+import contactAnimation from "../../../src/animations/contact.json";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mgvewbyg");
@@ -56,11 +59,29 @@ const Contact = () => {
 
           <button type="submit" disabled={state.submitting} className="submit">
             {state.submitting ? "Submitting ..." : "Submit"}
-            <span className="icon-paper-plane"></span> Submit
           </button>
-          {state.succeeded && (<p >Your massage has been sent successfully</p>)}
+
+          {state.succeeded && (
+            <p
+              className="flex"
+              style={{ fontSize: "18px", marginTop: "1.7rem" ,color:"green" }}
+            >
+              <Lottie
+                loop={false}
+                style={{ height: 37 }}
+                animationData={doneAnimation}
+              />
+              Your message has been sent successfully 👌
+            </p>
+          )}
         </form>
-        <div className="animation"></div>
+        <div className=" animation">
+          <Lottie
+            className="contact-animation"
+            style={{ height: 455 }}
+            animationData={contactAnimation}
+          />
+        </div>
       </div>
     </section>
   );

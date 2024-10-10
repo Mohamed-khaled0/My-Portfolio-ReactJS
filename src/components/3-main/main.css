@@ -66,7 +66,6 @@ main section.right-section.flex {
 }
 
 .card:hover {
-    background-color: rgba(248  , 248, 248);
     border: 1px solid var(--blue);
     rotate: 1deg;
     scale: 1.01;
@@ -74,8 +73,8 @@ main section.right-section.flex {
 }
 
 .light  .card:hover{
+    background-color: rgba(248  , 248, 248);
     border: 1px solid black;
-
 }
 
 

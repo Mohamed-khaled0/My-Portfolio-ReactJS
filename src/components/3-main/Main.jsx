@@ -84,7 +84,7 @@ export default function Main() {
                       href={item.githubLink}
                     ></a>
                   </div>
-                  <a className="link flex" href="">
+                  <a className="link flex" href={item.githubRepos} target="_blank">
                     more
                     <span
                       style={{ alignSelf: "end" }}

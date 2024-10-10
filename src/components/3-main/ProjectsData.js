@@ -8,6 +8,7 @@ let myProjects = [
       category: ["react", "all"],
       liveDemo: "https://reactjs-e-commerce-app.surge.sh/",
       githubLink: "https://github.com/Mohamed-khaled0/Basic-E-Commerce-ReactApp?tab=readme-ov-file",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       imgPath: "ecommerce-react.png",
       features: [
         "Responsive design using Bootstrap.",
@@ -23,6 +24,7 @@ let myProjects = [
       category: ["react", "all"],
       liveDemo: "https://prayers-times-reactjs.netlify.app/",
       githubLink: "https://github.com/Mohamed-khaled0/Prayers-Times-Reactjs",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       imgPath: "prayers-times-reactj.png",
       features: [
         "Displays prayer times for selected cities.",
@@ -39,6 +41,7 @@ let myProjects = [
       category: ["css", "js", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/Product-Management-System-CRUD/",
       githubLink: "https://github.com/Mohamed-khaled0/Product-Management-System-CRUD",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       imgPath: "crud-js.png",
       features: [
         "Add New Products: Add multiple products with details.",
@@ -56,6 +59,7 @@ let myProjects = [
       category: ["css", "js", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/Image-Editor-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/Image-Editor-UsingJS",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       imgPath: "image-editor.png",
       features: [
         "Responsive design with HTML and CSS.",
@@ -71,6 +75,7 @@ let myProjects = [
       category: ["css", "js", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       imgPath: "ecommercejs.png",
       features: [
         "User-friendly interface for easy navigation.",
@@ -88,6 +93,7 @@ let myProjects = [
       category: ["css", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/Leon-Html-Css-Template/",
       githubLink: "https://github.com/Mohamed-khaled0/Leon-Html-Css-Template",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       imgPath: "leon.png",
       features: [
         "Responsive Design: Looks great on all devices (desktop, tablet, mobile).",
@@ -105,6 +111,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Bondi-Bootstrap-Project/",
       githubLink: "https://github.com/Mohamed-khaled0/Bondi-Bootstrap-Project",
       imgPath: "bondi.png",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       features: [
         "Fully Responsive Design: Adapts seamlessly to any screen size.",
         "Clean and Modern Layout: Aesthetic and professional design.",
@@ -120,6 +127,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Photo-Revive-AI-Project/",
       githubLink: "https://github.com/Mohamed-khaled0/Photo-Revive-AI-Project",
       imgPath: "photo-revive.png",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       features: [
         "User-Friendly Interface: Simple and clean design.",
         "Upload Image: Upload your old photos.",

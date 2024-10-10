@@ -1,8 +1,12 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-// eslint-disable-next-line no-unused-vars
+import Lottie from "lottie-react";
 import "./hero.css";
+import devAnimation from "../../../src/animations/dev1.json";
+import { useRef } from "react";
 
 export default function Hero() {
+  let lottieRef =useRef()
   return (
     <section className="hero flex">
       <div className="left-section ">
@@ -37,7 +41,16 @@ export default function Hero() {
         </a>
       </div>
 
-      <div className="right-section animation border">BBBBBBBBBB</div>
+      <div className="right-section animation ">
+        <Lottie
+          lottieRef={lottieRef}
+          className=""
+          onLoadedImages={() => {
+            // https://lottiefiles.com/  if you want to change the animation
+          }}
+          animationData={devAnimation}
+        />
+      </div>
     </section>
   );
 }

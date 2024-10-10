@@ -97,7 +97,22 @@ section button .icon-linkedin:hover {
 /* ======================
         Right Section 
 ========================*/
-/* Add styles for the right section here if needed */
+
+.animation{
+    width: 40%;
+    translate: -5px 90px;
+}
+
+
+@media (max-width: 1200px) {
+    .animation {
+        display: none;
+    }
+}
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 600px) {

@@ -100,13 +100,13 @@ section.contact-us .submit:hover {
 /* =====================================
     6- Responsive Design (media queries)
 ======================================== */
-@media (max-width: 1250px) {
-    section.contact-us .contact-animation {
+@media (max-width: 800px) {
+    section.contact-us .animation {
         display: none;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {  
     section.contact-us .animation {
         display: none;
     }
