@@ -17,10 +17,10 @@ header.flex {
   }
   
   header.flex nav {
-    background-color: var(--bgHeader);
-    padding: 0.77rem 1.6rem;
+    background-color:var(--header-color);
+    padding: 1rem 2rem;
     border-radius: 55px;
-    box-shadow: 1px 1px 20px rgba(49, 48, 48, 0.5);
+    box-shadow: 1px 1px 20px rgba(49, 48, 48, 0.2);
   }
   
   header ul.flex {
@@ -33,6 +33,7 @@ header.flex {
     opacity: 0.9;
     font-size: 1rem;
     font-weight: 500;
+
   }
   
   header ul li a:hover {
@@ -106,7 +107,7 @@ header.flex {
     =================== */
   header .icon-menu,
   header button.mode {
-    background-color: var(--bgHeader);
+    background-color: var(--header-color);
     height: 2.5rem;
     width: 2.5rem;
     justify-content: center;
@@ -114,7 +115,7 @@ header.flex {
     text-align: center;
     color: var(--subtitle);
     border: 1px solid rgba(93, 188, 252, 0.2);
-    box-shadow: 1px 1px 40px rgba(93, 188, 252, 0.1) ;
+    box-shadow: 1px 1px 20px rgba(93, 188, 252, 0.1) ;
     transition: 0.3s;
   }
   
@@ -122,17 +123,14 @@ header.flex {
     display: none;
   }
 
- 
-
   header .icon-sun{
     color: var(--blue);
   }
-  
 
   header .icon-menu:hover,
   header button.mode:hover {
     color: var(--title);
-    border: 1px solid rgba(93, 188, 252, 0.9);
+    border: 1px solid rgba(93, 188, 252, 0.5);
   }
   
   header ul li a span {

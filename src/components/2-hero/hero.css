@@ -1,66 +1,49 @@
 /* ======================
-        Table of Contents
-=========================
-1- Hero Section
-2- Left Section
-3- Button Icons
-4- Right Section
-5- Responsive Design
-*/
-
-/* ======================
         Hero Section 
 ========================*/
 section.hero {
     display: flex;
-    margin-top: 2rem;
+    margin-top: 3rem;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 /* ======================
         Left Section 
 ========================*/
 section.hero .parent-avatar.flex {
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    flex-direction: column; /* Column layout for avatar and text */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center content vertically */
 }
 
 section.hero .avatar {
     width: 200px;
     border-radius: 50%;
     border: 2px solid rgba(93, 188, 252, .5);
-    padding: 1px;
-    
+    padding: 2px;
 }
 
 section.hero .left-section {
-    flex-grow: 1;
+    flex-grow: 1; /* Allow this section to grow */
+    display: flex;
+    flex-direction: column; /* Align buttons in a column */
+    align-items: center; /* Center align buttons */
 }
 
-section.hero .title {
-    color: var(--title);
-    font-size: 1.8rem;
-    margin: 24px 0;
-    width: 80%;
+/* Button Group */
+.button-group {
+    display: flex; /* Flexbox for buttons */
+    flex-direction: row; /* Row layout for buttons */
+    justify-content: center; /* Center buttons */
 }
 
-section.hero .sub-title {
-    color: var(--subtitle);
-    width: 70%;
-}
-.light  section.hero .left-section button{
-    color: white;
-    opacity: .9; /* Fully visible on hover */
-}
-
-
- section.hero .left-section button {
-    margin: 26px 12px 0 0;
+/* Button styles */
+section.hero .left-section button {
+    margin: 15px; 
     background-color: rgba(36, 37, 46, 1);
-    width: 7rem;
+    width: 8rem;
     height: 40px;
     border-radius: 5px;
     text-align: center;
@@ -78,77 +61,20 @@ section.hero .left-section button:hover {
     opacity: 1; /* Fully visible on hover */
 }
 
-section.hero .left-section button:active {
-    scale: 0.97; /* Scale effect on click */
-}
-
 /* ======================
-        Button Icons
+        Responsive Design 
 ========================*/
-section button .icon-cloud-download,
-section button .icon-github,
-section button .icon-linkedin {
-    color: var(--subtitle);
-    font-size: 1.2rem;
-}
-
-section button .icon-cloud-download:hover,
-section button .icon-github:hover,
-section button .icon-linkedin:hover {
-    color: var(--icon-hover);
-}
-
-.light section button .icon-cloud-download,
-.light section button .icon-github,
-.light section button .icon-linkedin{
-    color: white;
-}
-/* ======================
-        Right Section 
-========================*/
-
-.animation{
-    width: 45%;
-    translate: -5px 50px;
-}
-
-
-@media (max-width: 1200px) {
-    .animation {
-        display: none;
-    }
-
-    section.hero .avatar{
-    max-width:100px;
-    }
-
-    section.hero .title {
-        font-size: 1.2rem;
-        margin: 8px 0;
-    }
-
-
-}
-
-
-
-
-
-/* Responsive Design */
 @media (max-width: 600px) {
-    section.hero .avatar{
-    display: none; 
-       }
+    section.hero .avatar {
+        display: none; 
+    }
 
-       section.hero .left-section button {
-        margin: 14px 6px 0 0;
-        background-color: rgba(36, 37, 46, 1);
+    section.hero .left-section button {
+        margin: 14px 6px; /* Adjusted margins for smaller screens */
         height: 28px;
         line-height: 1rem;
-        text-transform: capitalize;
         font-size: 1.0rem;
     } 
-
 
     section.hero .sub-title {
         font-size: .8rem;

@@ -38,6 +38,7 @@ html {
   --blue: rgb(93, 188, 252);
   --icon-hover: #d4d4d8;
   --card:rgba(29,36,50 ,.6);
+  --header-color:rgb(7,12,24);
   --container-padding: 4rem;
 
 }
@@ -53,6 +54,8 @@ html {
   --blue: rgb(0, 149, 246);
   --icon-hover: #333;
   --card: rgb(255, 255, 255);
+  --header-color:rgb(255, 255, 255);
+
 }
 
 /* 5. Reset Styles */
