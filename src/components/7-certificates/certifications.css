@@ -4,7 +4,15 @@
   font-size: 2.5rem;
   color:var(--title) ; 
 }
-
+.certifications-section .title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--blue);
+  margin: 0.5rem auto;
+  border-radius: 4px;
+}
 .filter-buttons {
   display: flex;
   justify-content: center;
