@@ -3,6 +3,19 @@
 let myProjects = [
     // React Projects
     {
+        projectTitle: "My Portfolio",
+        projectSubtitle: "modern web developer portfolio template built using React.js, HTML, CSS, and Framer Motion.",
+        category: ["react", "all"],
+        liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
+        githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
+        githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
+        imgPath: "https://i.imgur.com/gJsUyER.png",
+        features: [
+          
+        ],
+        technologies: ["React"]
+      },
+    {
       projectTitle: "React Shopping App",
       projectSubtitle: "An intuitive shopping experience showcasing a variety of products.",
       category: ["react", "all"],

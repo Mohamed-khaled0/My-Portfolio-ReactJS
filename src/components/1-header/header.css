@@ -12,7 +12,7 @@
 =================== */
 header.flex {
     justify-content: space-between;
-    padding: 0 2.4rem;
+    padding: 0 3rem;
     margin-top: 1rem;
   }
   
@@ -149,22 +149,69 @@ header.flex {
     rotate: 180deg;
   }
   
-  /* =================
+  
+  header ul.flex {
+    gap: 16px;
+    color: white;
+}
+
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex; 
+    align-items: center; 
+    padding: 8px; 
+    border-radius: 50px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header ul li a:hover {
+    background-color: rgba(93, 188, 252, 0.2); /* Darker circular background */
+    color: var(--blue); /* Change text color on hover */
+    opacity: 1; /* Full opacity */
+}
+
+header ul li a svg {
+    margin-right: 4px; /* Space between icon and text */
+}
+
+/* =================
     4- Media Query (Responsive Design) 
     =================== */
-  @media (max-width: 650px) {
-    header.flex nav {
-      display: none;
+
+    @media (max-width: 600px) {
+        header.flex nav {
+            display: none; /* Hide the navigation links */
+        }
+    
+        header .icon-menu {
+            display: block; /* Show the menu icon */
+        }
     }
     
-    header .icon-menu {
-      display: block;
+    @media (max-width: 900px) {
+        
     }
-  }
-  
-  @media (max-width: 900px) {
-    header ul li a span {
-      display: none;
+    
+    @media (max-width: 1200px) {
+        header ul li a {
+            font-size: 0.9rem; /* Make icons a little bit smaller */
+        }
+        
+        header ul li a svg {
+            display: none;
+        }
+
+        header ul li a {
+            padding: 0; 
+            
+        }
+
     }
-  }
-  
+    
+
+
+
+

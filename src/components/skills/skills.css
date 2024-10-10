@@ -28,6 +28,8 @@
 .skill-card:hover {
     scale: 1.1;
     rotate: -1deg;
+    box-shadow: 2px 6px 10px rgba(93, 188, 252,.1);
+
 }
 
 .skill-card i {

@@ -2,7 +2,7 @@
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
-  color: var(--title);
+  color:var(--title) ; 
 }
 
 .filter-buttons {
@@ -10,6 +10,7 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+
 }
 
 .filter-buttons button {
@@ -19,11 +20,13 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s ease;
-  background-color: rgba(36, 37, 46, 1);
   opacity: 0.9;
   border: 1px solid rgb(63 63 70);
-  color: var(--title);
+  background-color: rgba(36, 37, 46, 1);
+  color: white;
 }
+
+
 .filter-buttons button.active {
   border: 1px solid var(--blue);
 }
@@ -39,6 +42,7 @@
   justify-content: center;
   gap: 2rem;
   margin: 0 auto;
+
 }
 
 .certification-item {
@@ -50,9 +54,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
-  height: 400px;
+  height: 350px;
   position: relative;
   transition: 0.3s;
+
 }
 
 .certification-item:hover {
@@ -66,6 +71,7 @@
   height: 150px;
   object-fit: cover;
   border-radius: 5px;
+
 }
 
 .cert-details {
@@ -74,6 +80,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.cert-name a{
+    color: var(--title);
 }
 
  .cert-name {
@@ -128,4 +138,22 @@
 
 .show-more-btn:hover {
   background-color: #0056b3;
+}
+
+@media (max-width:600px) {
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;      
+      }
+      
+
+}
+
+
+@media (max-width:1200px) {
+    .filter-buttons {
+        flex-wrap: wrap;      
+      }
+      
+
 }

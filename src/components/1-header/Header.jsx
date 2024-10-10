@@ -1,5 +1,7 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
+import { FaHome, FaCode  , FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa"; // Importing icons
+import { MdBuild } from "react-icons/md"; 
+
 import "./header.css";
 
 export default function Header() {
@@ -33,33 +35,32 @@ export default function Header() {
           <ul className="flex">
             <li>
               <a href="#main">
-                Home
+                <FaHome /> Home
               </a>
             </li>
             <li>
               <a href="#projects">
-                Projects
+                <FaCode /> Projects
               </a>
             </li>
             <li>
               <a href="#skills">
-                 Skills
+                <MdBuild   /> Skills
               </a>
             </li>
             <li>
-            <a href="#experience">
-              Experience
+              <a href="#experience">
+                <FaBriefcase /> Experience
               </a>
             </li>
             <li>
               <a href="#education">
-                Education
+                <FaGraduationCap /> Education
               </a>
             </li>
-
             <li>
               <a href="#contact">
-               Contact
+                <FaEnvelope /> Contact
               </a>
             </li>
           </ul>
@@ -67,13 +68,10 @@ export default function Header() {
 
         <button
           onClick={() => {
-            // Send value to LS
             localStorage.setItem(
               "currentMode",
               theme === "dark" ? "light" : "dark"
             );
-
-            // get value from LS
             setTheme(localStorage.getItem("currentMode"));
           }}
           className="mode flex"
@@ -97,7 +95,7 @@ export default function Header() {
                 ></button>
               </li>
               <li>
-                <a  href="">  About</a>
+                <a href=""> About</a>
               </li>
               <li>
                 <a href="">Projects</a>

@@ -95,7 +95,7 @@ const Certifications = () => {
                   </a>
                 </h2>
                 <h3 className="cert-authority">{cert.authority}</h3>
-                <p className="cert-date">{cert.date}</p>
+                <p className="cert-date">Date : {cert.date}</p>
                 <a href={cert.link} target="_blank" rel="noopener noreferrer" className="external-link">
                   View Certificate <FiExternalLink className="external-link-icon" />
                 </a>
