@@ -3,8 +3,8 @@
 import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
-import doneAnimation from "../../../src/animations/done.json";
-import contactAnimation from "../../../src/animations/contact.json";
+import doneAnimation from "../../animations/done.json";
+import contactAnimation from "../../animations/contact.json";
 import { FiSend } from 'react-icons/fi'; // Import the Send icon
 
 const Contact = () => {
