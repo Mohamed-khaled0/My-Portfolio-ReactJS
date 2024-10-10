@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import {  FaUniversity } from 'react-icons/fa';
-import './Education.css';
+import './education.css';
 
 const Education = () => {
     const educationData = {
