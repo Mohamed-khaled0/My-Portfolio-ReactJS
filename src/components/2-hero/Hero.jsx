@@ -2,9 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Lottie from "lottie-react";
 import "./hero.css";
-import devAnimation from "../../../src/animations/dev1.json";
 import { useRef } from "react";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   let lottieRef = useRef();
@@ -46,17 +44,7 @@ export default function Hero() {
           </button>
         </a>
       </div>
-{/* 
-      <div className="right-section animation ">
-        <Lottie
-          lottieRef={lottieRef}
-          className=""
-          onLoadedImages={() => {
-            https://lottiefiles.com/  if you want to change the animation
-          }}
-          animationData={devAnimation}
-        />
-      </div> */}
+
     </section>
   );
 }
