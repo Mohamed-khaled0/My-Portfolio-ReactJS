@@ -34,9 +34,17 @@ footer.flex p {
 }
 
 /* 5. Responsive Styles for Footer */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     footer.flex {
         flex-direction: column;
         gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 500px) {
+    footer ul.flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
     }
 }
