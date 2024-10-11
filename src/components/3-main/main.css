@@ -3,23 +3,23 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-  }
-  
-  .projects-title {
+}
+
+.projects-title {
     text-align: center;
     font-size: 2rem;
     color: var(--title);
     margin-bottom: 2rem;
-  }
-  
-  .center-section {
+}
+
+.center-section {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-bottom: 2rem;
-  }
-  
-  .center-section button {
+}
+
+.center-section button {
     background-color: rgba(36, 37, 46, 1);
     width: 12rem;
     padding: 0.75rem 0;
@@ -30,22 +30,22 @@
     border-radius: 5px;
     border: 1px solid rgb(105, 105, 129);
     transition: 0.3s;
-  }
-  
-  .center-section button:hover,
-  .center-section button.active {
+}
+
+.center-section button:hover,
+.center-section button.active {
     opacity: 1;
     border: 1px solid var(--blue);
-  }
-  
-  .projects-section {
+}
+
+.projects-section {
     display: grid; /* Use CSS Grid for layout */
     grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     gap: 20px; /* Space between cards */
     margin: 0 auto; /* Centers the section */
-  }
-  
-  .card {
+}
+
+.card {
     box-shadow: -1px 1px 1px rgba(0, 0, 0, .2), 1px 1px 1px rgba(0, 0, 0, .2);
     border: 1px solid rgba(93, 188, 252, 0.3);
     transition: 0.3s;
@@ -55,7 +55,11 @@
       rgba(255, 255, 255, 0.05)
     );
     width: 300px; /* Fixed width for cards */
+    height: 400px; /* Fixed height for cards */
     text-align: center;
+    display: flex; /* Enable flex layout for children */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space out content evenly */
 }
 
 .card img {
@@ -63,68 +67,102 @@
     width: 100%; /* Make images fill the card */
     height: 200px; /* Fixed height for images */
 }
-  
-  .card:hover {
+
+.card:hover {
     border: 1px solid var(--blue);
     scale: 1.01;
     cursor: pointer;
-  }
-  
+}
 
-  
-  .card .box {
-    padding: 1rem;
-  }
-  
-  .card .title {
+.card .box {
+    padding: 1.5rem;
+    flex-grow: 1; /* Allow this box to grow to fill space */
+}
+
+
+.card .title {
     color: var(--title);
     text-transform: capitalize;
-  }
-  
-  .card .sub-title {
+}
+
+.card .sub-title {
     color: var(--subtitle);
     font-size: 0.8rem;
     margin: 0.6rem 0;
-  }
-  
-  .technologies {
+}
+
+.technologies {
     display: flex;
     justify-content: center;
-    gap: 10px;
     margin-top: 10px;
-  }
-  
-  .tech-icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .show-more-container {
+}
+
+.tech-icon {
+    width: 20px; /* Adjust icon size */
+    height: 15px; /* Adjust icon size */
+}
+
+.show-more-container {
     margin: 2rem 0; /* Add some margin around the button */
-  }
-  
-  button.show-more {
+}
+
+button.show-more {
     padding: 10px 20px;
     background-color: var(--blue);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
+}
+.flex.icons {
+    display: flex;
+    justify-content: center; /* Center align the icons */
+    gap: 20px; /* Space between icon containers */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 8px; /* Space between icon and text */
+}
+
+.icon {
+    color: var(--subtitle); /* Set icon color */
+    font-size: .8rem; /* Increase icon size */
+    transition:  0.3s; /* Smooth transition for hover effect */
+}
+
+.icon-text {
+    color: var(--subtitle); /* Set text color to var(--subtitle) */
+    font-size: 1rem; /* Text size */
+    font-family: "Nunito", sans-serif !important;
+    text-decoration: none; /* Remove underline */
+    transition:  0.3s; /* Smooth transition for hover effect */
+}
+
+/* Add hover effect for icons and text */
+.icon-text:hover {
+    color: var(--blue); /* Change color on hover */
+}
+.technologies-title {
+    font-size: .8rem; /* Size of the title */
+    color: var(--title); /* Title color, adjust as needed */
+    margin-bottom: 0.5rem; /* Space below the title */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
     .projects-section {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
     }
-  
+
     .card {
-      max-width: 100%; /* Cards take full width on medium screens */
+        max-width: 100%; /* Cards take full width on medium screens */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .projects-section {
-      grid-template-columns: 1fr; /* 1 card per row on small screens */
+        grid-template-columns: 1fr; /* 1 card per row on small screens */
     }
-  }
-  
+}

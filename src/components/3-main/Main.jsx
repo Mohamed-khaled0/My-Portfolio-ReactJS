@@ -4,6 +4,8 @@ import "./main.css";
 import myProjects from "./ProjectsData";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaJsSquare } from "react-icons/fa"; 
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // Import GitHub and Live Demo icons
+import { SiTailwindcss } from "react-icons/si"; // Import Tailwind CSS icon
 
 const techIcons = {
   React: <FaReact />,
@@ -11,6 +13,8 @@ const techIcons = {
   CSS3: <FaCss3Alt />,
   Bootstrap: <FaBootstrap />,
   JavaScript: <FaJsSquare />,
+  Tailwind: <SiTailwindcss />, // Adding Tailwind CSS icon
+  // Add more tech icons as needed
 };
 
 export default function Main() {
@@ -67,53 +71,62 @@ export default function Main() {
         <AnimatePresence>
           {visibleProjects.map((item) => (
             <motion.article
-              key={item.imgPath}
-              className="card"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-            >
-              <a href={item.liveDemo} target="_blank" rel="noopener noreferrer">
-                <img
-                  width={270}
-                  height={170}
-                  src={item.imgPath}
-                  alt={item.projectTitle}
-                />
-              </a>
-              <div className="box">
-                <h1 className="title">{item.projectTitle}</h1>
-                <p className="sub-title">{item.projectSubtitle}</p>
-                <div className="flex icons">
-                  <div className="flex">
-                    <a
-                      className="icon-link"
-                      target="_blank"
-                      href={item.liveDemo}
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      className="icon-github"
-                      target="_blank"
-                      href={item.githubLink}
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  </div>
-                </div>
+  key={item.imgPath}
+  className="card"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0, scale: 0.9 }}
+>
+  <a href={item.liveDemo} target="_blank" rel="noopener noreferrer">
+    <img
+      width={270}
+      height={170}
+      src={item.imgPath}
+      alt={item.projectTitle}
+    />
+  </a>
+  <div className="box">
+    <h1 className="title">{item.projectTitle}</h1>
+    <p className="sub-title">{item.projectSubtitle}</p>
+    
+    {/* Technologies Section */}
+    <div className="technologies">
+      <h2 className="technologies-title">Technologies : </h2> 
+      <div className="tech-icons-container">
+        {item.technologies.map((tech, index) => (
+          <span key={index} className="tech-icon">
+            {techIcons[tech]}
+          </span>
+        ))}
+      </div>
+    </div>
 
-                <div className="technologies">
-                  {item.technologies.map((tech, index) => (
-                    <span key={index} className="tech-icon">
-                      {techIcons[tech]}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.article>
+    <div className="flex icons">
+      <div className="icon-container">
+        <a
+          target="_blank"
+          href={item.liveDemo}
+          rel="noopener noreferrer"
+        >
+          <div className="icon">
+            <FaExternalLinkAlt className="icon" />
+            <span className="icon-text"> LiveDemo</span>
+          </div>
+        </a>
+        <a
+          target="_blank"
+          href={item.githubLink}
+          rel="noopener noreferrer"
+        >
+          <div className="icon">
+            <FaGithub className="icon" />
+            <span className="icon-text"> GitHub</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</motion.article>
           ))}
         </AnimatePresence>
       </section>

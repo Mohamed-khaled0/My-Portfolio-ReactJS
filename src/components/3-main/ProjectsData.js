@@ -4,7 +4,7 @@ let myProjects = [
     // React Projects
     {
         projectTitle: "My Portfolio",
-        projectSubtitle: "modern web developer portfolio template built using React.js, HTML, CSS, and Framer Motion.",
+        projectSubtitle: "modern web developer portfolio template built using React.js, HTML, CSS.",
         category: ["react", "all"],
         liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
         githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
@@ -44,7 +44,7 @@ let myProjects = [
         "Real-time updating of the current time.",
         "Automatically calculates the next prayer based on the current time."
       ],
-      technologies: ["React.js", "Moment.js", "Material UI", "Aladhan API", "Axios"]
+      technologies: ["React"]
     },
   
     // JavaScript (js) Projects

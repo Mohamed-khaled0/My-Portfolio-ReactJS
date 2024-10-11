@@ -61,19 +61,24 @@
   align-items: center;
   background-color: var(--card);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, .2), 1px 1px 1px rgba(0, 0, 0, .2);
   padding: 20px;
   width: 300px;
   height: 350px;
   position: relative;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(93, 188, 252, 0.3);
   transition: 0.3s;
 
 }
 
 .certification-item:hover {
-  transform: translateY(-5px);
-  scale: 1.05;
-  rotate: 1deg;
+  scale: 1.01;
+  border:1px solid var(--blue); /* Change color on hover */
+opacity: 1;
 }
 
 .cert-img {
