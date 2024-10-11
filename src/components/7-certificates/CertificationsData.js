@@ -81,6 +81,14 @@ let CertificationsData = [
       category: ["all", "udacity"],
     },
     {
+      name: "Web Developer Intern",
+      authority: "ITI",
+      date: "Aug to Sep 2024",
+      img: "https://i.imgur.com/xs63ckN.png",
+      link: "https://drive.google.com/file/d/1vh2weLv07nrL7abloGveXdr6dWSMPDMo/view?usp=sharing",
+      category: ["all", "internships"],
+    },
+    {
       name: "Mobile Developer Intern",
       authority: "CodeAlpha",
       date: "March 2024",
