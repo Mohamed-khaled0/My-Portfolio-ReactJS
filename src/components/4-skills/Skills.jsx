@@ -43,10 +43,10 @@ const Skills = () => {
           <motion.div
             key={index}
             className="skill-card"
-            initial={{ scale: 0.8, opacity: 0 }} // Start small and invisible
-            animate={{ scale: 1, opacity: 1 }} // Scale to normal and become visible
-            transition={{ duration: 0.3, delay: index * 0.1 }} // Delay for staggering effect
-            whileHover={{ scale: 1.1 }} // Scale up on hover
+            initial={{ scale: 0.8, opacity: 0 }} 
+            animate={{ scale: 1, opacity: 1 }} 
+            transition={{ duration: 0.3, delay: index * 0.1 }} 
+            whileHover={{ scale: 1.1 }} 
           >
             {skill.icon}
             <p>{skill.name}</p>

@@ -31,7 +31,7 @@
 .education-card-right h3 svg, 
 .education-card-right ul li svg {
     margin-right: 10px;
-    color: var(--icon-hover); /* Adjust the icon color as needed */
+    color: var(--icon-hover); 
 }
 
 
@@ -78,7 +78,7 @@
 @media screen and (max-width: 600px) {
     .education-card {
         flex-direction: column;
-        text-align: center; /* Center-align text for mobile view */
+        text-align: center;
     }
 
     .education-card-right {
@@ -87,12 +87,12 @@
     }
 
     .education-card-left img {
-        width: 110px; /* Adjusted image size for mobile */
+        width: 110px; 
         height: 80px;
     }
 
     h2 {
         margin-bottom: 20px;
-        font-size: 1.3rem; /* Reduced font size for mobile */
+        font-size: 1.3rem; 
     }
 }

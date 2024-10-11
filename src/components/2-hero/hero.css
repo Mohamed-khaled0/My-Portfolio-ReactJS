@@ -1,102 +1,60 @@
-/* ======================
-        Hero Section 
-========================*/
+/* ========================
+    Hero Section Styles 
+======================== */
 section.hero {
-    display: flex;
-    height: 70vh; /* Full viewport height */
-    margin-top: 0; /* Remove top margin */
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    background-size: cover; /* Ensure the background covers the entire section */
+    display: flex; 
+    margin-top: 20px; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    background-size: cover; 
 }
 
+/* ========================
+    Title Styles 
+======================== */
 section.hero .title {
-    width: 50%; /* Specific width for consistent layout */
-    text-align: center;
-    line-height: 2.4rem;
-    color: var(--title);
-    margin: 10px 0; /* Margin between sections */
+    width: 50%; 
+    text-align: center; 
+    line-height: 2.4rem; 
+    color: var(--title); 
+    margin: 10px 0; 
 }
 
-section.hero .parent-avatar.flex {
-    flex-direction: column; /* Column layout for avatar and text */
-    align-items: center; /* Center align items */
-    justify-content: center; /* Center content vertically */
-}
-
+/* ========================
+    Avatar Styles 
+======================== */
 section.hero .avatar {
-    width: 150px;
-    border-radius: 50%;
-    border: 2px solid rgba(93, 188, 252, .5);
-    padding: 2px;
-    margin-bottom: 25px ;
-    margin-top: 50px;
+    width: 150px; 
+    border-radius: 50%; 
+    border: 2px solid rgba(93, 188, 252, .5); 
+    padding: 2px; 
+    margin-bottom: 25px; 
+    margin-top: 50px; 
 }
 
-section.hero .left-section {
-    flex-grow: 1; /* Allow this section to grow */
-    display: flex;
-    flex-direction: column; /* Align buttons in a column */
-    align-items: center; /* Center align buttons */
-}
-
-/* Button styles */
+/* ========================
+    Button Styles 
+======================== */
 section.hero .left-section button {
-    margin: 15px; 
-    background-color: rgba(36, 37, 46, 1);
-    width: 8rem;
-    height: 40px;
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px;
-    line-height: 1.5rem; /* Ensure text is vertically centered */
-    opacity: 0.9;
-    text-transform: capitalize;
-    font-size: 1.05rem; /* Consistent font size */
-    transition: 0.3s;
-    border: 1px solid rgb(63 63 70);
-    color: var(--title);
+    background-color: rgba(36, 37, 46, 1); 
+    border-radius: 5px; 
+    transition: 0.3s; 
 }
 
-.light section.hero .left-section button {
-    color: var(--primary);
-}
-
-section.hero .left-section button:hover {
-    opacity: 1; /* Fully visible on hover */
-    border: 1px solid var(--blue);
-}
-
-/* ======================
-        Responsive Design 
-========================*/
-
+/* ========================
+    Media Queries 
+======================== */
 @media (max-width: 1200px) {
     section.hero .title {
-        margin-top: 20px;
-        width: 80%;
-        line-height: 1.2rem;
-        font-size: 1.3rem;
+        width: 80%; 
+        line-height: 1.2rem; 
+        font-size: 1.3rem; 
     }
 }
 
 @media (max-width: 600px) {
     section.hero .avatar {
         display: none; 
-    }
-
-    section.hero .left-section button {
-        margin: 14px 6px; /* Adjusted margins for smaller screens */
-        height: 28px;
-        line-height: 1rem;
-        font-size: 1.0rem;
-        width: auto;
-    } 
-
-    section.hero .title {
-        width: 80%;
-        line-height: 1.5rem;
-        font-size: 1.3rem;
     }
 }
