@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import { FaHome, FaCode  , FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa"; // Importing icons
+import { FaHome, FaCode, FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa"; // Importing icons
 import { MdBuild } from "react-icons/md"; 
-
 import "./header.css";
 
 export default function Header() {
   let [showModal, setShowModal] = useState(false);
-  const [theme, setTheme] = useState(
-    localStorage.getItem("currentMode") ?? "dark"
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
 
   useEffect(() => {
     if (theme === "light") {
@@ -19,6 +16,19 @@ export default function Header() {
       document.body.classList.add("dark");
     }
   }, [theme]);
+
+  // Close modal if clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showModal && !document.querySelector(".modal").contains(event.target) && !event.target.classList.contains("menu")) {
+        setShowModal(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showModal]);
 
   return (
     <div>
@@ -45,7 +55,7 @@ export default function Header() {
             </li>
             <li>
               <a href="#skills">
-                <MdBuild   /> Skills
+                <MdBuild /> Skills
               </a>
             </li>
             <li>
@@ -95,22 +105,22 @@ export default function Header() {
                 ></button>
               </li>
               <li>
-                <a href="#main"> Home</a>
+                <a href="#main" onClick={() => setShowModal(false)}>Home</a>
               </li>
               <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" onClick={() => setShowModal(false)}>Projects</a>
               </li>
               <li>
-                <a href="#skills">Skills</a>
+                <a href="#skills" onClick={() => setShowModal(false)}>Skills</a>
               </li>
               <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" onClick={() => setShowModal(false)}>Experience</a>
               </li>
               <li>
-                <a href="#education">Education</a>
+                <a href="#education" onClick={() => setShowModal(false)}>Education</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" onClick={() => setShowModal(false)}>Contact</a>
               </li>
             </ul>
           </div>

@@ -13,7 +13,7 @@ let myProjects = [
         features: [
           
         ],
-        technologies: ["React"]
+        technologies: ["React","HTML5", "CSS3", "JavaScript",]
       },
     {
       projectTitle: "React Shopping App",
@@ -44,14 +44,14 @@ let myProjects = [
         "Real-time updating of the current time.",
         "Automatically calculates the next prayer based on the current time."
       ],
-      technologies: ["React"]
+      technologies: ["React","JavaScript"]
     },
   
     // JavaScript (js) Projects
     {
       projectTitle: "CRUDS ",
       projectSubtitle: "A simple Product Management System that allows users to manage products.",
-      category: ["css", "js", "all"],
+      category: ["js", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/Product-Management-System-CRUD/",
       githubLink: "https://github.com/Mohamed-khaled0/Product-Management-System-CRUD",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
@@ -64,12 +64,12 @@ let myProjects = [
         "Store Data in Local Storage: Data persists even after refreshing the page.",
         "Responsive Design: A responsive UI built using HTML and CSS."
       ],
-      technologies: ["HTML5", "CSS3", "JavaScript (ES6)", "Local Storage"]
+      technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage"]
     },
     {
       projectTitle: "Photo Editor",
       projectSubtitle: "A photo editing application that allows users to upload images and apply filters.",
-      category: ["css", "js", "all"],
+      category: ["js", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/Image-Editor-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/Image-Editor-UsingJS",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
@@ -80,12 +80,12 @@ let myProjects = [
         "Apply various filters and effects to images.",
         "Download the edited image after applying filters."
       ],
-      technologies: ["HTML", "CSS", "JavaScript"]
+      technologies: ["HTML5", "CSS3", "JavaScript"]
     },
     {
       projectTitle: "E-Commerce Website",
       projectSubtitle: "An online shop offering a variety of products.",
-      category: ["css", "js", "all"],
+      category: ["js", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
@@ -131,7 +131,7 @@ let myProjects = [
         "Built with Bootstrap: Utilizes Bootstrap for easy layout.",
         "Customizable Components: Easily modify and extend the template."
       ],
-      technologies: ["Bootstrap", "HTML", "CSS"]
+      technologies: ["Bootstrap","HTML5", "CSS3"]
     },
     {
       projectTitle: "PhotoRevive",
@@ -148,7 +148,7 @@ let myProjects = [
         "Download Result: Download your restored photo.",
         "Responsive Design: Optimized for all devices."
       ],
-      technologies: ["HTML", "Tailwind CSS", "JavaScript"]
+      technologies: ["HTML5", "CSS3","Tailwind"]
     }
   ];
 

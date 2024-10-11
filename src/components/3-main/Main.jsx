@@ -13,7 +13,7 @@ const techIcons = {
   CSS3: <FaCss3Alt />,
   Bootstrap: <FaBootstrap />,
   JavaScript: <FaJsSquare />,
-  Tailwind: <SiTailwindcss />, // Adding Tailwind CSS icon
+  Tailwind: <SiTailwindcss />, 
   // Add more tech icons as needed
 };
 
@@ -48,10 +48,10 @@ export default function Main() {
           All projects
         </button>
         <button
-          onClick={() => handleClick("css")}
-          className={currentActive === "css" ? "active" : ""}
+          onClick={() => handleClick("react")}
+          className={currentActive === "react" ? "active" : ""}
         >
-          HTML & CSS
+          ReactJS
         </button>
         <button
           onClick={() => handleClick("js")}
@@ -60,11 +60,13 @@ export default function Main() {
           JavaScript
         </button>
         <button
-          onClick={() => handleClick("react")}
-          className={currentActive === "react" ? "active" : ""}
+          onClick={() => handleClick("css")}
+          className={currentActive === "css" ? "active" : ""}
         >
-          ReactJS
+          HTML & CSS
         </button>
+
+
       </section>
 
       <section className="projects-section">
