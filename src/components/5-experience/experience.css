@@ -130,3 +130,12 @@
     font-size: 1.2rem;
     color: white; /* Adjust the icon color as needed */
 }
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .experience-container {
+        padding: .5rem;
+    }
+}

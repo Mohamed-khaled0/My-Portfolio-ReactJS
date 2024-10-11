@@ -76,7 +76,7 @@ body {
 
 /* 7. Container Styles */
 .container {
-  width: 88%;
+  width: 80%;
   border: 2px solid var(--border);
   margin: 0 auto;
   background-color: var(--secondary);

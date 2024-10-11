@@ -72,7 +72,7 @@
     .skills-container {
         justify-content: center;
         gap: 20px;
-        max-width: 100%; /* Full width on small screens */
+        max-width: 100%; 
     }
 
     .skill-card i {
@@ -80,18 +80,18 @@
     }
 
     .skills-title h2 {
-        font-size: 1.5rem; /* Adjust title font size for smaller screens */
+        font-size: 1.5rem; 
     }
 }
 
 /* Additional media query for larger screens if needed */
 @media (min-width: 600px) {
     .skills-container {
-        gap: 30px; /* Maintain gap on larger screens */
+        gap: 30px; 
     }
 
     .skill-card {
-        width: 120px; /* Slightly wider cards on larger screens */
-        height: 120px; /* Adjust height accordingly */
+        width: 120px; 
+        height: 120px; 
     }
 }

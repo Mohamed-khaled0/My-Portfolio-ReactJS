@@ -75,7 +75,11 @@ section.hero .left-section button:hover {
 
 @media (max-width: 600px) {
     section.hero .avatar {
-        display: none; 
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
     }
 
     section.hero .left-section button {
@@ -91,4 +95,3 @@ section.hero .left-section button:hover {
         line-height: 1.5rem;
         font-size: 1.3rem;
     }
-}
