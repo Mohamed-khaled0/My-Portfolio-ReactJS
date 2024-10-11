@@ -95,19 +95,22 @@ export default function Header() {
                 ></button>
               </li>
               <li>
-                <a href=""> About</a>
+                <a href="#main"> Home</a>
               </li>
               <li>
-                <a href="">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <li>
-                <a href="">Education</a>
+                <a href="#skills">Skills</a>
               </li>
               <li>
-                <a href="">Skills</a>
+                <a href="#experience">Experience</a>
               </li>
               <li>
-                <a href="">Contact</a>
+                <a href="#education">Education</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>

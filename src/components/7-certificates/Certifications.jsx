@@ -43,6 +43,19 @@ const Certifications = () => {
           Internships
         </button>
         <button
+          onClick={() => handleFilter("coursera")}
+          className={currentCategory === "coursera" ? "active" : ""}
+        >
+          Coursera
+
+        </button>
+        <button
+          onClick={() => handleFilter("udacity")}
+          className={currentCategory === "udacity" ? "active" : ""}
+        >
+          Udacity
+        </button>
+        <button
           onClick={() => handleFilter("hackerrank")}
           className={currentCategory === "hackerrank" ? "active" : ""}
         >
@@ -54,19 +67,7 @@ const Certifications = () => {
         >
           ITI
         </button>
-        <button
-          onClick={() => handleFilter("udacity")}
-          className={currentCategory === "udacity" ? "active" : ""}
-        >
-          Udacity
-        </button>
-        <button
-          onClick={() => handleFilter("coursera")}
-          className={currentCategory === "coursera" ? "active" : ""}
-        >
-          Coursera
 
-        </button>
         
       </div>
 

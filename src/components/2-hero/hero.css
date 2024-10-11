@@ -1,60 +1,94 @@
-/* ========================
-    Hero Section Styles 
-======================== */
 section.hero {
-    display: flex; 
-    margin-top: 20px; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    background-size: cover; 
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
 }
 
-/* ========================
-    Title Styles 
-======================== */
 section.hero .title {
-    width: 50%; 
-    text-align: center; 
-    line-height: 2.4rem; 
-    color: var(--title); 
-    margin: 10px 0; 
+    width: 50%;
+    text-align: center;
+    line-height: 2.4rem;
+    color: var(--title);
+    margin: 10px 0;
 }
 
-/* ========================
-    Avatar Styles 
-======================== */
+section.hero .parent-avatar.flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 section.hero .avatar {
-    width: 150px; 
-    border-radius: 50%; 
-    border: 2px solid rgba(93, 188, 252, .5); 
-    padding: 2px; 
-    margin-bottom: 25px; 
-    margin-top: 50px; 
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid rgba(93, 188, 252, .5);
+    padding: 2px;
+    margin-bottom: 25px;
+    margin-top: 50px;
 }
 
-/* ========================
-    Button Styles 
-======================== */
+section.hero .left-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section.hero .left-section button {
-    background-color: rgba(36, 37, 46, 1); 
-    border-radius: 5px; 
-    transition: 0.3s; 
+    margin: 15px; 
+    margin-bottom: 50px;
+    background-color: rgba(36, 37, 46, 1);
+    width: 8rem;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    line-height: 1.5rem;
+    opacity: 0.9;
+    text-transform: capitalize;
+    font-size: 1.05rem;
+    transition: 0.3s;
+    border: 1px solid rgb(63 63 70);
+    color: var(--title);
 }
 
-/* ========================
-    Media Queries 
-======================== */
+.light section.hero .left-section button {
+    color: var(--primary);
+}
+
+section.hero .left-section button:hover {
+    opacity: 1;
+    border: 1px solid var(--blue);
+}
+
 @media (max-width: 1200px) {
     section.hero .title {
-        width: 80%; 
-        line-height: 1.2rem; 
-        font-size: 1.3rem; 
+        margin-top: 20px;
+        width: 80%;
+        line-height: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 
 @media (max-width: 600px) {
     section.hero .avatar {
         display: none; 
+    }
+
+    section.hero .left-section button {
+        margin: 14px 6px;
+        height: 28px;
+        line-height: 1rem;
+        font-size: 1.0rem;
+        width: auto;
+    } 
+
+    section.hero .title {
+        width: 80%;
+        line-height: 1.5rem;
+        font-size: 1.3rem;
     }
 }
