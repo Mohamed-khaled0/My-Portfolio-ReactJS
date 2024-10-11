@@ -12,6 +12,7 @@
 }
 
 .skills-title h2 { 
+    color: var(--title);
     margin: 0; /* Remove default margin */
     font-size: 2rem; /* Title font size */
 }

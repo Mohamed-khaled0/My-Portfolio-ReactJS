@@ -3,28 +3,33 @@
 import Lottie from "lottie-react";
 import "./hero.css";
 import { useRef } from "react";
+import { motion } from "framer-motion"; // Import framer-motion for animations
 
 export default function Hero() {
   let lottieRef = useRef();
+
+  // Animation variants
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section id="main" className="hero flex">
       <div className="left-section flex">
         <div className="parent-avatar flex">
-          <img
-            className="avatar"
-            src="./myimg.jpg"
-            alt=""
-          />
-          <h1 className="title">Hi 👋🏻 I’m Mohamed Khaled</h1>
-          <h1 className="title">
+          <img className="avatar" src="./myimg.jpg" alt="Mohamed Khaled" />
+          <motion.h1 className="title" initial="hidden" animate="visible" variants={textVariants} transition={{ duration: 0.5 }}>
+            Hi 👋🏻 I’m Mohamed Khaled
+          </motion.h1>
+          <motion.h1 className="title" initial="hidden" animate="visible" variants={textVariants} transition={{ duration: 0.5, delay: 0.2 }}>
             Software engineer mainly focused on Web Development
-          </h1>
+          </motion.h1>
+          <motion.h1 className="title" initial="hidden" animate="visible" variants={textVariants} transition={{ duration: 0.5, delay: 0.4 }}>
+            I have a passion for building interactive web applications
+            My day consists of working on projects with HTML, CSS, Tailwind, JavaScript, TypeScript, and React.js.
+          </motion.h1>
 
-          <p className="sub-title">
-           currently interning as a web developer at the Information Technology
-            Institute (ITI). I spend my day working on projects with HTML, CSS,
-            Tailwind, JavaScript, TypeScript, and React.js.
-          </p>
         </div>
 
         <div className="button-group flex">

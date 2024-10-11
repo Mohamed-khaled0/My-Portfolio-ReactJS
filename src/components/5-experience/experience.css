@@ -128,5 +128,5 @@
 .github-icon,
 .tableau-icon {
     font-size: 1.2rem;
-    color: var(--icon-hover); /* Adjust the icon color as needed */
+    color: white; /* Adjust the icon color as needed */
 }

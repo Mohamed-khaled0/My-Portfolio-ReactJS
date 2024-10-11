@@ -164,7 +164,7 @@ header ul li a {
     align-items: center; 
     padding: 8px; 
     border-radius: 50px; 
-    transition: background-color 0.3s, color 0.3s; 
+    transition: 0.3s; 
 }
 
 header ul li a:hover {
@@ -181,7 +181,7 @@ header ul li a svg {
     4- Media Query (Responsive Design) 
     =================== */
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         header.flex nav {
             display: none; /* Hide the navigation links */
         }
@@ -189,11 +189,14 @@ header ul li a svg {
         header .icon-menu {
             display: block; /* Show the menu icon */
         }
+
+        header ul li a:hover {
+            background-color:transparent;
+            scale: 1.02;
+        }
     }
     
-    @media (max-width: 900px) {
-        
-    }
+
     
     @media (max-width: 1200px) {
         header ul li a {
