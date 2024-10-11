@@ -57,7 +57,7 @@ After setting up the project locally, you can:
 - **Integrate Additional Features:** Enhance the portfolio with more interactive elements or integrations as needed.
 
 ## Project Structure
-- **components/**: Contains all reusable components (e.g., Header, Hero, Main, Contact, Footer, Scroll2Top).
+- **components/**: Contains all reusable components (e.g., Home ,Projects,Skills,Experience,Education,Contact).
 - **animations/**: Stores Lottie animation JSON files.
 - **assets/**: Stores images and other static assets.
 - **styles/**: Contains all CSS files for styling components.
