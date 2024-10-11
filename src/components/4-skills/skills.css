@@ -1,9 +1,32 @@
 /* Skills section styles */
 #skills {
-    background-color:var(--secondary) ; 
-    font-size: 2rem;
+    position: relative;
+    background-color: var(--secondary);
+    text-align: center; /* Center the title */
 }
 
+/* Skills title styles */
+.skills-title {
+    position: relative;
+    margin-bottom: 40px; /* Space below the title */
+}
+
+.skills-title h2 { 
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Title font size */
+}
+
+.skills-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--blue);
+    margin: 0.5rem auto; /* Center the line */
+    border-radius: 4px;
+}
+
+/* Skills container styles */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -24,22 +47,18 @@
     background-color: var(--secondary); 
     transition: 0.3s; 
     cursor: pointer;
+    width: 100px;
+    height: 100px;
 }
 
 .skill-card:hover {
     scale: 1.1;
-    rotate: -1deg;
-    box-shadow: 2px 6px 10px rgba(93, 188, 252,.1);
-
+    rotate: -1deg; /* Apply rotation on hover */
+    box-shadow: 2px 6px 10px rgba(93, 188, 252, .1);
 }
 
 .skill-card i {
     margin-bottom: 10px;
-}
-
-.skill-card {
-    width: 100px;
-    height: 100px;
 }
 
 .skill-card p {
@@ -56,13 +75,11 @@
         max-width: 100%; /* Full width on small screens */
     }
 
-
     .skill-card i {
         font-size: 2.5rem;
     }
 
-    h2 {
-        margin-bottom: 20px;
-        font-size: 1.3rem;
+    .skills-title h2 {
+        font-size: 1.5rem; /* Adjust title font size for smaller screens */
     }
 }

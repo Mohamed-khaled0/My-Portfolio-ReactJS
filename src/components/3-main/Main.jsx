@@ -69,64 +69,65 @@ export default function Main() {
 
       <section className="projects-section">
         <AnimatePresence>
-          {visibleProjects.map((item) => (
+          {visibleProjects.map((item, index) => (
             <motion.article
-  key={item.imgPath}
-  className="card"
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  exit={{ opacity: 0, scale: 0.9 }}
->
-  <a href={item.liveDemo} target="_blank" rel="noopener noreferrer">
-    <img
-      width={270}
-      height={170}
-      src={item.imgPath}
-      alt={item.projectTitle}
-    />
-  </a>
-  <div className="box">
-    <h1 className="title">{item.projectTitle}</h1>
-    <p className="sub-title">{item.projectSubtitle}</p>
-    
-    {/* Technologies Section */}
-    <div className="technologies">
-      <h2 className="technologies-title">Technologies : </h2> 
-      <div className="tech-icons-container">
-        {item.technologies.map((tech, index) => (
-          <span key={index} className="tech-icon">
-            {techIcons[tech]}
-          </span>
-        ))}
-      </div>
-    </div>
+              key={item.imgPath}
+              className="card"
+              initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and move down
+              animate={{ opacity: 1, y: 0 }} // Fade in and move up
+              exit={{ opacity: 0, y: 50 }} // Fade out and move down
+              transition={{ duration: 0.5, delay: index * 0.2 }} // Add delay based on index
+            >
+              <a href={item.liveDemo} target="_blank" rel="noopener noreferrer">
+                <img
+                  width={270}
+                  height={170}
+                  src={item.imgPath}
+                  alt={item.projectTitle}
+                />
+              </a>
+              <div className="box">
+                <h1 className="title">{item.projectTitle}</h1>
+                <p className="sub-title">{item.projectSubtitle}</p>
 
-    <div className="flex icons">
-      <div className="icon-container">
-        <a
-          target="_blank"
-          href={item.liveDemo}
-          rel="noopener noreferrer"
-        >
-          <div className="icon">
-            <FaExternalLinkAlt className="icon" />
-            <span className="icon-text"> LiveDemo</span>
-          </div>
-        </a>
-        <a
-          target="_blank"
-          href={item.githubLink}
-          rel="noopener noreferrer"
-        >
-          <div className="icon">
-            <FaGithub className="icon" />
-            <span className="icon-text"> GitHub</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</motion.article>
+                {/* Technologies Section */}
+                <div className="technologies">
+                  <h2 className="technologies-title">Technologies: </h2> 
+                  <div className="tech-icons-container">
+                    {item.technologies.map((tech, index) => (
+                      <span key={index} className="tech-icon">
+                        {techIcons[tech]}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex icons">
+                  <div className="icon-container">
+                    <a
+                      target="_blank"
+                      href={item.liveDemo}
+                      rel="noopener noreferrer"
+                    >
+                      <div className="icon">
+                        <FaExternalLinkAlt className="icon" />
+                        <span className="icon-text"> LiveDemo</span>
+                      </div>
+                    </a>
+                    <a
+                      target="_blank"
+                      href={item.githubLink}
+                      rel="noopener noreferrer"
+                    >
+                      <div className="icon">
+                        <FaGithub className="icon" />
+                        <span className="icon-text"> GitHub</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.article>
           ))}
         </AnimatePresence>
       </section>

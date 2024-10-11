@@ -22,7 +22,7 @@ const experiences = [
     githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks', // GitHub link
   },
   {
-    title: 'Mobil Developer Intern',
+    title: 'Mobile Developer Intern',
     company: 'CodeAlpha',
     location: 'Remote',
     date: 'Apr 2024 - May 2024',
@@ -59,7 +59,7 @@ const Experience = () => {
             className="experience-card"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }} // Add delay based on index
           >
             <div className="experience-header">
               <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" /> {/* Logo */}
@@ -91,7 +91,7 @@ const Experience = () => {
               )}
               {exp.tableauLink && (
                 <a href={exp.tableauLink} target="_blank" rel="noopener noreferrer">
-                  <AiOutlineBarChart  className="tableau-icon" /> Tableau 
+                  <AiOutlineBarChart className="tableau-icon" /> Tableau 
                 </a>
               )}
             </div>
