@@ -4,7 +4,6 @@ section.hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-size: cover;
 }
 
 section.hero .title {
@@ -45,7 +44,7 @@ section.hero .left-section button {
     height: 40px;
     border-radius: 5px;
     text-align: center;
-    padding: 5px;
+    padding: .7rem 1rem;
     line-height: 1.5rem;
     opacity: 0.9;
     text-transform: capitalize;
