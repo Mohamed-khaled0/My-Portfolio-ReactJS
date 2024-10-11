@@ -51,7 +51,7 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="experience-container">
-      <h2 className="section-title">Experience</h2>
+      <h2 id='experience' className="section-title">Experience</h2>
       <div className="experience-list">
         {experiences.map((exp, index) => (
           <motion.div

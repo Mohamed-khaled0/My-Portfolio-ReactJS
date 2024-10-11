@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { SiTailwindcss, SiTypescript, SiNextdotjs, SiMysql, SiPostman, SiVisualstudiocode } from 'react-icons/si';
+import { SiTailwindcss, SiTypescript, SiNextdotjs, SiMysql, SiPostman } from 'react-icons/si';
 import './skills.css';
 
 import { 
@@ -30,7 +30,6 @@ const skillsData = [
     { name: 'Postman', icon: <SiPostman size={50} style={{ color: '#FF6C37' }} /> },
     { name: 'Git', icon: <FaGit size={50} style={{ color: '#F05032' }} /> },
     { name: 'GitHub', icon: <FaGithub size={50} style={{ color: '#181717' }} /> },
-    { name: 'Code', icon: <SiVisualstudiocode size={50} style={{ color: '#007ACC' }} /> },
   ];
   
 

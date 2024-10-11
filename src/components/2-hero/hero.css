@@ -66,13 +66,20 @@ section.hero .left-section button {
 }
 
 .light section.hero .left-section button {
-    color: white;
+    color: var(--primary);
 }
+
 section.hero .left-section button:hover {
     opacity: 1; /* Fully visible on hover */
     border: 1px solid var(--blue);
 }
+section.hero .left-section .button-group .icon-cloud-download{
+    
+}
 
+section.hero .left-section .button-group .icon-github:hover{
+
+}
 /* ======================
         Responsive Design 
 ========================*/

@@ -16,7 +16,7 @@ const Education = () => {
 
     return (
         <section id="education">
-            <h2>Education </h2>
+            <h2 id='title'>Education </h2>
             <div className="education-card">
                 <div className="education-card-left">
                     <img src={educationData.imageUrl} alt="Thebes Academy Logo" />

@@ -3,102 +3,127 @@ import React, { useState } from "react";
 import "./main.css";
 import myProjects from "./ProjectsData";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaJsSquare } from "react-icons/fa"; 
+
+const techIcons = {
+  React: <FaReact />,
+  HTML5: <FaHtml5 />,
+  CSS3: <FaCss3Alt />,
+  Bootstrap: <FaBootstrap />,
+  JavaScript: <FaJsSquare />,
+};
 
 export default function Main() {
-  let [currentActive, setCurrentActive] = useState("all");
-  let [arr, setArr] = useState(myProjects);
+  const [currentActive, setCurrentActive] = useState("all");
+  const [arr, setArr] = useState(myProjects);
+  const [showMore, setShowMore] = useState(false);
 
-  let handelClick = (buttonCategory) => {
+  const handleClick = (buttonCategory) => {
     setCurrentActive(buttonCategory);
     if (buttonCategory === "all") {
       setArr(myProjects);
       return;
     }
-    let newArr = myProjects.filter((item) => {
-      return item.category.includes(buttonCategory);
-    });
+    const newArr = myProjects.filter((item) =>
+      item.category.includes(buttonCategory)
+    );
     setArr(newArr);
   };
 
+  const visibleProjects = showMore ? arr : arr.slice(0, 3);
+
   return (
-    <main id="projects" className="flex">
-      <section className="flex left-section">
+    <main id="projects" className="main-section">
+      <h1 className="projects-title">My Projects</h1>
+
+      <section className="center-section">
         <button
-          onClick={() => handelClick("all")}
+          onClick={() => handleClick("all")}
           className={currentActive === "all" ? "active" : ""}
         >
           All projects
         </button>
         <button
-          onClick={() => handelClick("css")}
+          onClick={() => handleClick("css")}
           className={currentActive === "css" ? "active" : ""}
         >
           HTML & CSS
         </button>
         <button
-          onClick={() => handelClick("js")}
+          onClick={() => handleClick("js")}
           className={currentActive === "js" ? "active" : ""}
         >
           JavaScript
         </button>
         <button
-          onClick={() => handelClick("react")}
+          onClick={() => handleClick("react")}
           className={currentActive === "react" ? "active" : ""}
         >
           ReactJS
         </button>
       </section>
 
-      <section className="right-section flex">
+      <section className="projects-section">
         <AnimatePresence>
-          {arr.map((item) => (
+          {visibleProjects.map((item) => (
             <motion.article
-              // layout
-              // initial={{ transform: "scale(0.7)" }}
-              // animate={{ transform: "scale(1)" }}
-              // transition={{ type: "spring", damping: 6, stiffness: 80 }}
               key={item.imgPath}
               className="card"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
             >
-              <img
-                width={270}
-                height={170}
-                src={item.imgPath}
-                alt={item.imgPath}
-              />
-              <div style={{ width: "270px" }} className="box">
+              <a href={item.liveDemo} target="_blank" rel="noopener noreferrer">
+                <img
+                  width={270}
+                  height={170}
+                  src={item.imgPath}
+                  alt={item.projectTitle}
+                />
+              </a>
+              <div className="box">
                 <h1 className="title">{item.projectTitle}</h1>
                 <p className="sub-title">{item.projectSubtitle}</p>
                 <div className="flex icons">
-                  <div style={{ gap: "10px" }} className="flex">
+                  <div className="flex">
                     <a
                       className="icon-link"
                       target="_blank"
                       href={item.liveDemo}
-                    ></a>
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
                     <a
                       className="icon-github"
                       target="_blank"
                       href={item.githubLink}
-                    ></a>
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </a>
                   </div>
-                  <a
-                    className="link flex"
-                    href={item.githubRepos}
-                    target="_blank"
-                  >
-                    more
-                    <span
-                      style={{ alignSelf: "end" }}
-                      className="icon-arrow-right"
-                    ></span>
-                  </a>
+                </div>
+
+                <div className="technologies">
+                  {item.technologies.map((tech, index) => (
+                    <span key={index} className="tech-icon">
+                      {techIcons[tech]}
+                    </span>
+                  ))}
                 </div>
               </div>
             </motion.article>
           ))}
         </AnimatePresence>
       </section>
+
+      {/* Show More / Show Less Button */}
+      <div className="show-more-container">
+        <button className="show-more" onClick={() => setShowMore((prev) => !prev)}>
+          {showMore ? "Show Less" : "Show More"}
+        </button>
+      </div>
     </main>
   );
 }

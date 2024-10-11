@@ -7,7 +7,7 @@
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--title);
     position: relative;
@@ -52,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1.1rem;
 }
 
 
@@ -70,7 +71,8 @@
 
 .company {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+
 }
 
 .location {
@@ -116,6 +118,7 @@
 
 }
 
+
 .light .action-buttons a {
     color: white;
 }
@@ -125,4 +128,5 @@
 .github-icon,
 .tableau-icon {
     font-size: 1.2rem;
+    color: var(--icon-hover); /* Adjust the icon color as needed */
 }

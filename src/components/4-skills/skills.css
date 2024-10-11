@@ -1,6 +1,7 @@
 /* Skills section styles */
 #skills {
     background-color:var(--secondary) ; 
+    font-size: 2rem;
 }
 
 .skills-container {

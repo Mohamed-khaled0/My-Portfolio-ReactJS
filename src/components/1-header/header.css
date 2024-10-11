@@ -168,8 +168,8 @@ header ul li a {
 }
 
 header ul li a:hover {
-    background-color: rgba(93, 188, 252, 0.2); /* Darker circular background */
-    color: var(--blue); /* Change text color on hover */
+    background-color: rgba(166, 160, 160,.2); /* Darker circular background */
+    color: var(--title); /* Change text color on hover */
     opacity: 1; /* Full opacity */
 }
 

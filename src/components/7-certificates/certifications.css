@@ -4,6 +4,7 @@
   font-size: 2.5rem;
   color:var(--title) ; 
 }
+
 .certifications-section .title::after {
   content: '';
   display: block;
@@ -13,6 +14,7 @@
   margin: 0.5rem auto;
   border-radius: 4px;
 }
+
 .filter-buttons {
   display: flex;
   justify-content: center;

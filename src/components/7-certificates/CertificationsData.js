@@ -13,7 +13,7 @@ let CertificationsData = [
       authority: "Information Technology Institute",
       date: "Oct 2024",
       img: "https://i.imgur.com/05NP1Xc.png",
-      link: "https://drive.google.com/file/d/1pnkVC14SVO-0jWc0xj_6CVVLKQT3-bj3/view",
+      link: "    https://drive.google.com/file/d/1pnkVC14SVO-0jWc0xj_6CVVLKQT3-bj3/view?usp=sharing",
       category: ["all", "iti"],
     },
     {
@@ -21,7 +21,7 @@ let CertificationsData = [
       authority: "Information Technology Institute",
       date: "Oct 2024",
       img: "https://i.imgur.com/8yHuEcW.png",
-      link: "https://drive.google.com/file/d/1dHf-5lyZJTCNzEjoJRAGirP5N3pMU9wo/view",
+      link: "https://drive.google.com/file/d/1dHf-5lyZJTCNzEjoJRAGirP5N3pMU9wo/view?usp=sharing",
       category: ["all", "iti"],
     },
     {
@@ -37,7 +37,7 @@ let CertificationsData = [
       authority: "HackerRank",
       date: "3 Sep 2024",
       img: "https://i.imgur.com/kKIWGJU.png",
-      link: "https://www.freecodecamp.org/certification/yourusername/javascript-algorithms-and-data-structures",
+      link: "https://www.hackerrank.com/certificates/c048672d365b",
       category: ["all", "hackerrank"],
     },
     {
@@ -53,7 +53,7 @@ let CertificationsData = [
       authority: "ITI",
       date: "May 2024",
       img: "https://i.imgur.com/wBUbTH6.png",
-      link: "https://drive.google.com/file/d/1c92aqY932Y2iznrRZoEf_ZasUGevR5o1/view",
+      link: "https://drive.google.com/file/d/1c92aqY932Y2iznrRZoEf_ZasUGevR5o1/view?usp=sharing",
       category: ["all", "iti"],
     },
     {
@@ -61,7 +61,7 @@ let CertificationsData = [
       authority: "ITI",
       date: "Apr 2024",
       img: "https://i.imgur.com/qjCMV4s.png",
-      link: "https://drive.google.com/file/d/1lm2nS1iCo7CO4Ja9eTDa_lDmmX854uND/view",
+      link: "https://drive.google.com/file/d/1lm2nS1iCo7CO4Ja9eTDa_lDmmX854uND/view?usp=sharing",
       category: ["all", "iti"],
     },
     {
@@ -77,7 +77,7 @@ let CertificationsData = [
       authority: "Udacity",
       date: "Feb 2022",
       img: "https://i.imgur.com/aMcRTaf.png",
-      link: "https://drive.google.com/file/d/14EPD-f6H2WBOn9t3hs3FrjVMNm-3XqQY/view",
+      link: "https://drive.google.com/file/d/14EPD-f6H2WBOn9t3hs3FrjVMNm-3XqQY/view?usp=sharing",
       category: ["all", "udacity"],
     },
     {
@@ -85,7 +85,7 @@ let CertificationsData = [
       authority: "CodeAlpha",
       date: "March 2024",
       img: "https://i.imgur.com/Xy5n7gk.png",
-      link: "https://drive.google.com/file/d/13L6sFGGOVdIirJSkIO6o8lE-oXVmbiJk/view",
+      link: "https://drive.google.com/file/d/13L6sFGGOVdIirJSkIO6o8lE-oXVmbiJk/view?usp=sharing",
       category: ["all", "internships"],
     },
     {
@@ -93,7 +93,7 @@ let CertificationsData = [
       authority: "Sparks Foundation",
       date: "May to Jun 2022",
       img: "https://i.imgur.com/mDTxCEo.png",
-      link: "https://drive.google.com/file/d/1_fv57tUHZocWmnSepaolnpP0O-mgZGVG/view",
+      link: "https://drive.google.com/file/d/1_fv57tUHZocWmnSepaolnpP0O-mgZGVG/view?usp=sharing",
       category: ["all", "internships"],
     },
   ];
