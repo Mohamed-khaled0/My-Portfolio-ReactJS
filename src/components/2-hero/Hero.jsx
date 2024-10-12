@@ -27,7 +27,7 @@ export default function Hero() {
           </motion.h1>
           <motion.h1 className="title" initial="hidden" animate="visible" variants={textVariants} transition={{ duration: 0.5, delay: 0.4 }}>
             I have a passion for building interactive web applications
-            My day consists of working on projects with HTML, CSS, Tailwind, JavaScript, TypeScript, and React.js.
+            and my day consists of working on projects with HTML, CSS, Tailwind, JavaScript, TypeScript, and React.js.
           </motion.h1>
 
         </div>

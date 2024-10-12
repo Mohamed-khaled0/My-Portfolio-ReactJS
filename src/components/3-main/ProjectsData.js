@@ -85,7 +85,7 @@ let myProjects = [
     {
       projectTitle: "E-Commerce Website",
       projectSubtitle: "An online shop offering a variety of products.",
-      category: ["js", "all"],
+      category: ["css", "all"],
       liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
@@ -96,18 +96,18 @@ let myProjects = [
         "Shopping cart to manage selected items.",
         "Responsive design for mobile and desktop compatibility."
       ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome", "Swiper.js"]
+      technologies: ["HTML5", "CSS3", "Font Awesome", "Swiper.js"]
     },
   
     // CSS Projects
     {
-      projectTitle: "Leon Template",
-      projectSubtitle: "A fully responsive landing page template designed for creative agencies.",
-      category: ["css", "all"],
-      liveDemo: "https://mohamed-khaled0.github.io/Leon-Html-Css-Template/",
-      githubLink: "https://github.com/Mohamed-khaled0/Leon-Html-Css-Template",
+      projectTitle: " Nova - Landing Page",
+      projectSubtitle: "Nova a modern and fully responsive landing page template  ,built using Bootstrap, HTML, and CSS",
+      category: ["css"],
+      liveDemo: "https://mohamed-khaled0.github.io/Bondi-Bootstrap-Project/",
+      githubLink: "https://github.com/Mohamed-khaled0/Bondi-Bootstrap-Project",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "leon.png",
+      imgPath: "https://i.imgur.com/52qfmFB.png",
       features: [
         "Responsive Design: Looks great on all devices (desktop, tablet, mobile).",
         "Modern UI/UX: Clean and professional design.",
@@ -115,15 +115,15 @@ let myProjects = [
         "Cross-Browser Compatibility: Works seamlessly across major browsers.",
         "Customizable: Easy to modify and adapt to your needs."
       ],
-      technologies: ["HTML5", "CSS3"]
+      technologies: ["HTML5", "CSS3","Bootstrap"]
     },
     {
-      projectTitle: "Landing Page Template",
-      projectSubtitle: "A modern and fully responsive landing page template.",
-      category: ["css", "all"],
-      liveDemo: "https://mohamed-khaled0.github.io/Bondi-Bootstrap-Project/",
-      githubLink: "https://github.com/Mohamed-khaled0/Bondi-Bootstrap-Project",
-      imgPath: "bondi.png",
+      projectTitle: "Gourmet Guru Restaurant",
+      projectSubtitle: "Gourmet Guru is a responsive, modern restaurant website ,built using HTML, CSS",
+      category: ["css"],
+      liveDemo: "https://mohamed-khaled0.github.io/Restaurant-Website-Using-HTML-and-CSS/",
+      githubLink: "https://github.com/Mohamed-khaled0/Restaurant-Website-Using-HTML-and-CSS",
+      imgPath: "https://i.imgur.com/CW1xo8c.png",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       features: [
         "Fully Responsive Design: Adapts seamlessly to any screen size.",
@@ -131,25 +131,8 @@ let myProjects = [
         "Built with Bootstrap: Utilizes Bootstrap for easy layout.",
         "Customizable Components: Easily modify and extend the template."
       ],
-      technologies: ["Bootstrap","HTML5", "CSS3"]
+      technologies: ["HTML5", "CSS3"]
     },
-    {
-      projectTitle: "PhotoRevive",
-      projectSubtitle: "A mock-up website showcasing an AI tool for restoring old photos online.",
-      category: ["css", "all"],
-      liveDemo: "https://mohamed-khaled0.github.io/Photo-Revive-AI-Project/",
-      githubLink: "https://github.com/Mohamed-khaled0/Photo-Revive-AI-Project",
-      imgPath: "photo-revive.png",
-      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      features: [
-        "User-Friendly Interface: Simple and clean design.",
-        "Upload Image: Upload your old photos.",
-        "Revive Image: AI processes the image to remove imperfections.",
-        "Download Result: Download your restored photo.",
-        "Responsive Design: Optimized for all devices."
-      ],
-      technologies: ["HTML5", "CSS3","Tailwind"]
-    }
   ];
 
   export default myProjects;

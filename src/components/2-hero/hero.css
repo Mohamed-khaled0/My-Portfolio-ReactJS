@@ -7,11 +7,12 @@ section.hero {
 }
 
 section.hero .title {
-    width: 50%;
+    width: 50% !important;
     text-align: center;
-    line-height: 2.4rem;
+    line-height: 2.2rem;
     color: var(--title);
     margin: 10px 0;
+    font-size: 1.6rem;
 }
 
 section.hero .parent-avatar.flex {
@@ -63,34 +64,40 @@ section.hero .left-section button:hover {
     border: 1px solid var(--blue);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     section.hero .title {
+        line-height: 1.3rem;
         margin-top: 20px;
-        width: 80%;
+        width: 70% !important;
         line-height: 1.2rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 600px) {
     section.hero .avatar {
+
             width: 100px;
             border-radius: 50%;
             margin-bottom: 5px;
             margin-top: 5px;
         }
-    }
+    
 
-    section.hero .left-section button {
-        margin: 14px 6px;
-        height: 28px;
-        line-height: 1rem;
-        font-size: 1.0rem;
-        width: auto;
-    } 
+
 
     section.hero .title {
-        width: 80%;
-        line-height: 1.5rem;
-        font-size: 1.3rem;
+        width: 80% !important;
+        line-height: 1.4rem;
+        font-size: 1.1rem;
     }
+}
+
+
+section.hero .left-section button {
+    margin: 14px 6px;
+    height: 28px;
+    line-height: 1rem;
+    font-size: 1.0rem;
+    width: auto;
+} 
