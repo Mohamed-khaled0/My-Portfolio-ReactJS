@@ -11,7 +11,7 @@ const Education = () => {
         gpa: 'GPA 3/4',
         major: '- Major in Computer Science',
         minor: '- Minor in Web Applications',
-        imageUrl: "./thebes-logo.png"
+        imageUrl: "https://i.imgur.com/wSab0Hn.jpegnpm "
     };
 
     return (

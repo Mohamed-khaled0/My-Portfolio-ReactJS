@@ -18,7 +18,7 @@ export default function Hero() {
     <section id="main" className="hero flex">
       <div className="left-section flex">
         <div className="parent-avatar flex">
-          <img className="avatar" src="./myimg.jpg" alt="Mohamed Khaled" />
+          <img className="avatar" src="https://i.imgur.com/FeDVtYO.jpeg" alt="Mohamed Khaled" />
           <motion.h1 className="title" initial="hidden" animate="visible" variants={textVariants} transition={{ duration: 0.5 }}>
             Hi 👋🏻 I’m Mohamed Khaled
           </motion.h1>

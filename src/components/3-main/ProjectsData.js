@@ -22,7 +22,7 @@ let myProjects = [
       liveDemo: "https://reactjs-e-commerce-app.surge.sh/",
       githubLink: "https://github.com/Mohamed-khaled0/Basic-E-Commerce-ReactApp?tab=readme-ov-file",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "ecommerce-react.png",
+      imgPath: "https://i.imgur.com/H3RcDB8.png",
       features: [
         "Responsive design using Bootstrap.",
         "Product carousel for featured items.",
@@ -38,7 +38,7 @@ let myProjects = [
       liveDemo: "https://prayers-times-reactjs.netlify.app/",
       githubLink: "https://github.com/Mohamed-khaled0/Prayers-Times-Reactjs",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "prayers-times-reactj.png",
+      imgPath: "https://i.imgur.com/VaiDFqP.png",
       features: [
         "Displays prayer times for selected cities.",
         "Real-time updating of the current time.",
@@ -55,7 +55,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Product-Management-System-CRUD/",
       githubLink: "https://github.com/Mohamed-khaled0/Product-Management-System-CRUD",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "crud-js.png",
+      imgPath: "https://i.imgur.com/0W9NRZu.png",
       features: [
         "Add New Products: Add multiple products with details.",
         "Calculate Total Price: Calculate the total price dynamically.",
@@ -73,7 +73,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Image-Editor-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/Image-Editor-UsingJS",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "image-editor.png",
+      imgPath: "https://i.imgur.com/DuMlETx.png",
       features: [
         "Responsive design with HTML and CSS.",
         "Image upload functionality using JavaScript.",
@@ -89,7 +89,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "ecommercejs.png",
+      imgPath: "https://i.imgur.com/8bSm6Au.png",
       features: [
         "User-friendly interface for easy navigation.",
         "Search functionality to find products quickly.",
