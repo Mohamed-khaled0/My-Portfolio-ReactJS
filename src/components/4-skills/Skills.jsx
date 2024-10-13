@@ -2,8 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiMysql, SiPostman } from 'react-icons/si';
-import './skills.css';
-
 import { 
   FaHtml5, 
   FaCss3Alt, 
@@ -15,6 +13,8 @@ import {
   FaDatabase, 
   FaSass, 
 } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+import './skills.css';
 
 const skillsData = [
   { name: 'HTML', icon: <FaHtml5 size={50} style={{ color: '#E44D26' }} /> },
@@ -33,10 +33,12 @@ const skillsData = [
 ];
 
 const Skills = () => {
+  const { t } = useTranslation('skills'); // Specify 'skills' namespace
+
   return (
     <section id="skills">
       <div className="skills-title">
-        <h2>Skills</h2>
+        <h2>{t('title')}</h2>
       </div>
       <div className="skills-container">
         {skillsData.map((skill, index) => (
