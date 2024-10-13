@@ -51,7 +51,7 @@ export default function Main() {
           onClick={() => handleClick("react")}
           className={currentActive === "react" ? "active" : ""}
         >
-          ReactJS
+          React & NextJS
         </button>
         <button
           onClick={() => handleClick("js")}

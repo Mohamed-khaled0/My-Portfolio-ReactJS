@@ -82,10 +82,29 @@ let myProjects = [
       ],
       technologies: ["HTML5", "CSS3", "JavaScript"]
     },
+        // HTML & CSS Projects
+
+    {
+      projectTitle: "Hospital Website",
+      projectSubtitle: "A hospital website, providing information about healthcare services, doctors, and appointment booking options.",
+      category: ["css"],
+      liveDemo: "https://mohamed-khaled0.github.io/Hospital-Website-HTML-CSS/",
+      githubLink: "https://github.com/Mohamed-khaled0/Hospital-Website-HTML-CSS",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
+      imgPath: "https://i.imgur.com/fIX9iLp.png",
+      features: [
+        "User-friendly interface for easy navigation.",
+        "Home Page: Overview of the hospital services and contact details.",
+        "Medical news and updates.",
+        'Contact: A contact form for booking appointments and sending inquiries.',
+        "Responsive design for mobile and desktop compatibility."
+      ],
+      technologies: ["HTML5", "CSS3", "Font Awesome", "Swiper.js"]
+    },
     {
       projectTitle: "E-Commerce Website",
-      projectSubtitle: "An online shop offering a variety of products.",
-      category: ["css", "all"],
+      projectSubtitle: "Online shop that offers a wide variety of products, ranging from electronics to fashion, with great deals and discounts.",
+      category: ["css"],
       liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
@@ -98,8 +117,22 @@ let myProjects = [
       ],
       technologies: ["HTML5", "CSS3", "Font Awesome", "Swiper.js"]
     },
-  
-    // CSS Projects
+    {
+      projectTitle: "Restaurant Website",
+      projectSubtitle: "Gourmet Guru is a responsive, modern restaurant website ,built using HTML, CSS",
+      category: ["css"],
+      liveDemo: "https://mohamed-khaled0.github.io/Restaurant-Website-Using-HTML-and-CSS/",
+      githubLink: "https://github.com/Mohamed-khaled0/Restaurant-Website-Using-HTML-and-CSS",
+      imgPath: "https://i.imgur.com/CW1xo8c.png",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
+      features: [
+        "Fully Responsive Design: Adapts seamlessly to any screen size.",
+        "Clean and Modern Layout: Aesthetic and professional design.",
+        "Built with Bootstrap: Utilizes Bootstrap for easy layout.",
+        "Customizable Components: Easily modify and extend the template."
+      ],
+      technologies: ["HTML5", "CSS3"]
+    },
     {
       projectTitle: " Nova - Landing Page",
       projectSubtitle: "Nova a modern and fully responsive landing page template  ,built using Bootstrap, HTML, and CSS",
@@ -117,22 +150,7 @@ let myProjects = [
       ],
       technologies: ["HTML5", "CSS3","Bootstrap"]
     },
-    {
-      projectTitle: "Gourmet Guru Restaurant",
-      projectSubtitle: "Gourmet Guru is a responsive, modern restaurant website ,built using HTML, CSS",
-      category: ["css"],
-      liveDemo: "https://mohamed-khaled0.github.io/Restaurant-Website-Using-HTML-and-CSS/",
-      githubLink: "https://github.com/Mohamed-khaled0/Restaurant-Website-Using-HTML-and-CSS",
-      imgPath: "https://i.imgur.com/CW1xo8c.png",
-      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      features: [
-        "Fully Responsive Design: Adapts seamlessly to any screen size.",
-        "Clean and Modern Layout: Aesthetic and professional design.",
-        "Built with Bootstrap: Utilizes Bootstrap for easy layout.",
-        "Customizable Components: Easily modify and extend the template."
-      ],
-      technologies: ["HTML5", "CSS3"]
-    },
+
   ];
 
   export default myProjects;

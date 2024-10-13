@@ -234,4 +234,8 @@ header ul li a svg {
     header ul li a {
         padding: 0; 
     }
+    header ul li a:hover {
+        background-color: transparent; 
+        color: var(--blue); 
+    }
 }
