@@ -88,12 +88,12 @@ const Experience = () => {
             <div className="action-buttons">
               {exp.githubLink && (
                 <a href={exp.githubLink} target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="github-icon" /> {t('experience.githubLink')}
+                  <FaGithub className="github-icon" /> GitHub link
                 </a>
               )}
               {exp.tableauLink && (
                 <a href={exp.tableauLink} target="_blank" rel="noopener noreferrer">
-                  <AiOutlineBarChart className="tableau-icon" /> {t('experience.tableauLink')}
+                  <AiOutlineBarChart className="tableau-icon" /> Tableau Link
                 </a>
               )}
             </div>

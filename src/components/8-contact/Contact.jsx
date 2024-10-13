@@ -6,28 +6,27 @@ import Lottie from "lottie-react";
 import doneAnimation from "../../animations/done.json";
 import contactAnimation from "../../animations/contact.json";
 import { FiSend } from 'react-icons/fi'; // Import the Send icon
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Contact = () => {
+  const { t } = useTranslation('contact'); // Use the 'contact' namespace
   const [state, handleSubmit] = useForm("mgvewbyg");
-  
+
   return (
     <section id="contact" className="contact-us">
       <h1 className="title">
         <span className="icon-envelope-o"> </span>
-        Contact Me
+        {t('title')} {/* Use translation here */}
       </h1>
       <p className="sub-title">
-        My inbox is always open. Whether you have a question or want to share
-        about any relevant job that suits my skills and experience, or just want
-        to say hello, feel free to email me. I'll try my best to get back to you
-        as soon as I can.
+        {t('subTitle')} {/* Use translation here */}
       </p>
 
       <div style={{ justifyContent: "space-between" }} className="flex">
         <form onSubmit={handleSubmit}>
           <div className="flex">
             <input
-              placeholder="Your Email"
+              placeholder={t('emailPlaceholder')} // Use translation here
               autoComplete="off"
               required
               type="email"
@@ -38,7 +37,7 @@ const Contact = () => {
           </div>
 
           <input
-            placeholder="Your Name"
+            placeholder={t('namePlaceholder')} // Use translation here
             autoComplete="off"
             required
             type="text"
@@ -51,17 +50,17 @@ const Contact = () => {
             <textarea
               required
               name="message"
-              placeholder="Your message:"
+              placeholder={t('messagePlaceholder')} // Use translation here
               id="message"
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
 
           <button type="submit" disabled={state.submitting} className="submit">
-            {state.submitting ? "Submitting ..." : (
+            {state.submitting ? t('submitting') : ( // Use translation here
               <>
                 <FiSend style={{ marginRight: "8px" }} /> {/* Add the icon here */}
-                Submit
+                {t('submitButton')} {/* Use translation here */}
               </>
             )}
           </button>
@@ -69,18 +68,18 @@ const Contact = () => {
           {state.succeeded && (
             <p
               className="flex"
-              style={{ fontSize: "18px", marginTop: "1.7rem" ,color:"green" }}
+              style={{ fontSize: "18px", marginTop: "1.7rem", color: "green" }}
             >
               <Lottie
                 loop={false}
                 style={{ height: 37 }}
                 animationData={doneAnimation}
               />
-              Your message has been sent successfully 👌
+              {t('successMessage')} {/* Use translation here */}
             </p>
           )}
         </form>
-        <div className=" animation">
+        <div className="animation">
           <Lottie
             className="contact-animation"
             style={{ height: 455 }}

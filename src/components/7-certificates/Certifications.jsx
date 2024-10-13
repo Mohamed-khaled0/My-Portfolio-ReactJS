@@ -4,8 +4,10 @@ import "./certifications.css";
 import CertificationsData from "./CertificationsData";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi"; 
+import { useTranslation } from 'react-i18next';
 
 const Certifications = () => {
+  const { t } = useTranslation('certifications');
   const [currentCategory, setCurrentCategory] = useState("all");
   const [certificates, setCertificates] = useState(CertificationsData);
   const [showMore, setShowMore] = useState(false);
@@ -26,7 +28,7 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="certifications-section">
-      <h1 className="title">Certifications</h1>
+      <h1 className="title">{t("certifications")}</h1>
 
       {/* Filter Buttons */}
       <div className="filter-buttons">
@@ -34,41 +36,38 @@ const Certifications = () => {
           onClick={() => handleFilter("all")}
           className={currentCategory === "all" ? "active" : ""}
         >
-          All
+          {t("all")}
         </button>
         <button
           onClick={() => handleFilter("internships")}
           className={currentCategory === "internships" ? "active" : ""}
         >
-          Internships
+          {t("internships")}
         </button>
         <button
           onClick={() => handleFilter("coursera")}
           className={currentCategory === "coursera" ? "active" : ""}
         >
-          Coursera
-
+          {t("coursera")}
         </button>
         <button
           onClick={() => handleFilter("udacity")}
           className={currentCategory === "udacity" ? "active" : ""}
         >
-          Udacity
+          {t("udacity")}
         </button>
         <button
           onClick={() => handleFilter("hackerrank")}
           className={currentCategory === "hackerrank" ? "active" : ""}
         >
-          HackerRank
+          {t("hackerrank")}
         </button>
         <button
           onClick={() => handleFilter("iti")}
           className={currentCategory === "iti" ? "active" : ""}
         >
-          ITI
+          {t("iti")}
         </button>
-
-        
       </div>
 
       <div className="certifications-container">
@@ -110,7 +109,7 @@ const Certifications = () => {
       {certificates.length > 3 && (
         <div className="show-more-container">
           <button onClick={() => setShowMore(!showMore)} className="show-more-btn">
-            {showMore ? "Show Less" : "Show More"}
+            {showMore ? t("show_less") : t("show_more")}
           </button>
         </div>
       )}

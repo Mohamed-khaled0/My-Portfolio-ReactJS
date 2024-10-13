@@ -7,10 +7,10 @@
         "location": "Port Said, Ägypten",
         "date": "August 2024 - September 2024",
         "description": [
-          "HTML5, CSS und JavaScript: Entwickelte responsive und dynamische Webseiten.",
-          "MySQL: Arbeitete mit Datenbankmanagement, Abfragen und Datenmanipulation.",
-          "Zusammenarbeit mit Kollegen und Mentoren, um Problemlösungs- und Teamarbeitfähigkeiten zu verbessern.",
-          "Versionierung mit Git angewendet, um Projektversionen und Änderungen zu verwalten."
+          "- HTML5, CSS und JavaScript: Entwickelte responsive und dynamische Webseiten.",
+          "- MySQL: Arbeitete mit Datenbankmanagement, Abfragen und Datenmanipulation.",
+          "- Zusammenarbeit mit Kollegen und Mentoren, um Problemlösungs- und Teamarbeitfähigkeiten zu verbessern.",
+          "- Versionierung mit Git angewendet, um Projektversionen und Änderungen zu verwalten."
         ],
         "githubLink": "GitHub Repo"
       },
@@ -20,8 +20,8 @@
         "location": "Remote",
         "date": "Apr 2024 - Mai 2024",
         "description": [
-          "Entwickelte eine iOS-Anwendung namens 'Sweater Shop.'",
-          "MVC-Architektur: Folgte dem Model-View-Controller (MVC) Designmuster, um sauberen und organisierten Code zu erhalten."
+          "- Entwickelte eine iOS-Anwendung namens 'Sweater Shop.'",
+          "- MVC-Architektur: Folgte dem Model-View-Controller (MVC) Designmuster, um sauberen und organisierten Code zu erhalten."
         ],
         "githubLink": "GitHub Repo"
       },
@@ -31,9 +31,9 @@
         "location": "Remote",
         "date": "Mai 2022 - Jun 2022",
         "description": [
-          "Anwendung von SQL und Microsoft Excel zur Datenverarbeitung und -analyse.",
-          "Durchführung einer explorativen Datenanalyse zu Einzelhandelsdaten, um wichtige Erkenntnisse zu identifizieren.",
-          "Erstellung eines interaktiven Tableau-Dashboards zur Visualisierung der Daten und Ergebnisse."
+          "- Anwendung von SQL und Microsoft Excel zur Datenverarbeitung und -analyse.",
+          "- Durchführung einer explorativen Datenanalyse zu Einzelhandelsdaten, um wichtige Erkenntnisse zu identifizieren.",
+          "- Erstellung eines interaktiven Tableau-Dashboards zur Visualisierung der Daten und Ergebnisse."
         ],
         "tableauLink": "Tableau"
       }
