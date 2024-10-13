@@ -15,9 +15,11 @@
    3.1 General Styles 
    3.2 Icon Menu Styles 
    3.3 Hover Effects 
-4- Media Queries (Responsive Design) 
+   4- Language-switcher
+5- Media Queries (Responsive Design) 
    4.1 Mobile Styles 
    4.2 Tablet Styles 
+
 ===================*/
 
 /* =================
@@ -200,17 +202,40 @@ header ul li a:hover {
 header ul li a svg {
     margin-right: 4px; /* Space between icon and text */
 }
+/* 4-  language-switcher */
 
 
+.language-switcher {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lang-button {
+    background-color: var(--header-color);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 40px;
+    border-radius: 50%;
+    color: var(--subtitle);
+    transition: 0.3s;
+  }
+  
+  .lang-button:hover {
+    color: var(--blue);
+  }
+
+  
 /* =================
-4- Media Queries (Responsive Design) 
+5- Media Queries (Responsive Design) 
 =================== */
 
 /* Mobile Styles */
-@media (max-width: 700px) {
+@media (max-width: 790px) {
     header.flex nav {
         display: none; 
+        order: 2;
     }
+
 
     header .icon-menu {
         display: block; /
@@ -239,5 +264,18 @@ header ul li a svg {
     header ul li a:hover {
         background-color: transparent; 
         color: var(--blue); 
+    }
+}
+
+@media (max-width: 1400px) {
+    header.flex {
+        padding: 0 1rem;
+        gap: 10px;
+    }
+    header.flex nav {
+        padding: 0;
+    }
+    header ul.flex{
+        padding: 0 .4rem 0 .5rem;
     }
 }

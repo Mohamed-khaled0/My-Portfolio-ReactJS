@@ -9,17 +9,13 @@ import Certifications from './components/7-certificates/Certifications'
 import Education from './components/6-education/Education'
 import Skills from './components/4-skills/Skills'
 import Experience from './components/5-experience/Experience'
-import { useTranslation } from 'react-i18next'
-import LanguageSwitcher from './components/LanguageSwitcher'
 
 
 function App() {
-  const { t } = useTranslation();
   return (
     <div  id="up" className='container'>
       <Header />
       <Hero />
-      <LanguageSwitcher/>
       <div className='divider'/>
       <Main />
       <div className='divider'/>
