@@ -1,0 +1,10 @@
+.language-switcher {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .language-switcher button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

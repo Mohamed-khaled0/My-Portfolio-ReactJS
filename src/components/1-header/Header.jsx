@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from "react";
 import { FaHome, FaCode, FaBriefcase, FaGraduationCap, FaEnvelope } from "react-icons/fa"; // Importing icons
 import { MdBuild } from "react-icons/md"; 
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 import "./header.css";
 
 export default function Header() {
+  const { t } = useTranslation('header'); // Specify 'header' namespace
   let [showModal, setShowModal] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
 
@@ -30,6 +33,12 @@ export default function Header() {
     };
   }, [showModal]);
 
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    localStorage.setItem("currentMode", newTheme);
+    setTheme(newTheme);
+  };
+
   return (
     <div>
       <header className="flex">
@@ -38,53 +47,51 @@ export default function Header() {
           onClick={() => {
             setShowModal(true);
           }}
-        ></button>
+          aria-label={t('menuButton')} // Optional: For accessibility
+        >
+          {/* Optionally, include an icon or text for the menu button */}
+        </button>
         <div />
 
         <nav>
           <ul className="flex">
             <li>
               <a href="#main">
-                <FaHome /> Home
+                <FaHome /> {t('home')}
               </a>
             </li>
             <li>
               <a href="#projects">
-                <FaCode /> Projects
+                <FaCode /> {t('projects')}
               </a>
             </li>
             <li>
               <a href="#skills">
-                <MdBuild /> Skills
+                <MdBuild /> {t('skills')}
               </a>
             </li>
             <li>
               <a href="#experience">
-                <FaBriefcase /> Experience
+                <FaBriefcase /> {t('experience')}
               </a>
             </li>
             <li>
               <a href="#education">
-                <FaGraduationCap /> Education
+                <FaGraduationCap /> {t('education')}
               </a>
             </li>
             <li>
               <a href="#contact">
-                <FaEnvelope /> Contact
+                <FaEnvelope /> {t('contact')}
               </a>
             </li>
           </ul>
         </nav>
 
         <button
-          onClick={() => {
-            localStorage.setItem(
-              "currentMode",
-              theme === "dark" ? "light" : "dark"
-            );
-            setTheme(localStorage.getItem("currentMode"));
-          }}
+          onClick={toggleTheme}
           className="mode flex"
+          aria-label={t('modeToggle')} // Optional: For accessibility
         >
           {theme === "dark" ? (
             <span className="icon-moon-o"> </span>
@@ -102,25 +109,26 @@ export default function Header() {
                   onClick={() => {
                     setShowModal(false);
                   }}
+                  aria-label="Close Menu" // Optional: You can also translate this
                 ></button>
               </li>
               <li>
-                <a href="#main" onClick={() => setShowModal(false)}>Home</a>
+                <a href="#main" onClick={() => setShowModal(false)}>{t('home')}</a>
               </li>
               <li>
-                <a href="#projects" onClick={() => setShowModal(false)}>Projects</a>
+                <a href="#projects" onClick={() => setShowModal(false)}>{t('projects')}</a>
               </li>
               <li>
-                <a href="#skills" onClick={() => setShowModal(false)}>Skills</a>
+                <a href="#skills" onClick={() => setShowModal(false)}>{t('skills')}</a>
               </li>
               <li>
-                <a href="#experience" onClick={() => setShowModal(false)}>Experience</a>
+                <a href="#experience" onClick={() => setShowModal(false)}>{t('experience')}</a>
               </li>
               <li>
-                <a href="#education" onClick={() => setShowModal(false)}>Education</a>
+                <a href="#education" onClick={() => setShowModal(false)}>{t('education')}</a>
               </li>
               <li>
-                <a href="#contact" onClick={() => setShowModal(false)}>Contact</a>
+                <a href="#contact" onClick={() => setShowModal(false)}>{t('contact')}</a>
               </li>
             </ul>
           </div>
