@@ -44,7 +44,7 @@ Follow these steps to set up the template locally:
 
 4. **Start the development server:**
     ```bash
-    npm start
+     npm run dev
     ```
 
 ## Usage
