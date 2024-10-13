@@ -1,57 +1,59 @@
 /* eslint-disable no-unused-vars */
-// src/components/Experience.js
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaGithub } from 'react-icons/fa'; // Import GitHub and Tableau icons
-import './experience.css';
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
 import { AiOutlineBarChart } from 'react-icons/ai';
-
-const experiences = [
-  {
-    title: 'Web Developer Intern',
-    company: 'Information Technology Institute ITI',
-    location: 'Port Said, Egypt',
-    date: ' August 2024 - September 2024',
-    description: [
-      '- HTML5, CSS, and JavaScript: Developed responsive and dynamic web pages.',
-      '- MySQL: Worked with database management, queries, and data manipulation.',
-      '- Collaborated with peers and mentors, enhancing problem-solving and teamwork skills.',
-      '- Applied version control using Git to manage project versions and changes.'
-    ],
-    logo: 'https://ci.suez.edu.eg/wp-content/uploads/2022/08/iti-logo.png', // Add logo path
-    githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks', // GitHub link
-  },
-  {
-    title: 'Mobile Developer Intern',
-    company: 'CodeAlpha',
-    location: 'Remote',
-    date: 'Apr 2024 - May 2024',
-    description: [
-      '- Developed an iOS application named "Sweater Shop."',
-      '- MVC Architecture: Followed the Model-View-Controller (MVC) design pattern to maintain clean and organized code.'
-    ],
-    logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQFVBPbc6-yxoA/company-logo_200_200/company-logo_200_200/0/1677167041761?e=2147483647&v=beta&t=xBxH4zLgiEO1RCPbZemcdWDMIZFXROtM2c11jjdQHus', // Add logo path
-    githubLink: 'https://github.com/Mohamed-khaled0/E-Commerce-IOS-CodeAlpha-Internship', // GitHub link
-  },
-  {
-    title: 'Business Analytics Intern',
-    company: 'The Sparks Foundation',
-    location: 'Remote',
-    date: 'May 2022 - Jun 2022',
-    description: [
-      '- Applied SQL and Microsoft Excel for data handling and analysis.',
-      '- Conducted an Exploratory Data Analysis on retail data to identify key insights.',
-      '- Created an interactive Tableau dashboard to visualize the data and findings.'
-    ],
-    logo: 'https://i-cdn.embed.ly/1/display/resize?key=fd92ebbc52fc43fb98f69e50e7893c13&url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*zUk9tVv_7kOqbhqUdkxFLQ.png&width=175', // Add logo path
-    tableauLink: 'https://public.tableau.com/app/profile/mohamed.elshraby/viz/Superstore_16507269263970/Dashboard1', // Tableau link
-  },
-];
+import { useTranslation } from 'react-i18next';
+import './experience.css';
 
 const Experience = () => {
+  const { t } = useTranslation('experience');
+
+  const experiences = [
+    {
+      title: t('experience.webDeveloperIntern.title'),
+      company: t('experience.webDeveloperIntern.company'),
+      location: t('experience.webDeveloperIntern.location'),
+      date: t('experience.webDeveloperIntern.date'),
+      description: [
+        t('experience.webDeveloperIntern.description.0'),
+        t('experience.webDeveloperIntern.description.1'),
+        t('experience.webDeveloperIntern.description.2'),
+        t('experience.webDeveloperIntern.description.3')
+      ],
+      logo: 'https://ci.suez.edu.eg/wp-content/uploads/2022/08/iti-logo.png',
+      githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks',
+    },
+    {
+      title: t('experience.mobileDeveloperIntern.title'),
+      company: t('experience.mobileDeveloperIntern.company'),
+      location: t('experience.mobileDeveloperIntern.location'),
+      date: t('experience.mobileDeveloperIntern.date'),
+      description: [
+        t('experience.mobileDeveloperIntern.description.0'),
+        t('experience.mobileDeveloperIntern.description.1')
+      ],
+      logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQFVBPbc6-yxoA/company-logo_200_200/company-logo_200_200/0/1677167041761?e=2147483647&v=beta&t=xBxH4zLgiEO1RCPbZemcdWDMIZFXROtM2c11jjdQHus',
+      githubLink: 'https://github.com/Mohamed-khaled0/E-Commerce-IOS-CodeAlpha-Internship',
+    },
+    {
+      title: t('experience.businessAnalyticsIntern.title'),
+      company: t('experience.businessAnalyticsIntern.company'),
+      location: t('experience.businessAnalyticsIntern.location'),
+      date: t('experience.businessAnalyticsIntern.date'),
+      description: [
+        t('experience.businessAnalyticsIntern.description.0'),
+        t('experience.businessAnalyticsIntern.description.1'),
+        t('experience.businessAnalyticsIntern.description.2')
+      ],
+      logo: 'https://i-cdn.embed.ly/1/display/resize?key=fd92ebbc52fc43fb98f69e50e7893c13&url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*zUk9tVv_7kOqbhqUdkxFLQ.png&width=175',
+      tableauLink: 'https://public.tableau.com/app/profile/mohamed.elshraby/viz/Superstore_16507269263970/Dashboard1',
+    },
+  ];
+
   return (
     <div className="experience-container">
-      <h2 id='experience' className="section-title">Experience</h2>
+      <h2 id='experience' className="section-title">{t('experience.title')}</h2>
       <div className="experience-list">
         {experiences.map((exp, index) => (
           <motion.div
@@ -59,14 +61,14 @@ const Experience = () => {
             className="experience-card"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }} // Add delay based on index
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="experience-header">
-              <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" /> {/* Logo */}
+              <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" />
               <div>
                 <h3>{exp.title}</h3>
                 <p className="company">
-                  <FaBriefcase /> {exp.company} {/* Company icon */}
+                  <FaBriefcase /> {exp.company}
                 </p>
               </div>
             </div>
@@ -86,12 +88,12 @@ const Experience = () => {
             <div className="action-buttons">
               {exp.githubLink && (
                 <a href={exp.githubLink} target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="github-icon" /> GitHub Repo
+                  <FaGithub className="github-icon" /> {t('experience.githubLink')}
                 </a>
               )}
               {exp.tableauLink && (
                 <a href={exp.tableauLink} target="_blank" rel="noopener noreferrer">
-                  <AiOutlineBarChart className="tableau-icon" /> Tableau 
+                  <AiOutlineBarChart className="tableau-icon" /> {t('experience.tableauLink')}
                 </a>
               )}
             </div>

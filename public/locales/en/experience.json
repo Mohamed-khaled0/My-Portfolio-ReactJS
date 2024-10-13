@@ -1,0 +1,42 @@
+{
+    "experience": {
+      "title": "Experience",
+      "webDeveloperIntern": {
+        "title": "Web Developer Intern",
+        "company": "Information Technology Institute ITI",
+        "location": "Port Said, Egypt",
+        "date": "August 2024 - September 2024",
+        "description": [
+          "HTML5, CSS, and JavaScript: Developed responsive and dynamic web pages.",
+          "MySQL: Worked with database management, queries, and data manipulation.",
+          "Collaborated with colleagues and mentors to enhance problem-solving and teamwork skills.",
+          "Applied version control using Git to manage project versions and changes."
+        ],
+        "githubLink": "GitHub Repo"
+      },
+      "mobileDeveloperIntern": {
+        "title": "Mobile Developer Intern",
+        "company": "CodeAlpha",
+        "location": "Remote",
+        "date": "April 2024 - May 2024",
+        "description": [
+          "Developed an iOS application called 'Sweater Shop.'",
+          "MVC Architecture: Followed the Model-View-Controller (MVC) design pattern to maintain clean and organized code."
+        ],
+        "githubLink": "GitHub Repo"
+      },
+      "businessAnalyticsIntern": {
+        "title": "Business Analytics Intern",
+        "company": "The Sparks Foundation",
+        "location": "Remote",
+        "date": "May 2022 - June 2022",
+        "description": [
+          "Applied SQL and Microsoft Excel for data processing and analysis.",
+          "Conducted exploratory data analysis on retail data to identify key insights.",
+          "Created an interactive Tableau dashboard to visualize data and results."
+        ],
+        "tableauLink": "Tableau"
+      }
+    }
+  }
+  
