@@ -201,6 +201,7 @@ header ul li a svg {
     margin-right: 4px; /* Space between icon and text */
 }
 
+
 /* =================
 4- Media Queries (Responsive Design) 
 =================== */
@@ -220,6 +221,7 @@ header ul li a svg {
         scale: 1.02;
     }
 }
+
 
 /* Tablet Styles */
 @media (max-width: 1200px) {

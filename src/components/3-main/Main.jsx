@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaJsSquare } from "react-icons/fa"; 
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // Import GitHub and Live Demo icons
 import { SiTailwindcss } from "react-icons/si"; // Import Tailwind CSS icon
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const techIcons = {
   React: <FaReact />,
@@ -18,6 +19,7 @@ const techIcons = {
 };
 
 export default function Main() {
+  const { t } = useTranslation('main'); // Hook to use translations
   const [currentActive, setCurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
   const [showMore, setShowMore] = useState(false);
@@ -38,35 +40,33 @@ export default function Main() {
 
   return (
     <main id="projects" className="main-section">
-      <h1 className="projects-title">My Projects</h1>
+      <h1 className="projects-title">{t('projects_title')}</h1>
 
       <section className="center-section">
         <button
           onClick={() => handleClick("all")}
           className={currentActive === "all" ? "active" : ""}
         >
-          All projects
+          {t('all_projects')}
         </button>
         <button
           onClick={() => handleClick("react")}
           className={currentActive === "react" ? "active" : ""}
         >
-          React & NextJS
+          {t('react_nextjs')}
         </button>
         <button
           onClick={() => handleClick("js")}
           className={currentActive === "js" ? "active" : ""}
         >
-          JavaScript
+          {t('javascript')}
         </button>
         <button
           onClick={() => handleClick("css")}
           className={currentActive === "css" ? "active" : ""}
         >
-          HTML & CSS
+          {t('html_css')}
         </button>
-
-
       </section>
 
       <section className="projects-section">
@@ -94,7 +94,7 @@ export default function Main() {
 
                 {/* Technologies Section */}
                 <div className="technologies">
-                  <h2 className="technologies-title">Technologies: </h2> 
+                  <h2 className="technologies-title">{t('technologies_title')}</h2> 
                   <div className="tech-icons-container">
                     {item.technologies.map((tech, index) => (
                       <span key={index} className="tech-icon">
@@ -113,7 +113,7 @@ export default function Main() {
                     >
                       <div className="icon">
                         <FaExternalLinkAlt className="icon" />
-                        <span className="icon-text"> LiveDemo</span>
+                        <span className="icon-text"> {t('live_demo')}</span>
                       </div>
                     </a>
                     <a
@@ -123,7 +123,7 @@ export default function Main() {
                     >
                       <div className="icon">
                         <FaGithub className="icon" />
-                        <span className="icon-text"> GitHub</span>
+                        <span className="icon-text"> {t('github')}</span>
                       </div>
                     </a>
                   </div>
@@ -137,7 +137,7 @@ export default function Main() {
       {/* Show More / Show Less Button */}
       <div className="show-more-container">
         <button className="show-more" onClick={() => setShowMore((prev) => !prev)}>
-          {showMore ? "Show Less" : "Show More"}
+          {showMore ? t('show_less') : t('show_more')}
         </button>
       </div>
     </main>
