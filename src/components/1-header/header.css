@@ -211,17 +211,16 @@ header ul li a svg {
   }
   
   .lang-button {
-    background-color: var(--header-color);
     height: 2.5rem;
     width: 2.5rem;
     font-size: 40px;
-    border-radius: 50%;
     color: var(--subtitle);
     transition: 0.3s;
   }
   
   .lang-button:hover {
     color: var(--blue);
+    scale: 1.1;
   }
 
   

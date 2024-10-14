@@ -20,9 +20,10 @@ export default function Scroll2Top() {
     <>
       <a
         href="#up"
+        aria-label="Scroll to top"
         style={{ opacity: showScrollBTN ? 1 : 0, transition: "1s" }}
       >
-        <button className="scroll2Top icon-arrow-up"></button>
+        <button className="scroll2Top icon-arrow-up" aria-hidden="true"></button>
       </a>
     </>
   );

@@ -3,11 +3,11 @@
 import React, { useRef } from "react";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useTranslation } from "react-i18next"; // Import useTranslation
 import "./hero.css";
 
 export default function Hero() {
-  const { t } = useTranslation('hero'); // Specify 'hero' namespace
+  const { t } = useTranslation("hero"); // Specify 'hero' namespace
   let lottieRef = useRef();
 
   // Animation variants
@@ -24,6 +24,7 @@ export default function Hero() {
             className="avatar"
             src="https://i.imgur.com/FeDVtYO.jpeg"
             alt="Mohamed Khaled"
+            loading="lazy"
           />
           <motion.h1
             className="title"
@@ -32,7 +33,7 @@ export default function Hero() {
             variants={textVariants}
             transition={{ duration: 0.5 }}
           >
-            {t('greeting')}
+            {t("greeting")}
           </motion.h1>
           <motion.h1
             className="title"
@@ -41,7 +42,7 @@ export default function Hero() {
             variants={textVariants}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {t('profession')}
+            {t("profession")}
           </motion.h1>
           <motion.h1
             className="title"
@@ -50,14 +51,15 @@ export default function Hero() {
             variants={textVariants}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            {t('description')}
+            {t("description")}
           </motion.h1>
         </div>
 
         <div className="button-group flex">
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <button aria-label={t('ariaLabels.resumeButton')}>
-              <span className="icon-cloud-download"></span> {t('buttons.resume')}
+            <button aria-label={t("ariaLabels.resumeButton")}>
+              <span className="icon-cloud-download"></span>{" "}
+              {t("buttons.resume")}
             </button>
           </a>
           <a
@@ -65,17 +67,18 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button aria-label={t('ariaLabels.githubButton')}>
-              <span className="icon-github"></span> {t('buttons.github')}
+            <button aria-label={t("ariaLabels.githubButton")}>
+              <span className="icon-github"></span> {t("buttons.github")}
             </button>
           </a>
           <a
             href="https://www.linkedin.com/in/mohamed-khaled3/"
             target="_blank"
             rel="noopener noreferrer"
+          
           >
-            <button aria-label={t('ariaLabels.linkedinButton')}>
-              <span className="icon-linkedin"></span> {t('buttons.linkedin')}
+            <button aria-label={t("ariaLabels.linkedinButton")}>
+              <span className="icon-linkedin"></span> {t("buttons.linkedin")}
             </button>
           </a>
         </div>
