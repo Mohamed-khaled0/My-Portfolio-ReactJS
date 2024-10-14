@@ -23,7 +23,7 @@ export default function Scroll2Top() {
         aria-label="Scroll to top"
         style={{ opacity: showScrollBTN ? 1 : 0, transition: "1s" }}
       >
-        <button className="scroll2Top icon-arrow-up" aria-hidden="true"></button>
+        <button className="scroll2Top icon-arrow-up" aria-label="Scroll to top" ></button>
       </a>
     </>
   );

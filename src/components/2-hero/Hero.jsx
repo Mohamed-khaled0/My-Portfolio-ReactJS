@@ -1,14 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useRef } from "react";
-import Lottie from "lottie-react";
 import { motion } from "framer-motion"; // Import framer-motion for animations
 import { useTranslation } from "react-i18next"; // Import useTranslation
 import "./hero.css";
 
 export default function Hero() {
   const { t } = useTranslation("hero"); // Specify 'hero' namespace
-  let lottieRef = useRef();
 
   // Animation variants
   const textVariants = {
@@ -31,7 +28,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.1 }}
           >
             {t("greeting")}
           </motion.h1>
@@ -40,7 +37,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             {t("profession")}
           </motion.h1>
@@ -49,7 +46,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={textVariants}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
             {t("description")}
           </motion.h1>
