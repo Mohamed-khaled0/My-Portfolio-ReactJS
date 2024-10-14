@@ -21,7 +21,7 @@ const Experience = () => {
         t('experience.webDeveloperIntern.description.2'),
         t('experience.webDeveloperIntern.description.3')
       ],
-      logo: 'https://ci.suez.edu.eg/wp-content/uploads/2022/08/iti-logo.png',
+      logo: '../../../public/images/experience/iti-logo.webp',
       githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks',
     },
     {
@@ -33,7 +33,7 @@ const Experience = () => {
         t('experience.mobileDeveloperIntern.description.0'),
         t('experience.mobileDeveloperIntern.description.1')
       ],
-      logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQFVBPbc6-yxoA/company-logo_200_200/company-logo_200_200/0/1677167041761?e=2147483647&v=beta&t=xBxH4zLgiEO1RCPbZemcdWDMIZFXROtM2c11jjdQHus',
+      logo: '../../../public/images/experience/the-sparks-foundation-logo.webp',
       githubLink: 'https://github.com/Mohamed-khaled0/E-Commerce-IOS-CodeAlpha-Internship',
     },
     {
@@ -46,7 +46,7 @@ const Experience = () => {
         t('experience.businessAnalyticsIntern.description.1'),
         t('experience.businessAnalyticsIntern.description.2')
       ],
-      logo: 'https://i-cdn.embed.ly/1/display/resize?key=fd92ebbc52fc43fb98f69e50e7893c13&url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*zUk9tVv_7kOqbhqUdkxFLQ.png&width=175',
+      logo: '../../../public/images/experience/code-alpha-logo.webp',
       tableauLink: 'https://public.tableau.com/app/profile/mohamed.elshraby/viz/Superstore_16507269263970/Dashboard1',
     },
   ];
