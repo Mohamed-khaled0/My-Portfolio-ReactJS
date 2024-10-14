@@ -12,7 +12,7 @@ const Education = () => {
       <h2 id='title'>{t('title')}</h2>
       <div className="education-card">
         <div className="education-card-left">
-          <img src="https://i.imgur.com/wSab0Hn.jpegnpm" alt="Thebes Academy Logo" />
+          <img       src="../../../public/images/edu-logo.webp" alt="Thebes Academy Logo" />
         </div>
         <div className="education-card-right">
           <h3><FaUniversity /> {t('degree')}</h3>

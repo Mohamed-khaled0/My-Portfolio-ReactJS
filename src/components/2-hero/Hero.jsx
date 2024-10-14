@@ -19,8 +19,8 @@ export default function Hero() {
         <div className="parent-avatar flex">
           <img
             className="avatar"
-            src="https://i.imgur.com/FeDVtYO.jpeg"
-            alt="Mohamed Khaled"
+            src="../../../public/images/personalphoto.webp"
+            alt="Mohamed Khaled Image"
             loading="lazy"
           />
           <motion.h1
