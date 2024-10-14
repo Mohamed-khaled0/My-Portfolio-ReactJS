@@ -21,7 +21,7 @@ const Experience = () => {
         t('experience.webDeveloperIntern.description.2'),
         t('experience.webDeveloperIntern.description.3')
       ],
-      logo: '../../../public/images/experience/iti-logo.webp',
+      logo: '/images/experience/iti-logo.webp',
       githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks',
     },
     {
@@ -33,7 +33,7 @@ const Experience = () => {
         t('experience.mobileDeveloperIntern.description.0'),
         t('experience.mobileDeveloperIntern.description.1')
       ],
-      logo: '../../../public/images/experience/the-sparks-foundation-logo.webp',
+      logo: '/images/experience/the-sparks-foundation-logo.webp',
       githubLink: 'https://github.com/Mohamed-khaled0/E-Commerce-IOS-CodeAlpha-Internship',
     },
     {
@@ -46,7 +46,7 @@ const Experience = () => {
         t('experience.businessAnalyticsIntern.description.1'),
         t('experience.businessAnalyticsIntern.description.2')
       ],
-      logo: '../../../public/images/experience/code-alpha-logo.webp',
+      logo: '/images/experience/code-alpha-logo.webp',
       tableauLink: 'https://public.tableau.com/app/profile/mohamed.elshraby/viz/Superstore_16507269263970/Dashboard1',
     },
   ];

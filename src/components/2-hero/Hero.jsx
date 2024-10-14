@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="parent-avatar flex">
           <img
             className="avatar"
-            src="../../../public/images/personalphoto.webp"
+            src="/images/personalphoto.webp"
             alt="Mohamed Khaled Image"
             loading="lazy"
           />

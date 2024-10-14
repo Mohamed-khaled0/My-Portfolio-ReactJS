@@ -9,7 +9,7 @@ let myProjects = [
         liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
         githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
         githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-        imgPath: "../../../public/images/projects/4.webp",
+        imgPath: "/images/projects/4.webp",
 
         features: [
           
@@ -23,7 +23,7 @@ let myProjects = [
       liveDemo: "https://prayers-times-reactjs.netlify.app/",
       githubLink: "https://github.com/Mohamed-khaled0/Prayers-Times-Reactjs",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "../../../public/images/projects/7.webp",
+      imgPath: "/images/projects/7.webp",
       features: [
         "Displays prayer times for selected cities.",
         "Real-time updating of the current time.",
@@ -40,7 +40,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Product-Management-System-CRUD/",
       githubLink: "https://github.com/Mohamed-khaled0/Product-Management-System-CRUD",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "../../../public/images/projects/3.webp",
+      imgPath: "/images/projects/3.webp",
       features: [
         "Add New Products: Add multiple products with details.",
         "Calculate Total Price: Calculate the total price dynamically.",
@@ -58,7 +58,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Image-Editor-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/Image-Editor-UsingJS",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "../../../public/images/projects/6.webp",
+      imgPath: "/images/projects/6.webp",
       features: [
         "Responsive design with HTML and CSS.",
         "Image upload functionality using JavaScript.",
@@ -76,7 +76,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Hospital-Website-HTML-CSS/",
       githubLink: "https://github.com/Mohamed-khaled0/Hospital-Website-HTML-CSS",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "../../../public/images/projects/2.webp",
+      imgPath: "/images/projects/2.webp",
       features: [
         "User-friendly interface for easy navigation.",
         "Home Page: Overview of the hospital services and contact details.",
@@ -93,7 +93,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
       githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "../../../public/images/projects/5.webp",
+      imgPath: "/images/projects/5.webp",
       features: [
         "User-friendly interface for easy navigation.",
         "Search functionality to find products quickly.",
@@ -108,7 +108,7 @@ let myProjects = [
       category: ["css"],
       liveDemo: "https://mohamed-khaled0.github.io/Restaurant-Website-Using-HTML-and-CSS/",
       githubLink: "https://github.com/Mohamed-khaled0/Restaurant-Website-Using-HTML-and-CSS",
-      imgPath: "../../../public/images/projects/9.webp",
+      imgPath: "/images/projects/9.webp",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
       features: [
         "Fully Responsive Design: Adapts seamlessly to any screen size.",
@@ -125,7 +125,7 @@ let myProjects = [
       liveDemo: "https://mohamed-khaled0.github.io/Bondi-Bootstrap-Project/",
       githubLink: "https://github.com/Mohamed-khaled0/Bondi-Bootstrap-Project",
       githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "../../../public/images/projects/1.webp",
+      imgPath: "/images/projects/1.webp",
       features: [
         "Responsive Design: Looks great on all devices (desktop, tablet, mobile).",
         "Modern UI/UX: Clean and professional design.",
