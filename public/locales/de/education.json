@@ -1,7 +1,8 @@
 {
  
-      "title": "Bachelor der Informatik",
-      "institution": "Dasbe Hochschule für Informationstechnologie",
+      "title": "Ausbildung",
+      "institution": "Thebes Höheres Institut für Informationstechnologie",
+      "degree" : "Bachelor in Informatik",
       "yearRange": "2021 - 2025",
       "gpa": "GPA 3/4",
       "major": "- Hauptfach Informatik",

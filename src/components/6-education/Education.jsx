@@ -15,7 +15,7 @@ const Education = () => {
           <img src="https://i.imgur.com/wSab0Hn.jpegnpm" alt="Thebes Academy Logo" />
         </div>
         <div className="education-card-right">
-          <h3><FaUniversity /> {t('title')}</h3>
+          <h3><FaUniversity /> {t('degree')}</h3>
           <p>{t('institution')}</p>
           <p>{t('yearRange')}</p>
           <p>{t('gpa')}</p>
