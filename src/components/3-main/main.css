@@ -116,17 +116,23 @@
   
   button.show-more {
     padding: 10px 20px;
-    background-color: #0056b3;
+    background-color: rgba(36, 37, 46, 1);
+    opacity: .7;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid rgba(36, 37, 46, 1);
     transition: 0.3s;
   }
+
   button.show-more:hover{
-    background-color: #023b79;
+    border: 1px solid var(--blue);
+    opacity: 1;
+        letter-spacing: .5px;
 
   }
+
 
   .flex.icons {
     display: flex;
