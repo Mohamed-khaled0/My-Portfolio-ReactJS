@@ -4,6 +4,7 @@ section.hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 80vh;
 }
 
 section.hero .title {
@@ -37,23 +38,23 @@ section.hero .left-section {
     align-items: center;
 }
 
+
 section.hero .left-section button {
-    margin: 15px; 
-    margin-bottom: 50px;
+    margin: 50px 10px;
+    height: 28px;
+    line-height: 1rem;
+    font-size: 1.0rem;
+    padding: .7rem 1rem;
     background-color: rgba(36, 37, 46, 1);
     width: 8rem;
-    height: 40px;
     border-radius: 5px;
     text-align: center;
-    padding: .7rem 1rem;
-    line-height: 1.5rem;
     opacity: 0.9;
-    text-transform: capitalize;
     font-size: 1.05rem;
     transition: 0.3s;
     border: 1px solid rgb(63 63 70);
     color: var(--title);
-}
+} 
 
 .light section.hero .left-section button {
     color: var(--primary);
@@ -65,6 +66,10 @@ section.hero .left-section button:hover {
 }
 
 @media (max-width: 1400px) {
+    section.hero {
+        height: auto;
+    }
+
     section.hero .title {
         line-height: 1.3rem;
         margin-top: 20px;
@@ -72,11 +77,19 @@ section.hero .left-section button:hover {
         line-height: 1.2rem;
         font-size: 1.2rem;
     }
+
+    section.hero .left-section button{
+        width: auto;
+    }
 }
 
 @media (max-width: 600px) {
-    section.hero .avatar {
 
+    section.hero {
+        height: auto;
+    }
+
+    section.hero .avatar {
             width: 100px;
             border-radius: 50%;
             margin-bottom: 5px;
@@ -84,7 +97,13 @@ section.hero .left-section button:hover {
         }
     
 
-
+        section.hero .left-section button{
+            width: auto;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
 
     section.hero .title {
         width: 80% !important;
@@ -94,10 +113,3 @@ section.hero .left-section button:hover {
 }
 
 
-section.hero .left-section button {
-    margin: 14px 6px;
-    height: 28px;
-    line-height: 1rem;
-    font-size: 1.0rem;
-    width: auto;
-} 

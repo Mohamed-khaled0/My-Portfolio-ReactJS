@@ -1,7 +1,7 @@
 {
     "greeting": "Hallo 👋🏻 Ich bin Mohamed Khaled",
     "profession": "Softwareingenieur mit Schwerpunkt auf Webentwicklung",
-    "description": "Ich habe eine Leidenschaft dafür, interaktive Webanwendungen zu erstellen, und mein Tag besteht darin, an Projekten mit HTML, CSS, Tailwind, JavaScript, TypeScript und React.js zu arbeiten.",
+    "description": "Ich habe eine Leidenschaft dafür, interaktive Webanwendungen zu erstellen, mein Tag besteht darin, an Projekten mit HTML, CSS, Tailwind, JavaScript, TypeScript und React.js zu arbeiten.",
     "buttons": {
       "resume": "Lebenslauf",
       "github": "Github",
