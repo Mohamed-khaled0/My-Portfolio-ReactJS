@@ -207,16 +207,28 @@ header ul li a svg {
 
 .language-switcher {
     display: flex;
-    align-items: center;
+    align-items: center; /* Ensure vertical alignment */
   }
   
   .lang-button {
-    height: 2.5rem;
-    width: 2.5rem;
-    font-size: 40px;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem; /* Adjust font size */
+    color: #ffffff; /* Or the desired text color */
+    transition: .3s;
     color: var(--subtitle);
-    transition: 0.3s;
   }
+  
+  .lang-button span {
+    margin-left: 5px;
+    font-size: 14px; /* Control the size of the language code */
+    transition: .3s;
+
+  }
+  
   
   .lang-button:hover {
     color: var(--blue);
@@ -244,6 +256,10 @@ header ul li a svg {
         background-color: transparent;
         scale: 1.02;
     }
+    
+    .lang-button {
+        padding: 0 ;
+      }
 }
 
 
@@ -277,4 +293,9 @@ header ul li a svg {
     header ul.flex{
         padding: 0 .4rem 0 .5rem;
     }
+
+    .lang-button {
+        font-size: 3rem; /* Adjust font size */
+        padding: 0 .5rem;
+      }
 }

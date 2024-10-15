@@ -70,16 +70,20 @@ export default function Header() {
             <li><a href="#education"><FaGraduationCap /> {t('education')}</a></li>
             <li><a href="#contact"><FaEnvelope /> {t('contact')}</a></li>
             <li>
-              <div className="language-switcher">
-                <button
-                  className="lang-button"
-                  onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
-                  title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
-                >
-                  <FaLanguage  />
-                </button>
-              </div>
-            </li>
+  <div className="language-switcher">
+    <button
+      className="lang-button"
+      onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
+      title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
+    >
+      <FaGlobe style={{ width: '20px' }} />
+      <span style={{ marginLeft: '5px' }}>
+        {currentLanguage === 'en' ? 'EN' : 'DE'}
+      </span>
+    </button>
+  </div>
+</li>
+
           </ul>
         </nav>
 
@@ -112,15 +116,18 @@ export default function Header() {
               <li><a href="#education" onClick={() => setShowModal(false)}>{t('education')}</a></li>
               <li><a href="#contact" onClick={() => setShowModal(false)}>{t('contact')}</a></li>
               <li>
-                <div className="language-switcher">
-                  <button
-                    className="lang-button"
-                    onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
-                    title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
-                  >
-                    <FaGlobe className="changeLanguageIcon" style={{ color: 'var(--blue)' }} />
-                  </button>
-                </div>
+              <div className="language-switcher">
+    <button
+      className="lang-button"
+      onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
+      title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
+    >
+      <FaGlobe style={{ width: '22px' }} />
+      <span style={{ marginLeft: '5px' }}>
+        {currentLanguage === 'en' ? 'EN' : 'DE'}
+      </span>
+    </button>
+  </div>
               </li>
             </ul>
           </div>
