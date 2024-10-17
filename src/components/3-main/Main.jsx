@@ -5,7 +5,7 @@ import myProjects from "./ProjectsData";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaJsSquare } from "react-icons/fa"; 
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // Import GitHub and Live Demo icons
-import { SiTailwindcss } from "react-icons/si"; // Import Tailwind CSS icon
+import { SiNextdotjs, SiTailwindcss } from "react-icons/si"; // Import Tailwind CSS icon
 import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const techIcons = {
@@ -15,6 +15,7 @@ const techIcons = {
   Bootstrap: <FaBootstrap />,
   JavaScript: <FaJsSquare />,
   Tailwind: <SiTailwindcss />, 
+  NextJs: <SiNextdotjs/>
   // Add more tech icons as needed
 };
 

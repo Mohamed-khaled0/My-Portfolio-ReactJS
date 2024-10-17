@@ -1,10 +1,25 @@
 /* eslint-disable no-unused-vars */
 
 let myProjects = [
+  // Next js Projects 
+  {
+    projectTitle: "E-Commerce NextJs ",
+    projectSubtitle: "A simple shopping cart system built with Next.js. The primary focus is on user-friendly product management.",
+    category: ["react", "all"],
+    liveDemo: "https://e-commerce-app-next.netlify.app/",
+    githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Nextjs-App",
+    // githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
+    imgPath: "/images/projects/8.webp",
+
+    features: [
+      
+    ],
+    technologies: ["NextJs" ,"HTML5", "CSS3", "JavaScript"]
+  },
     // React Projects
     {
         projectTitle: "My Portfolio",
-        projectSubtitle: "modern web developer portfolio template built using React.js, HTML, CSS.",
+        projectSubtitle: "Modern web developer portfolio template built using React.js, HTML, CSS.",
         category: ["react", "all"],
         liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
         githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
@@ -67,6 +82,22 @@ let myProjects = [
       ],
       technologies: ["HTML5", "CSS3", "JavaScript"]
     },
+    {
+      projectTitle: "E-Commerce Website",
+      projectSubtitle: "Online shop that offers a wide variety of products, ranging from electronics to fashion, with great deals and discounts.",
+      category: ["js"],
+      liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
+      githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
+      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
+      imgPath: "/images/projects/5.webp",
+      features: [
+        "User-friendly interface for easy navigation.",
+        "Search functionality to find products quickly.",
+        "Shopping cart to manage selected items.",
+        "Responsive design for mobile and desktop compatibility."
+      ],
+      technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome", "Swiper.js"]
+    },
         // HTML & CSS Projects
 
     {
@@ -86,22 +117,7 @@ let myProjects = [
       ],
       technologies: ["HTML5", "CSS3", "Font Awesome", "Swiper.js"]
     },
-    {
-      projectTitle: "E-Commerce Website",
-      projectSubtitle: "Online shop that offers a wide variety of products, ranging from electronics to fashion, with great deals and discounts.",
-      category: ["css"],
-      liveDemo: "https://mohamed-khaled0.github.io/E-Commerce-Website-UsingJS/",
-      githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Website-UsingJS?tab=readme-ov-file",
-      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "/images/projects/5.webp",
-      features: [
-        "User-friendly interface for easy navigation.",
-        "Search functionality to find products quickly.",
-        "Shopping cart to manage selected items.",
-        "Responsive design for mobile and desktop compatibility."
-      ],
-      technologies: ["HTML5", "CSS3", "Font Awesome", "Swiper.js"]
-    },
+    
     {
       projectTitle: "Restaurant Website",
       projectSubtitle: "Gourmet Guru is a responsive, modern restaurant website ,built using HTML, CSS",
