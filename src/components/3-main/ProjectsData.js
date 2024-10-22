@@ -3,6 +3,20 @@
 let myProjects = [
   // Next js Projects 
   {
+    projectTitle: "New portfolio",
+    projectSubtitle: "A personal website designed to showcase my skills, projects, and experience in web development.",
+    category: ["react", "all"],
+    liveDemo: "https://mohamed-khaled-frontend-developer.netlify.app/",
+    githubLink: "https://github.com/Mohamed-khaled0/mohamed-khaled-portfolio-v2",
+    // githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
+    imgPath: "/images/portfolio.webp",
+
+    features: [
+      
+    ],
+    technologies: ["NextJs" ,"HTML5", "CSS3", "JavaScript"]
+  },
+  {
     projectTitle: "E-Commerce NextJs ",
     projectSubtitle: "A simple shopping cart system built with Next.js. The primary focus is on user-friendly product management.",
     category: ["react", "all"],
