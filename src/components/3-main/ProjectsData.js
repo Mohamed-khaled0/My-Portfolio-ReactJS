@@ -16,51 +16,8 @@ let myProjects = [
     ],
     technologies: ["NextJs" ,"HTML5", "CSS3", "JavaScript"]
   },
-  {
-    projectTitle: "E-Commerce NextJs ",
-    projectSubtitle: "A simple shopping cart system built with Next.js. The primary focus is on user-friendly product management.",
-    category: ["react", "all"],
-    liveDemo: "https://e-commerce-app-next.netlify.app/",
-    githubLink: "https://github.com/Mohamed-khaled0/E-Commerce-Nextjs-App",
-    // githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-    imgPath: "/images/projects/8.webp",
-
-    features: [
-      
-    ],
-    technologies: ["NextJs" ,"HTML5", "CSS3", "JavaScript"]
-  },
-    // React Projects
-    {
-        projectTitle: "My Portfolio",
-        projectSubtitle: "Modern web developer portfolio template built using React.js, HTML, CSS.",
-        category: ["react", "all"],
-        liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
-        githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
-        githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-        imgPath: "/images/projects/4.webp",
-
-        features: [
-          
-        ],
-        technologies: ["React","HTML5", "CSS3", "JavaScript",]
-      },
-    {
-      projectTitle: "Prayer Timings App",
-      projectSubtitle: "A web application displaying prayer timings for different cities.",
-      category: ["react", "all"],
-      liveDemo: "https://prayers-times-reactjs.netlify.app/",
-      githubLink: "https://github.com/Mohamed-khaled0/Prayers-Times-Reactjs",
-      githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-      imgPath: "/images/projects/7.webp",
-      features: [
-        "Displays prayer times for selected cities.",
-        "Real-time updating of the current time.",
-        "Automatically calculates the next prayer based on the current time."
-      ],
-      technologies: ["React","JavaScript"]
-    },
-  
+   
+   
     // JavaScript (js) Projects
     {
       projectTitle: "CRUDS ",
