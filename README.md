@@ -11,6 +11,7 @@ This is a **modern web developer portfolio template** built using **React.js, HT
 
 
 ## Features
+- Localization : En , De
 - **Responsive Design:** Works perfectly across all devices.
 - **Light/Dark Theme Toggle:** Switch between light and dark mode.
 - **Smooth Scrolling:** Easy navigation with smooth scroll behavior.
