@@ -43,7 +43,7 @@ export default function Main() {
     <main id="projects" className="main-section">
       <h1 className="projects-title">{t('projects_title')}</h1>
 
-      <section className="center-section">
+      {/* <section className="center-section">
         <button
           onClick={() => handleClick("all")}
           className={currentActive === "all" ? "active" : ""}
@@ -68,7 +68,7 @@ export default function Main() {
         >
           {t('html_css')}
         </button>
-      </section>
+      </section> */}
 
       <section className="projects-section">
         <AnimatePresence>
@@ -136,11 +136,11 @@ export default function Main() {
       </section>
 
       {/* Show More / Show Less Button */}
-      <div className="show-more-container">
+      {/* <div className="show-more-container">
         <button className="show-more" onClick={() => setShowMore((prev) => !prev)}>
           {showMore ? t('show_less') : t('show_more')}
         </button>
-      </div>
+      </div> */}
     </main>
   );
 }

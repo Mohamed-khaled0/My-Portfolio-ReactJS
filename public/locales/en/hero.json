@@ -1,7 +1,7 @@
 {
     "greeting": "Hi 👋🏻 I’m Mohamed Khaled",
-    "profession": "Software engineer mainly focused on Web Development",
-    "description": "I have a passion for building interactive web applications , my day consists of working on projects with HTML, CSS, Tailwind, JavaScript, TypeScript, and React.js.",
+    "profession": "Software engineer mainly focused on Flutter & Web Development",
+    "description": "I have a passion for building interactive web applications , my day consists of working on projects with Flutter,Dart, HTML, CSS, Tailwind, JavaScript, TypeScript, and React.js.",
     "buttons": {
       "resume": "Resume",
       "github": "Github",
