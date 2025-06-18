@@ -1,19 +1,19 @@
 section.hero {
     display: flex;
-    margin-top: 40px;
+    margin-top: 100px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 55vh;
+    height: 80vh;
 }
 
 section.hero .title {
-    width: 70% !important;
+    width: 80% !important;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 2.2rem;
     color: var(--title);
-    margin: 6px 0;
-    font-size: 1.1rem;
+    margin: 10px 0;
+    font-size: 1.6rem;
 }
 
 section.hero .parent-avatar.flex {
@@ -23,12 +23,12 @@ section.hero .parent-avatar.flex {
 }
 
 section.hero .avatar {
-    width: 90px;
+    width: 150px;
     border-radius: 50%;
     border: 2px solid rgba(93, 188, 252, .5);
     padding: 2px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-top: 50px;
 }
 
 section.hero .left-section {
@@ -39,15 +39,17 @@ section.hero .left-section {
 }
 
 section.hero .left-section button {
-    margin: 12px 5px;
-    height: 26px;
-    font-size: 0.95rem;
-    padding: .5rem .8rem;
-    width: 7rem;
+    margin: 50px 10px;
+    height: 28px;
+    line-height: 1rem;
+    font-size: 1.0rem;
+    padding: .7rem 1rem;
     background-color: rgba(36, 37, 46, 1);
+    width: 8rem;
     border-radius: 5px;
     text-align: center;
     opacity: 0.9;
+    font-size: 1.05rem;
     transition: 0.3s;
     border: 1px solid rgb(63 63 70);
     color: var(--title);
@@ -60,6 +62,13 @@ section.hero .left-section button {
 section.hero .left-section button:hover {
     opacity: 1;
     border: 1px solid var(--blue);
+}
+
+section.hero .card-description {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 @media (max-width: 1400px) {
@@ -83,26 +92,31 @@ section.hero .left-section button:hover {
 @media (max-width: 600px) {
     section.hero {
         height: auto;
-        padding-bottom: 10px;
-        margin-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 60px;
     }
     section.hero .avatar {
-        width: 60px;
-        margin-bottom: 6px;
-        margin-top: 6px;
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    section.hero .left-section button{
+        width: 100%;
+        margin: 10px 0;
+        display: block;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
     }
     section.hero .title {
-        width: 95% !important;
-        line-height: 1.1rem;
-        font-size: 0.9rem;
-        margin: 4px 0;
+        width: 98% !important;
+        line-height: 1.3rem;
+        font-size: 1rem;
+        margin: 8px 0;
     }
-    section.hero .left-section button {
-        margin: 7px 0;
-        height: 22px;
-        font-size: 0.85rem;
-        padding: .4rem .6rem;
-        width: 100%;
+    section.hero .card-description {
+        width: 98%;
     }
 }
 
