@@ -37,6 +37,18 @@ const Experience = () => {
       githubLink: 'https://github.com/Mohamed-khaled0/E-Commerce-IOS-CodeAlpha-Internship',
     },
     {
+      title: t('experience.itSupportSpecialist.title'),
+      company: t('experience.itSupportSpecialist.company'),
+      location: t('experience.itSupportSpecialist.location'),
+      date: t('experience.itSupportSpecialist.date'),
+      description: [
+        t('experience.itSupportSpecialist.description.0'),
+        t('experience.itSupportSpecialist.description.1'),
+        t('experience.itSupportSpecialist.description.2')
+      ],
+      logo: t('experience.itSupportSpecialist.logo'),
+    },
+    {
       title: t('experience.businessAnalyticsIntern.title'),
       company: t('experience.businessAnalyticsIntern.company'),
       location: t('experience.businessAnalyticsIntern.location'),

@@ -21,7 +21,22 @@ const Education = () => {
           <p>{t('gpa')}</p>
           <ul>
             <li>{t('major')}</li>
-            <li>{t('minor')}</li>
+          </ul>
+        </div>
+      </div>
+      {/* Space between cards */}
+      <div style={{ height: '20px' }} />
+      {/* Secondary Education Card */}
+      <div className="education-card">
+        <div className="education-card-left" style={{height: '115px', width: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          {/* Empty for spacing, no image */}
+        </div>
+        <div className="education-card-right">
+          <h3><FaUniversity /> {t('secondary_title')}</h3>
+          <p>{t('secondary_institution')}</p>
+          <p>{t('secondary_yearRange')}</p>
+          <ul>
+            <li>{t('secondary_subjects')}</li>
           </ul>
         </div>
       </div>

@@ -36,6 +36,19 @@
           "- Erstellung eines interaktiven Tableau-Dashboards zur Visualisierung der Daten und Ergebnisse."
         ],
         "tableauLink": "Tableau"
+      },
+      "itSupportSpecialist": {
+        "title": "Spezialist für technischen Support",
+        "company": "Shajarat Al-Durr",
+        "location": "New Cairo, Ägypten",
+        "date": " June 2022 – Dec 2023",
+        "description": [
+          "- Unterstützung der Mitarbeitenden bei alltäglichen IT-Problemen (Drucker, Internet, E-Mail).",
+          "- Einrichtung von Benutzerkonten und E-Mail-Adressen.",
+          "- Durchführung kleinerer Wartungs- und Hardwaretests (PCs, Monitore, Router)."
+
+        ],
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQHy2x1Q0NJ9ZA/company-logo_200_200/B56ZXcnttIGsAI-/0/1743163165610?e=1755734400&v=beta&t=r8GMqvLTndenhT7jbD_6ZqznAfZbAWH4KcH248d_WOs"
       }
     }
   }

@@ -138,4 +138,22 @@
     .experience-container {
         padding: .5rem;
     }
+    .experience-list {
+        gap: 1rem;
+    }
+    .experience-card {
+        padding: 1rem;
+        margin-bottom: 15px;
+    }
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+    .experience-header {
+        font-size: 1rem;
+    }
+    .action-buttons a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.7rem;
+    }
 }

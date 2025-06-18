@@ -1,19 +1,19 @@
 section.hero {
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 55vh;
 }
 
 section.hero .title {
-    width: 50% !important;
+    width: 70% !important;
     text-align: center;
-    line-height: 2.2rem;
+    line-height: 1.5rem;
     color: var(--title);
-    margin: 10px 0;
-    font-size: 1.6rem;
+    margin: 6px 0;
+    font-size: 1.1rem;
 }
 
 section.hero .parent-avatar.flex {
@@ -23,12 +23,12 @@ section.hero .parent-avatar.flex {
 }
 
 section.hero .avatar {
-    width: 150px;
+    width: 90px;
     border-radius: 50%;
     border: 2px solid rgba(93, 188, 252, .5);
     padding: 2px;
-    margin-bottom: 25px;
-    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 section.hero .left-section {
@@ -38,19 +38,16 @@ section.hero .left-section {
     align-items: center;
 }
 
-
 section.hero .left-section button {
-    margin: 50px 10px;
-    height: 28px;
-    line-height: 1rem;
-    font-size: 1.0rem;
-    padding: .7rem 1rem;
+    margin: 12px 5px;
+    height: 26px;
+    font-size: 0.95rem;
+    padding: .5rem .8rem;
+    width: 7rem;
     background-color: rgba(36, 37, 46, 1);
-    width: 8rem;
     border-radius: 5px;
     text-align: center;
     opacity: 0.9;
-    font-size: 1.05rem;
     transition: 0.3s;
     border: 1px solid rgb(63 63 70);
     color: var(--title);
@@ -84,31 +81,28 @@ section.hero .left-section button:hover {
 }
 
 @media (max-width: 600px) {
-
     section.hero {
         height: auto;
+        padding-bottom: 10px;
+        margin-top: 20px;
     }
-
     section.hero .avatar {
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-    
-
-        section.hero .left-section button{
-            width: auto;
-            display: flex;
-            gap: 5px;
-            justify-content: center;
-            align-items: center;
-        }
-
+        width: 60px;
+        margin-bottom: 6px;
+        margin-top: 6px;
+    }
     section.hero .title {
-        width: 80% !important;
-        line-height: 1.4rem;
-        font-size: 1.1rem;
+        width: 95% !important;
+        line-height: 1.1rem;
+        font-size: 0.9rem;
+        margin: 4px 0;
+    }
+    section.hero .left-section button {
+        margin: 7px 0;
+        height: 22px;
+        font-size: 0.85rem;
+        padding: .4rem .6rem;
+        width: 100%;
     }
 }
 

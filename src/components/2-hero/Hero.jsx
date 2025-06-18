@@ -51,32 +51,15 @@ export default function Hero() {
             {t("description")}
           </motion.h1>
         </div>
-
         <div className="button-group flex">
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <button aria-label={t("ariaLabels.resumeButton")}>
-              <span className="icon-cloud-download"></span>{" "}
-              {t("buttons.resume")}
-            </button>
+            <button aria-label={t("ariaLabels.resumeButton")}>{t("buttons.resume")}</button>
           </a>
-          <a
-            href="https://github.com/Mohamed-khaled0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button aria-label={t("ariaLabels.githubButton")}>
-              <span className="icon-github"></span> {t("buttons.github")}
-            </button>
+          <a href="https://github.com/Mohamed-khaled0" target="_blank" rel="noopener noreferrer">
+            <button aria-label={t("ariaLabels.githubButton")}>{t("buttons.github")}</button>
           </a>
-          <a
-            href="https://www.linkedin.com/in/mohamed-khaled3/"
-            target="_blank"
-            rel="noopener noreferrer"
-          
-          >
-            <button aria-label={t("ariaLabels.linkedinButton")}>
-              <span className="icon-linkedin"></span> {t("buttons.linkedin")}
-            </button>
+          <a href="https://www.linkedin.com/in/mohamed-khaled4/" target="_blank" rel="noopener noreferrer">
+            <button aria-label={t("ariaLabels.linkedinButton")}>{t("buttons.linkedin")}</button>
           </a>
         </div>
       </div>

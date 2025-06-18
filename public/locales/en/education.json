@@ -1,12 +1,14 @@
 {
-
       "title": "Education",
       "institution": "Thebes Higher Institute of Information Technology",
-      "degree" : "Bachelor of Computer Science",
-      "yearRange": "2021 - 2025",
-      "gpa": "GPA 3/4",
-      "major": "- Major in Computer Science",
-      "minor": "- Minor in Web Applications"
+      "degree": "Bachelor of Science in Computer Science, Thebes Academy",
+      "yearRange": "10/2021 – 07/2025",
+      "gpa": "GPA 3.17/4 (equivalent to German grade 1.62)",
+      "major": "Graduation Project: GPA 4.00/4 → German grade 1.0",
+      "secondary_title": "General Higher Education Entrance Qualification (equivalent to Abitur)",
+      "secondary_institution": "El-Hawamdia School",
+      "secondary_yearRange": "09/2016 – 06/2019",
+      "secondary_subjects": "All subjects: Physics, Mathematics, German, English, Chemistry, Biology."
     }
 
   

@@ -71,16 +71,23 @@
 @media screen and (max-width: 600px) {
     .skills-container {
         justify-content: center;
-        gap: 20px;
+        gap: 12px;
         max-width: 100%; 
     }
-
-    .skill-card i {
-        font-size: 2.5rem;
+    .skill-card {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        margin-bottom: 10px;
     }
-
+    .skill-card i {
+        font-size: 2rem;
+    }
     .skills-title h2 {
-        font-size: 1.5rem; 
+        font-size: 1.2rem; 
+    }
+    .skill-card p {
+        font-size: 0.85rem;
     }
 }
 

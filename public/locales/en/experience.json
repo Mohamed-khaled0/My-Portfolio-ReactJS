@@ -36,6 +36,18 @@
           "- Created an interactive Tableau dashboard to visualize data and results."
         ],
         "tableauLink": "Tableau"
+      },
+      "itSupportSpecialist": {
+        "title": "Technical Support Specialist",
+        "company": "Shajarat Al-Durr",
+        "location": "New Cairo, Egypt",
+        "date": "June 2022 – Dec 2023",
+        "description": [
+          "- Supported staff with daily IT issues (printers, internet, email).",
+          "- Set up user accounts and email addresses.",
+          "- Performed minor maintenance and hardware tests (PCs, monitors, routers)."
+        ],
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQHy2x1Q0NJ9ZA/company-logo_200_200/B56ZXcnttIGsAI-/0/1743163165610?e=1755734400&v=beta&t=r8GMqvLTndenhT7jbD_6ZqznAfZbAWH4KcH248d_WOs"
       }
     }
   }

@@ -1,4 +1,9 @@
 {
-    "title": "Fähigkeiten"
+    "title": "Fähigkeiten",
+    "languages": "Sprachen: Deutsch: B2, Englisch: Sehr gut, Arabisch: Muttersprache",
+    "software_network": "Software & Netzwerk: CCNA (Subnetting, Firewall, VPN, VLAN, NAT, ACL, Routing-Protokolle)",
+    "web_technologies": "Web-Technologien: HTML – CSS – JavaScript – Grundkenntnisse in React",
+    "tools_platforms": "Tools & Plattformen: Cisco Packet Tracer – Python & OOP – SQL – Git & GitHub – Microsoft Office",
+    "strengths": "Persönliche Stärken: Analytisches Denken, Teamfähigkeit, Problemlösungskompetenz"
   }
   
