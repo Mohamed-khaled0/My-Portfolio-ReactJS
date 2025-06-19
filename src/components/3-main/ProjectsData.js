@@ -2,6 +2,27 @@
 
 let myProjects = [
   {
+    projectTitle: "portfolio_project_title",
+    projectSubtitle: "A modern, responsive portfolio website built with ReactJS, deployed on Netlify, featuring localization, dark/light mode, and more.",
+    description: "This is my personal portfolio website, built with ReactJS and deployed using Netlify. It showcases my projects, skills, and experience with a modern, responsive design and advanced features.",
+    category: ["react", "all"],
+    liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
+    githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
+    imgPath: "/images/portfolio.webp",
+    features: [
+      "Localization : En , De",
+      "Responsive Design: Works perfectly across all devices.",
+      "Light/Dark Theme Toggle: Switch between light and dark mode.",
+      "Smooth Scrolling: Easy navigation with smooth scroll behavior.",
+      "Scroll to Top Button: Automatically scrolls the user back to the top.",
+      "Project Filter: Dynamic project filtering by category (CSS, JavaScript, React, etc.).",
+      "Framer Motion Animations: Interactive animations included in the project sections.",
+      "Contact Form: Integrated with Formspree for easy form submissions.",
+      "Deployed with Netlify for fast and reliable hosting."
+    ],
+    technologies: ["ReactJS", "HTML5", "CSS3", "Framer Motion", "Vite", "Formspree", "Netlify"]
+  },
+  {
     projectTitle: "CRUDS ",
     projectSubtitle: "A simple Product Management System that allows users to manage products.",
     category: ["js", "all"],
@@ -20,22 +41,6 @@ let myProjects = [
     technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage"]
   },
   {
-    projectTitle: "Photo Editor",
-    projectSubtitle: "A photo editing application that allows users to upload images and apply filters.",
-    category: ["js", "all"],
-    liveDemo: "https://mohamed-khaled0.github.io/Image-Editor-UsingJS/",
-    githubLink: "https://github.com/Mohamed-khaled0/Image-Editor-UsingJS",
-    githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-    imgPath: "/images/projects/6.webp",
-    features: [
-      "Responsive design with HTML and CSS.",
-      "Image upload functionality using JavaScript.",
-      "Apply various filters and effects to images.",
-      "Download the edited image after applying filters."
-    ],
-    technologies: ["HTML5", "CSS3", "JavaScript"]
-  },
-  {
     projectTitle: "E-Commerce Website",
     projectSubtitle: "Online shop that offers a wide variety of products, ranging from electronics to fashion, with great deals and discounts.",
     category: ["js"],
@@ -52,23 +57,6 @@ let myProjects = [
     technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome", "Swiper.js"]
   },
   {
-    projectTitle: "Hospital Website",
-    projectSubtitle: "A hospital website, providing information about healthcare services, doctors, and appointment booking options.",
-    category: ["css"],
-    liveDemo: "https://mohamed-khaled0.github.io/Hospital-Website-HTML-CSS/",
-    githubLink: "https://github.com/Mohamed-khaled0/Hospital-Website-HTML-CSS",
-    githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-    imgPath: "/images/projects/2.webp",
-    features: [
-      "User-friendly interface for easy navigation.",
-      "Home Page: Overview of the hospital services and contact details.",
-      "Medical news and updates.",
-      'Contact: A contact form for booking appointments and sending inquiries.',
-      "Responsive design for mobile and desktop compatibility."
-    ],
-    technologies: ["HTML5", "CSS3", "Font Awesome", "Swiper.js"]
-  },
-  {
     projectTitle: "Restaurant Website",
     projectSubtitle: "Gourmet Guru is a responsive, modern restaurant website ,built using HTML, CSS",
     category: ["css"],
@@ -83,23 +71,6 @@ let myProjects = [
       "Customizable Components: Easily modify and extend the template."
     ],
     technologies: ["HTML5", "CSS3"]
-  },
-  {
-    projectTitle: " Nova - Landing Page",
-    projectSubtitle: "Nova a modern and fully responsive landing page template  ,built using Bootstrap, HTML, and CSS",
-    category: ["css"],
-    liveDemo: "https://mohamed-khaled0.github.io/Bondi-Bootstrap-Project/",
-    githubLink: "https://github.com/Mohamed-khaled0/Bondi-Bootstrap-Project",
-    githubRepos:"https://github.com/Mohamed-khaled0?tab=repositories",
-    imgPath: "/images/projects/1.webp",
-    features: [
-      "Responsive Design: Looks great on all devices (desktop, tablet, mobile).",
-      "Modern UI/UX: Clean and professional design.",
-      "Smooth Animations: Eye-catching animations to enhance user experience.",
-      "Cross-Browser Compatibility: Works seamlessly across major browsers.",
-      "Customizable: Easy to modify and adapt to your needs."
-    ],
-    technologies: ["HTML5", "CSS3","Bootstrap"]
   },
 ];
 

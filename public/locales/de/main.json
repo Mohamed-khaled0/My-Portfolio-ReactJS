@@ -1,5 +1,4 @@
 {
-
     "all_projects": "Alle Projekte",
     "react_nextjs": "React & NextJS",
     "javascript": "JavaScript",
@@ -8,6 +7,18 @@
     "live_demo": "Live-Demo",
     "github": "GitHub",
     "show_more": "Mehr anzeigen",
-    "show_less": "Weniger anzeigen"
+    "show_less": "Weniger anzeigen",
+    "portfolio_project_title": "Portfolio Webseite",
+    "portfolio_project_subtitle": "Eine moderne, responsive Portfolio-Webseite mit ReactJS, mit Lokalisierung, Dark/Light-Modus und mehr.",
+    "portfolio_project_features": [
+      "Lokalisierung: En, De",
+      "Responsives Design: Funktioniert perfekt auf allen Geräten.",
+      "Hell/Dunkel-Theme-Umschaltung: Wechsel zwischen hellem und dunklem Modus.",
+      "Sanftes Scrollen: Einfache Navigation mit sanftem Scrollverhalten.",
+      "Scroll-zum-Anfang-Button: Scrollt automatisch zurück nach oben.",
+      "Projektfilter: Dynamisches Filtern der Projekte nach Kategorie (CSS, JavaScript, React, usw.).",
+      "Framer Motion Animationen: Interaktive Animationen in den Projektabschnitten.",
+      "Kontaktformular: Integriert mit Formspree für einfache Formularübermittlung."
+    ]
   }
   

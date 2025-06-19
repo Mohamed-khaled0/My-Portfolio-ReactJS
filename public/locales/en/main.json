@@ -8,6 +8,18 @@
     "live_demo": "Live Demo",
     "github": "GitHub",
     "show_more": "Show More",
-    "show_less": "Show Less"
+    "show_less": "Show Less",
+    "portfolio_project_title": "Portfolio Website",
+    "portfolio_project_subtitle": "A modern, responsive portfolio website built with ReactJS, featuring localization, dark/light mode, and more.",
+    "portfolio_project_features": [
+      "Localization: En, De",
+      "Responsive Design: Works perfectly across all devices.",
+      "Light/Dark Theme Toggle: Switch between light and dark mode.",
+      "Smooth Scrolling: Easy navigation with smooth scroll behavior.",
+      "Scroll to Top Button: Automatically scrolls the user back to the top.",
+      "Project Filter: Dynamic project filtering by category (CSS, JavaScript, React, etc.).",
+      "Framer Motion Animations: Interactive animations included in the project sections.",
+      "Contact Form: Integrated with Formspree for easy form submissions."
+    ]
   }
   
