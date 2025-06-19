@@ -11,6 +11,8 @@ import Skills from './components/4-skills/Skills'
 import Experience from './components/5-experience/Experience'
 import ProfileSidebar from './components/ProfileSidebar';
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProjectDetails from './components/3-main/ProjectDetails';
 
 
 function App() {
@@ -26,14 +28,19 @@ function App() {
   };
 
   return (
-    <div className='app-layout'>
-      <ProfileSidebar />
-      <div className='main-content'>
-        <Header setActiveSection={setActiveSection} activeSection={activeSection} />
-        {sectionComponents[activeSection]}
-        <Scroll2Top />
+    <Router>
+      <div className='app-layout'>
+        <ProfileSidebar />
+        <div className='main-content'>
+          <Header setActiveSection={setActiveSection} activeSection={activeSection} />
+          <Routes>
+            <Route path="/" element={sectionComponents[activeSection]} />
+            <Route path="/project/:id" element={<ProjectDetails />} />
+          </Routes>
+          <Scroll2Top />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

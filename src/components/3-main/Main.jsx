@@ -7,6 +7,7 @@ import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap, FaJsSquare } from "react-icon
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // Import GitHub and Live Demo icons
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si"; // Import Tailwind CSS icon
 import { useTranslation } from "react-i18next"; // Import useTranslation
+import { useNavigate } from 'react-router-dom';
 
 const techIcons = {
   React: <FaReact />,
@@ -24,6 +25,8 @@ export default function Main() {
   const [currentActive, setCurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
   const [showMore, setShowMore] = useState(false);
+  const [modal, setModal] = useState({ open: false, liveDemo: null });
+  const navigate = useNavigate();
 
   const handleClick = (buttonCategory) => {
     setCurrentActive(buttonCategory);
@@ -37,13 +40,28 @@ export default function Main() {
     setArr(newArr);
   };
 
+  const handleCardClick = (liveDemo) => {
+    setModal({ open: true, liveDemo });
+  };
+
+  const handleModalClose = () => setModal({ open: false, liveDemo: null });
+  const handleModalConfirm = () => {
+    window.open(modal.liveDemo, '_blank');
+    setModal({ open: false, liveDemo: null });
+  };
+
   const visibleProjects = showMore ? arr : arr.slice(0, 3);
 
   return (
     <main id="projects" className="main-section">
       <section className="projects-section">
         {arr.map((item, index) => (
-          <div className="card" key={item.imgPath}>
+          <div
+            className="card"
+            key={item.imgPath}
+            onClick={() => handleCardClick(item.liveDemo)}
+            style={{ cursor: 'pointer' }}
+          >
             <img
               width={270}
               height={170}
@@ -73,11 +91,93 @@ export default function Main() {
                   <button className="project-btn">Tableau</button>
                 )}
               </div>
-              <a className="read-more" href={item.liveDemo} target="_blank" rel="noopener noreferrer">Read more →</a>
+              <button
+                className="read-more"
+                onClick={e => {
+                  e.stopPropagation();
+                  navigate(`/project/${index}`);
+                }}
+              >
+                Read more →
+              </button>
             </div>
           </div>
         ))}
       </section>
+      {/* Custom Modal */}
+      {modal.open && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(40, 40, 48, 0.85)',
+            zIndex: 2000,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backdropFilter: 'blur(5px)'
+          }}
+          onClick={handleModalClose}
+        >
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: 18,
+              boxShadow: '0 2px 24px rgba(36,99,235,0.13)',
+              padding: '36px 32px',
+              minWidth: 320,
+              maxWidth: 380,
+              textAlign: 'center',
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: 18
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div style={{ fontSize: 32, color: '#2563eb', marginBottom: 12 }}><FaExternalLinkAlt /></div>
+            <h2 style={{ color: '#2563eb', fontWeight: 700, marginBottom: 8 }}>Go to Live Demo?</h2>
+            <p style={{ color: '#555', marginBottom: 18 }}>You are about to leave the portfolio and open the project's live demo in a new tab.</p>
+            <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 12 }}>
+              <button
+                onClick={handleModalConfirm}
+                style={{
+                  background: 'linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%)',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 999,
+                  padding: '10px 32px',
+                  fontWeight: 600,
+                  fontSize: '1.08rem',
+                  cursor: 'pointer',
+                  boxShadow: '0 1px 4px rgba(36,99,235,0.08)',
+                  transition: 'background 0.18s, color 0.18s, transform 0.13s',
+                }}
+              >
+                Yes, Go!
+              </button>
+              <button
+                onClick={handleModalClose}
+                style={{
+                  background: '#eef2ff',
+                  color: '#2563eb',
+                  border: 'none',
+                  borderRadius: 999,
+                  padding: '10px 22px',
+                  fontWeight: 500,
+                  fontSize: '1.08rem',
+                  cursor: 'pointer',
+                  boxShadow: '0 1px 4px rgba(36,99,235,0.08)',
+                  transition: 'background 0.18s, color 0.18s, transform 0.13s',
+                }}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
