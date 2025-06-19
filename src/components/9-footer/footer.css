@@ -8,14 +8,25 @@ Table of Contents:
 */
 
 /* 1. Footer Flex Styles */
-footer.flex {
-    justify-content: space-between;
-    padding-bottom: 2rem;
+footer {
+    width: 100vw;
+    background: #f5f6fa;
+    color: #222;
+    padding: 18px 32px 18px 32px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    border-top: 1px solid #e3e8f0;
 }
 
 /* 2. Footer List Styles */
-footer ul.flex {
-    gap: 1rem;
+footer ul {
+    margin-right: 24px;
 }
 
 /* 3. Footer Link Styles */
@@ -29,8 +40,8 @@ footer ul.flex li a:hover {
 }
 
 /* 4. Footer Paragraph Styles */
-footer.flex p {
-    color:var(--subtitle);
+footer p {
+    margin: 0;
 }
 
 /* 5. Responsive Styles for Footer */

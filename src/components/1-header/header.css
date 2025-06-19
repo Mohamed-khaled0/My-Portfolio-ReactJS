@@ -299,3 +299,10 @@ header ul li a svg {
         padding: 0 .5rem;
       }
 }
+
+.header-centered {
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  margin: 0 auto;
+}

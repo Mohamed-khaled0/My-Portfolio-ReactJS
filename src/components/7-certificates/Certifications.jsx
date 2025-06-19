@@ -89,13 +89,13 @@ const Certifications = () => {
                 />
               </a>
               <div className="cert-details">
-                <h2 className="cert-name">
-                  <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                <h2 className="cert-name" style={{ color: '#2563eb', textAlign: 'center' }}>
+                  <a href={cert.link} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb' }}>
                     {cert.name}
                   </a>
                 </h2>
-                <h3 className="cert-authority">{cert.authority}</h3>
-                <p className="cert-date">Date : {cert.date}</p>
+                <h3 className="cert-authority" style={{ color: '#222', textAlign: 'center' }}>{cert.authority}</h3>
+                <p className="cert-date" style={{ color: '#555', textAlign: 'center' }}>Date : {cert.date}</p>
                 <a href={cert.link} target="_blank" rel="noopener noreferrer" className="external-link">
                   View Certificate <FiExternalLink className="external-link-icon" />
                 </a>

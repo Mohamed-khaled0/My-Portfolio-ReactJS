@@ -9,30 +9,33 @@ import Certifications from './components/7-certificates/Certifications'
 import Education from './components/6-education/Education'
 import Skills from './components/4-skills/Skills'
 import Experience from './components/5-experience/Experience'
+import ProfileSidebar from './components/ProfileSidebar';
+import { useState } from 'react';
 
 
 function App() {
+  const [activeSection, setActiveSection] = useState('projects');
+
+  // Map section keys to components
+  const sectionComponents = {
+    projects: <Main />,
+    certifications: <Certifications />,
+    experience: <Experience />,
+    education: <Education />,
+    contact: <Contact />,
+  };
+
   return (
-    <div  id="up" className='container'>
-      <Header />
-      <Hero />
-      <div className='divider'/>
-      <Main />
-      <div className='divider'/>
-      <Skills />
-     <div className='divider'/>
-     <Experience />
-     <div className='divider'/>
-     <Education  />
-      <div className='divider'/>
-      <Certifications  />
-      <div className='divider'/>
-      <Contact />
-      <div className='divider'/>
+    <div className='app-layout'>
+      <ProfileSidebar />
+      <div className='main-content'>
+        <Header setActiveSection={setActiveSection} activeSection={activeSection} />
+        {sectionComponents[activeSection]}
+        <Scroll2Top />
+      </div>
       <Footer />
-      <Scroll2Top />
     </div>
-  )
+  );
 }
 
 export default App;

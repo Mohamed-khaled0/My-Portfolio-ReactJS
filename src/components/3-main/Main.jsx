@@ -41,106 +41,43 @@ export default function Main() {
 
   return (
     <main id="projects" className="main-section">
-      <h1 className="projects-title">{t('projects_title')}</h1>
-
-      {/* <section className="center-section">
-        <button
-          onClick={() => handleClick("all")}
-          className={currentActive === "all" ? "active" : ""}
-        >
-          {t('all_projects')}
-        </button>
-        <button
-          onClick={() => handleClick("react")}
-          className={currentActive === "react" ? "active" : ""}
-        >
-          {t('react_nextjs')}
-        </button>
-        <button
-          onClick={() => handleClick("js")}
-          className={currentActive === "js" ? "active" : ""}
-        >
-          {t('javascript')}
-        </button>
-        <button
-          onClick={() => handleClick("css")}
-          className={currentActive === "css" ? "active" : ""}
-        >
-          {t('html_css')}
-        </button>
-      </section> */}
-
       <section className="projects-section">
-        <AnimatePresence>
-          {visibleProjects.map((item, index) => (
-            <motion.article
-              key={item.imgPath}
-              className="card"
-              initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and move down
-              animate={{ opacity: 1, y: 0 }} // Fade in and move up
-              exit={{ opacity: 0, y: 50 }} // Fade out and move down
-              transition={{ duration: 0.5, delay: index * 0.2 }} // Add delay based on index
-            >
-              <a href={item.liveDemo} target="_blank" rel="noopener noreferrer">
-                <img
-                  width={270}
-                  height={170}
-                  src={item.imgPath}
-                  alt={item.projectTitle}
-                />
-              </a>
-              <div className="box">
-                <h1 className="title">{item.projectTitle}</h1>
-                <p className="sub-title">{item.projectSubtitle}</p>
-
-                {/* Technologies Section */}
-                <div className="technologies">
-                  <h2 className="technologies-title">{t('technologies_title')}</h2> 
-                  <div className="tech-icons-container">
-                    {item.technologies.map((tech, index) => (
-                      <span key={index} className="tech-icon">
-                        {techIcons[tech]}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex icons">
-                  <div className="icon-container">
-                    <a
-                      target="_blank"
-                      href={item.liveDemo}
-                      rel="noopener noreferrer"
-                    >
-                      <div className="icon">
-                        <FaExternalLinkAlt className="icon" />
-                        <span className="icon-text"> {t('live_demo')}</span>
-                      </div>
-                    </a>
-                    <a
-                      target="_blank"
-                      href={item.githubLink}
-                      rel="noopener noreferrer"
-                    >
-                      <div className="icon">
-                        <FaGithub className="icon" />
-                        <span className="icon-text"> {t('github')}</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
+        {arr.map((item, index) => (
+          <div className="card" key={item.imgPath}>
+            <img
+              width={270}
+              height={170}
+              src={item.imgPath}
+              alt={item.projectTitle}
+              className="project-image"
+            />
+            <div className="box">
+              <h2 className="title">{item.projectTitle}</h2>
+              <div className="project-tags">
+                {item.technologies && item.technologies.map((tech, i) => (
+                  <span className="project-tag" key={i}>{tech}</span>
+                ))}
               </div>
-            </motion.article>
-          ))}
-        </AnimatePresence>
+              <p className="sub-title">{item.projectSubtitle}</p>
+              <div className="project-buttons">
+                {item.technologies && item.technologies.includes('Excel') && (
+                  <button className="project-btn">Excel for data cleaning</button>
+                )}
+                {item.technologies && item.technologies.includes('SQL') && (
+                  <button className="project-btn">SQL</button>
+                )}
+                {item.technologies && item.technologies.includes('Data Visualization') && (
+                  <button className="project-btn">Data Visualization</button>
+                )}
+                {item.technologies && item.technologies.includes('Tableau') && (
+                  <button className="project-btn">Tableau</button>
+                )}
+              </div>
+              <a className="read-more" href={item.liveDemo} target="_blank" rel="noopener noreferrer">Read more →</a>
+            </div>
+          </div>
+        ))}
       </section>
-
-      {/* Show More / Show Less Button */}
-      {/* <div className="show-more-container">
-        <button className="show-more" onClick={() => setShowMore((prev) => !prev)}>
-          {showMore ? t('show_less') : t('show_more')}
-        </button>
-      </div> */}
     </main>
   );
 }
