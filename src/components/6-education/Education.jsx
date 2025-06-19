@@ -11,9 +11,6 @@ const Education = () => {
     <section id="education">
       <h2 id='title'>{t('title')}</h2>
       <div className="education-card">
-        <div className="education-card-left">
-          <img src="/images/edu-logo.webp" alt="Thebes Academy Logo" />
-        </div>
         <div className="education-card-right">
           <h3><FaUniversity /> {t('degree')}</h3>
           <p>{t('institution')}</p>
@@ -28,9 +25,6 @@ const Education = () => {
       <div style={{ height: '20px' }} />
       {/* Secondary Education Card */}
       <div className="education-card">
-        <div className="education-card-left" style={{height: '115px', width: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          {/* Empty for spacing, no image */}
-        </div>
         <div className="education-card-right">
           <h3><FaUniversity /> {t('secondary_title')}</h3>
           <p>{t('secondary_institution')}</p>

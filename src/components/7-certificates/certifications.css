@@ -6,13 +6,13 @@
 }
 
 .certifications-section .title::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 4px;
-  background: var(--blue);
-  margin: 0.5rem auto;
-  border-radius: 4px;
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
 }
 
 .filter-buttons {
@@ -174,4 +174,27 @@ opacity: 1;
       }
       
 
+}
+
+.view-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(36,99,235,0.06);
+  transition: background 0.18s, color 0.18s, transform 0.13s;
+  padding: 10px 22px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 10px auto 0 auto;
+  justify-content: center;
+}
+.view-cert-btn:hover {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+  color: #fff;
+  transform: scale(1.07);
 }

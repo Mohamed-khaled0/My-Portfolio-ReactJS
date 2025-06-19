@@ -33,7 +33,6 @@ function App() {
         {sectionComponents[activeSection]}
         <Scroll2Top />
       </div>
-      <Footer />
     </div>
   );
 }

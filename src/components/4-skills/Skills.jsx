@@ -35,25 +35,27 @@ const skillsData = [
   { name: 'Microsoft Office', icon: <FaWindows size={50} style={{ color: '#ea3e23' }} /> },
   { name: 'Microsoft Server', icon: <FaServer size={50} style={{ color: '#0077b6' }} /> },
 ];
+
 const Skills = ({ sidebarMode }) => {
   const { t } = useTranslation('skills'); // Specify 'skills' namespace
 
   if (sidebarMode) {
     // Render as tags for sidebar
     return (
-      <div className="skills-tags">
-        {skillsData.map((skill, index) => (
-          <span key={index} className="skill-tag">{skill.name}</span>
-        ))}
+      <div>
+        <div className="skills-section-title">Skills</div>
+        <div className="skills-tags">
+          {skillsData.map((skill, index) => (
+            <span key={index} className="skill-tag">{skill.name}</span>
+          ))}
+        </div>
       </div>
     );
   }
 
   return (
     <section id="skills">
-      <div className="skills-title">
-        <h2>{t('title')}</h2>
-      </div>
+      <div className="skills-section-title">Skills</div>
       <div className="skills-container">
         {skillsData.map((skill, index) => (
           <motion.div

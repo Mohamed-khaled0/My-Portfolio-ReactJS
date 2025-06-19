@@ -62,76 +62,73 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact-us">
-      <h1 className="title">
-        <span className="icon-envelope-o"> </span>
-        {t('title')} {/* Use translation here */}
-      </h1>
-      <p className="sub-title">
-        {t('subTitle')} {/* Use translation here */}
-      </p>
-
-      <div style={{ justifyContent: "space-between" }} className="flex">
-        <form onSubmit={handleFormSubmit} noValidate>
-          <div className="flex">
+      <div className="contact-card">
+        <div className="contact-content">
+          <h1 className="title">
+            <span className="icon-envelope-o"> </span>
+            {t('title')}
+          </h1>
+          <p className="sub-title">
+            {t('subTitle')}
+          </p>
+          <form onSubmit={handleFormSubmit} noValidate>
+            <div className="flex">
+              <input
+                placeholder={t('emailPlaceholder')}
+                autoComplete="off"
+                required
+                type="email"
+                name="email"
+                id="email"
+              />
+              {emailError && <p className="custom-error-message">{emailError}</p>}
+            </div>
             <input
-              placeholder={t('emailPlaceholder')} // Use translation here
+              placeholder={t('namePlaceholder')}
               autoComplete="off"
               required
-              type="email"
-              name="email"
-              id="email"
+              type="text"
+              name="name"
+              id="name"
             />
-            {emailError && <p className="custom-error-message">{emailError}</p>} {/* Display custom email error */}
-          </div>
-
-          <input
-            placeholder={t('namePlaceholder')} // Use translation here
-            autoComplete="off"
-            required
-            type="text"
-            name="name"
-            id="name"
-          />
-          {nameError && <p className="custom-error-message">{nameError}</p>} {/* Display custom name error */}
-
-          <div className="flex" style={{ marginTop: "24px" }}>
-            <textarea
-              required
-              name="message"
-              placeholder={t('messagePlaceholder')} // Use translation here
-              id="message"
-            />
-            {messageError && <p className="custom-error-message">{messageError}</p>} {/* Display custom message error */}
-            <ValidationError prefix="Message" field="message" errors={state.errors} />
-          </div>
-
-          <button type="submit" disabled={state.submitting} className="submit">
-            {state.submitting ? t('submitting') : (
-              <>
-                <FiSend style={{ marginRight: "8px" }} /> {/* Add the icon here */}
-                {t('submitButton')} {/* Use translation here */}
-              </>
-            )}
-          </button>
-
-          {state.succeeded && (
-            <p
-              className="flex"
-              style={{ fontSize: "18px", marginTop: "1.7rem", color: "green" }}
-            >
-              <Lottie
-                loop={false}
-                style={{ height: 37 }}
-                animationData={doneAnimation}
+            {nameError && <p className="custom-error-message">{nameError}</p>}
+            <div className="flex" style={{ marginTop: "24px" }}>
+              <textarea
+                required
+                name="message"
+                placeholder={t('messagePlaceholder')}
+                id="message"
               />
-              {t('successMessage')} {/* Use translation here */}
-            </p>
-          )}
-        </form>
+              {messageError && <p className="custom-error-message">{messageError}</p>}
+              <ValidationError prefix="Message" field="message" errors={state.errors} />
+            </div>
+            <button type="submit" disabled={state.submitting} className="submit">
+              {state.submitting ? t('submitting') : (
+                <>
+                  <FiSend style={{ marginRight: "8px" }} />
+                  {t('submitButton')}
+                </>
+              )}
+            </button>
+            {state.succeeded && (
+              <p
+                className="flex"
+                style={{ fontSize: "18px", marginTop: "1.7rem", color: "green" }}
+              >
+                <Lottie
+                  loop={false}
+                  style={{ height: 37 }}
+                  animationData={doneAnimation}
+                />
+                {t('successMessage')}
+              </p>
+            )}
+          </form>
+        </div>
         <div className="animation">
           <Lottie
             className="contact-animation"
-            style={{ height: 455 }}
+            style={{ height: 320 }}
             animationData={contactAnimation}
           />
         </div>

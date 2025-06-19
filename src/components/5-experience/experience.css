@@ -14,13 +14,13 @@
 }
 
 .section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background: var(--blue);
-    margin: 0.5rem auto;
-    border-radius: 4px;
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
 }
 
 .experience-list {
@@ -30,22 +30,21 @@
 }
 
 .experience-card {
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    cursor: pointer;
-    background-color: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(36,99,235,0.08);
+    padding: 38px 24px;
+    background: #fff;
+    border-left: 6px solid #2563eb;
     display: flex;
     flex-direction: column;
-    opacity: 0.8;
-    transition: 0.3s;
-    color: var(--title);
-    
+    color: #222;
+    margin-bottom: 32px;
+    transition: box-shadow 0.3s, border 0.3s;
 }
 
 .experience-card:hover {
-    opacity: 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 24px rgba(36,99,235,0.13);
+    border-left: 6px solid #1d4ed8;
 }
 
 .experience-header {
@@ -55,14 +54,22 @@
     font-size: 1.1rem;
 }
 
+.experience-header h3 {
+    color: #2563eb;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
 
 /* New styles for the logo */
 .company-logo {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    margin-right: 10px;
-    border-radius: 50%; /* Optional for rounded logos */
+    margin-right: 18px;
+    border-radius: 10px;
+    background: #f7faff;
+    border: 1.5px solid #e3e8f0;
 }
 
 .experience-details {
@@ -70,24 +77,20 @@
 }
 
 .company {
-    font-weight: bold;
-    font-size: 1rem;
-
+    font-weight: 600;
+    color: #2563eb;
+    font-size: 1.05rem;
 }
 
-.location {
-    color: var(--subtitle);
-}
-
-.date {
-    display: flex;
-    align-items: center;
-    color: var(--subtitle);
+.location, .date {
+    color: #555;
+    font-size: 1.01rem;
 }
 
 .description {
     margin-top: 1rem;
-    
+    color: #222;
+    font-size: 1.01rem;
 }
 
 /* Button for GitHub and Tableau */
@@ -98,31 +101,25 @@
 }
 
 .action-buttons a {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition:  0.3s;
-    background-color: rgba(36, 37, 46, 1);
-    opacity: 0.9;
-    border: 1px solid rgb(63 63 70);
-    color: var(--title);
-
+    background: #eef2ff;
+    color: #2563eb;
+    border: none;
+    border-radius: 999px;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(36,99,235,0.06);
+    transition: background 0.18s, color 0.18s, transform 0.13s;
 }
 
 .action-buttons a:hover {
-    opacity: 1;
-    border: 1px solid var(--blue);
-
+    background: #dbeafe;
+    color: #1d4ed8;
+    transform: scale(1.07);
+    border: none;
 }
-
 
 .light .action-buttons a {
     color: white;
 }
-
 
 /* Add GitHub and Tableau icon styling */
 .github-icon,
@@ -130,6 +127,37 @@
     font-size: 1.2rem;
     color: white; /* Adjust the icon color as needed */
 }
+
+.company-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+
+.github-btn, .tableau-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #eef2ff;
+    color: #2563eb;
+    border: none;
+    border-radius: 999px;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(36,99,235,0.06);
+    transition: background 0.18s, color 0.18s, transform 0.13s;
+    padding: 8px 18px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.github-btn:hover, .tableau-btn:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+    transform: scale(1.07);
+}
+
 @media (max-width: 600px) {
     .section-title {
         font-size: 1.5rem;
@@ -142,18 +170,25 @@
         gap: 1rem;
     }
     .experience-card {
-        padding: 1rem;
-        margin-bottom: 15px;
+        padding: 20px 5px;
+        border-left: 4px solid #2563eb;
     }
     .company-logo {
         width: 40px;
         height: 40px;
     }
-    .experience-header {
-        font-size: 1rem;
+    .experience-header h3 {
+        font-size: 1.05rem;
+    }
+    .company, .location, .date, .description {
+        font-size: 0.97rem;
     }
     .action-buttons a {
         font-size: 0.95rem;
         padding: 0.4rem 0.7rem;
     }
+}
+
+.icon-gray {
+  color: #555 !important;
 }

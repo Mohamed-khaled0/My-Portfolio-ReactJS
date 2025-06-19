@@ -6,26 +6,29 @@
     font-size: 2rem;
 }
 #title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background: var(--blue);
-    margin: 0.5rem auto;
-    border-radius: 4px;
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
 }
 
 /* Education card styles */
 .education-card {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     cursor: pointer;
-    padding: 50px 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color:var(--card) ; 
-    transition: 0.3s ;
+    padding: 38px 24px;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 0 auto 32px auto;
+    box-shadow: 0 2px 12px rgba(36,99,235,0.08);
+    background: #fff;
+    border-left: 6px solid #2563eb;
+    transition: box-shadow 0.3s, border 0.3s;
 }
 
 .education-card-right h3 svg, 
@@ -34,35 +37,28 @@
     color: var(--icon-hover); 
 }
 
-
 .education-card:hover {
-    background-color:var(--card) ; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-
-}
-
-.education-card-left img {
-    width: 150px;
-    height: 115px;
-    border-radius: 8px;
-    object-fit: cover;
+    box-shadow: 0 6px 24px rgba(36,99,235,0.13);
+    border-left: 6px solid #1d4ed8;
 }
 
 .education-card-right {
-    margin-left: 20px;
+    margin-left: 0;
     text-align: left;
+    flex: 1;
 }
 
 .education-card-right h3 {
-    color: var(--title);
-    font-size: 1.5rem;
+    color: #2563eb;
+    font-size: 1.35rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .education-card-right p {
     margin: 5px 0;
-    font-size: 1rem;
-    color: var(--title);
+    font-size: 1.05rem;
+    color: #222;
 }
 
 .education-card-right ul {
@@ -71,41 +67,26 @@
 
 .education-card-right ul li {
     margin-bottom: 5px;
-    color: var(--subtitle);
+    color: #555;
 }
 
 /* Adjust for smaller screens */
+@media screen and (max-width: 1200px) {
+    .education-card {
+        max-width: 98vw;
+        padding: 24px 8px;
+    }
+}
 @media screen and (max-width: 600px) {
     .education-card {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 20px;
-        padding: 20px 5px;
-    }
-
-    .education-card-right {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .education-card-left img {
-        width: 90px; 
-        height: 65px;
-    }
-
-    h2 {
-        margin-bottom: 20px;
-        font-size: 1.3rem; 
-    }
-    #title {
-        margin-bottom: 20px;
-        font-size: 1.2rem;
+        padding: 14px 2px;
+        border-left: 4px solid #2563eb;
     }
     .education-card-right h3 {
         font-size: 1.1rem;
     }
     .education-card-right p, .education-card-right ul li {
-        font-size: 0.95rem;
+        font-size: 0.97rem;
     }
 }
 

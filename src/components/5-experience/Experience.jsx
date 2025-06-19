@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaGithub, FaBuilding } from 'react-icons/fa';
 import { AiOutlineBarChart } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import './experience.css';
@@ -76,20 +76,22 @@ const Experience = () => {
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="experience-header">
-              <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" />
+              <div className="company-logo-wrapper">
+                <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" />
+              </div>
               <div>
                 <h3>{exp.title}</h3>
                 <p className="company">
-                  <FaBriefcase /> {exp.company}
+                  <FaBuilding className="icon-gray" /> {exp.company}
                 </p>
               </div>
             </div>
             <div className="experience-details">
               <span className="location">
-                <FaMapMarkerAlt /> {exp.location}
+                <FaMapMarkerAlt className="icon-gray" /> {exp.location}
               </span>
               <p className="date">
-                <FaCalendarAlt /> {exp.date}
+                <FaCalendarAlt className="icon-gray" /> {exp.date}
               </p>
             </div>
             <ul className="description">
@@ -99,13 +101,13 @@ const Experience = () => {
             </ul>
             <div className="action-buttons">
               {exp.githubLink && (
-                <a href={exp.githubLink} target="_blank" rel="noopener noreferrer">
-                  <FaGithub className="github-icon" /> GitHub link
+                <a href={exp.githubLink} target="_blank" rel="noopener noreferrer" className="github-btn" aria-label="GitHub">
+                  <FaGithub className="github-icon icon-gray" /> GitHub
                 </a>
               )}
               {exp.tableauLink && (
-                <a href={exp.tableauLink} target="_blank" rel="noopener noreferrer">
-                  <AiOutlineBarChart className="tableau-icon" /> Tableau Link
+                <a href={exp.tableauLink} target="_blank" rel="noopener noreferrer" className="tableau-btn" aria-label="Tableau">
+                  <AiOutlineBarChart className="tableau-icon icon-gray" /> Tableau
                 </a>
               )}
             </div>

@@ -93,7 +93,9 @@ section.contact-us .submit {
 }
 
 section.contact-us .submit:hover {
-    scale: 1.05;
+    background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    transform: scale(1.09);
+    box-shadow: 0 4px 16px rgba(36,99,235,0.13);
 }
 
 /* Lottie animation adjustment */
@@ -156,4 +158,99 @@ section.contact-us .success-message {
         font-size: 1.3rem;
         margin-bottom: .7rem;
     }
+}
+
+section.contact-us {
+  background: none;
+  padding: 0;
+}
+.contact-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(36,99,235,0.08);
+  border-left: 6px solid #2563eb;
+  padding: 38px 24px;
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.contact-content {
+  flex: 1;
+}
+section.contact-us .title {
+  font-size: 2.1rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 700;
+}
+section.contact-us .sub-title {
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.65rem;
+  text-align: left;
+}
+section.contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+section.contact-us #name,
+section.contact-us #email,
+section.contact-us #message {
+  background: #f7faff;
+  border: 1.5px solid #e3e8f0;
+  color: #222;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 4px rgba(36,99,235,0.04);
+}
+section.contact-us #message {
+  min-height: 9rem;
+  resize: vertical;
+}
+section.contact-us .submit {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 32px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  box-shadow: 0 1px 4px rgba(36,99,235,0.08);
+  transition: background 0.18s, color 0.18s, transform 0.13s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section.contact-us .submit:hover {
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  transform: scale(1.09);
+  box-shadow: 0 4px 16px rgba(36,99,235,0.13);
+}
+section.contact-us .animation {
+  min-width: 260px;
+  max-width: 320px;
+  margin-left: 16px;
+  margin-top: 18px;
+}
+@media (max-width: 1000px) {
+  .contact-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 6px;
+    gap: 0;
+  }
+  section.contact-us .animation {
+    margin: 0 auto;
+    min-width: 180px;
+    max-width: 220px;
+  }
 }
