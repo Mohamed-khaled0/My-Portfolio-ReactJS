@@ -7,7 +7,16 @@
     "coursera": "Coursera",
     "udacity": "Udacity",
     "hackerrank": "HackerRank",
-    "iti": "ITI"
+    "iti": "ITI",
+    "desc_meta_frontend": "A comprehensive program covering HTML, CSS, JavaScript, React, and front-end best practices.",
+    "desc_css_basic": "Demonstrates understanding of basic CSS concepts and styling web pages.",
+    "desc_software_engineer": "Covers core software engineering principles and problem-solving skills.",
+    "desc_js_basic": "Validates knowledge of JavaScript fundamentals and syntax.",
+    "desc_sql_intermediate": "Demonstrates ability to write intermediate SQL queries and manage databases.",
+    "desc_data_analysis": "Focused on data analysis techniques using Python, statistics, and real-world datasets.",
+    "desc_web_dev_intern": "Hands-on internship focused on web development projects and teamwork.",
+    "desc_mobile_dev_intern": "Internship focused on building and testing mobile applications.",
+    "desc_business_analytics": "Internship involving business analytics tasks and data-driven decision making."
   }
   
   

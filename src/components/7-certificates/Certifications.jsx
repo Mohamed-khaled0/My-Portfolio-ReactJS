@@ -7,7 +7,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { useTranslation } from 'react-i18next';
 
 const Certifications = () => {
-  const { t } = useTranslation('certifications');
+  const { t } = useTranslation(['certifications']);
   const [currentCategory, setCurrentCategory] = useState("all");
   const [certificates, setCertificates] = useState(CertificationsData);
   const [showMore, setShowMore] = useState(false);
@@ -96,7 +96,9 @@ const Certifications = () => {
                 </h2>
                 <h3 className="cert-authority" style={{ color: '#222', textAlign: 'center' }}>{cert.authority}</h3>
                 {cert.description && (
-                  <p className="cert-description" style={{ color: '#444', fontSize: '1rem', margin: '8px 0', textAlign: 'center' }}>{cert.description}</p>
+                  <p className="cert-description" style={{ color: '#444', fontSize: '1rem', margin: '8px 0', textAlign: 'center' }}>
+                    {t(cert.descKey || '', { defaultValue: cert.description }) || cert.description}
+                  </p>
                 )}
                 <a href={cert.link} target="_blank" rel="noopener noreferrer" className="view-cert-btn">
                   View Certificate <FiExternalLink className="external-link-icon" />
