@@ -125,13 +125,6 @@ const Contact = () => {
             )}
           </form>
         </div>
-        <div className="animation">
-          <Lottie
-            className="contact-animation"
-            style={{ height: 320 }}
-            animationData={contactAnimation}
-          />
-        </div>
       </div>
     </section>
   );

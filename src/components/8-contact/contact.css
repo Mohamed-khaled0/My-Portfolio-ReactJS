@@ -98,11 +98,6 @@ section.contact-us .submit:hover {
     box-shadow: 0 4px 16px rgba(36,99,235,0.13);
 }
 
-/* Lottie animation adjustment */
-section.contact-us .animation {
-    translate: -8px -60px;
-}
-
 /* Success message style */
 section.contact-us .success-message {
     font-size: 1rem;
@@ -114,15 +109,15 @@ section.contact-us .success-message {
 
 /* 6. Responsive Design (media queries) */
 @media (max-width: 1400px) {
-    section.contact-us .animation {
+    /* section.contact-us .animation {
         display: none;
-    }
+    } */
 }
 
 @media (max-width: 1000px) {
-    section.contact-us .animation {
+    /* section.contact-us .animation {
         display: none;
-    }
+    } */
 
     section.contact-us form {
         display: flex;
@@ -157,6 +152,13 @@ section.contact-us .success-message {
     section.contact-us .title {
         font-size: 1.3rem;
         margin-bottom: .7rem;
+    }
+
+    section.contact-us .animation {
+        /* min-width: 260px;
+        max-width: 320px;
+        margin-left: 16px;
+        margin-top: 18px; */
     }
 }
 
@@ -236,10 +238,10 @@ section.contact-us .submit:hover {
   box-shadow: 0 4px 16px rgba(36,99,235,0.13);
 }
 section.contact-us .animation {
-  min-width: 260px;
+  /* min-width: 260px;
   max-width: 320px;
   margin-left: 16px;
-  margin-top: 18px;
+  margin-top: 18px; */
 }
 @media (max-width: 1000px) {
   .contact-card {
@@ -248,9 +250,9 @@ section.contact-us .animation {
     padding: 18px 6px;
     gap: 0;
   }
-  section.contact-us .animation {
+  /* section.contact-us .animation {
     margin: 0 auto;
     min-width: 180px;
     max-width: 220px;
-  }
+  } */
 }
