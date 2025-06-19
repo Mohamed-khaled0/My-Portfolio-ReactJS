@@ -60,23 +60,34 @@ export default function Main() {
             className="card"
             key={item.imgPath}
             onClick={() => handleCardClick(item.liveDemo)}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', width: 370, minHeight: 520 }}
           >
             <img
-              width={270}
-              height={170}
+              width={320}
+              height={180}
               src={item.imgPath}
-              alt={item.projectTitle}
+              alt={t(item.projectTitle)}
               className="project-image"
             />
             <div className="box">
-              <h2 className="title">{item.projectTitle}</h2>
+              <h2 className="title">{t(item.projectTitle)}</h2>
               <div className="project-tags">
                 {item.technologies && item.technologies.map((tech, i) => (
                   <span className="project-tag" key={i}>{tech}</span>
                 ))}
               </div>
-              <p className="sub-title">{item.projectSubtitle}</p>
+              <p className="project-description" style={{ color: '#555', fontSize: '1rem', margin: '8px 0 0 0', minHeight: 40 }}>{t(item.description)}</p>
+              {/* Features Preview (only first feature, localized) */}
+              {Array.isArray(item.features) && item.features.length === 1 && typeof item.features[0] === 'string' && item.features[0].endsWith('_features') ? (
+                <ul className="project-features-preview">
+                  {(() => {
+                    const featuresArr = t(item.features[0], { returnObjects: true });
+                    return Array.isArray(featuresArr) && featuresArr[0] ? (
+                      <li style={{ fontSize: '0.97rem', color: '#555', margin: '2px 0' }}>{featuresArr[0]}</li>
+                    ) : null;
+                  })()}
+                </ul>
+              ) : null}
               <div className="project-buttons">
                 {item.technologies && item.technologies.includes('Excel') && (
                   <button className="project-btn">Excel for data cleaning</button>

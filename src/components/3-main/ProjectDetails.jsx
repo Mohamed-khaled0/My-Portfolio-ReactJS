@@ -16,12 +16,21 @@ const ProjectDetails = () => {
   // Check if this is the portfolio project by key
   const isPortfolio = project.projectTitle === 'portfolio_project_title';
 
+  let localizedFeatures = null;
+  if (Array.isArray(project.features) && project.features.length === 1 && typeof project.features[0] === 'string' && project.features[0].endsWith('_features')) {
+    const tFeatures = t(project.features[0], { returnObjects: true });
+    if (Array.isArray(tFeatures)) {
+      localizedFeatures = tFeatures;
+    }
+  }
+
   return (
     <div style={{ maxWidth: 800, margin: '40px auto', background: '#fff', borderRadius: 12, boxShadow: '0 2px 12px rgba(36,99,235,0.08)', padding: 32 }}>
       <button onClick={() => navigate('/')} style={{ marginBottom: 24, background: 'var(--blue)', color: '#fff', border: 'none', borderRadius: 8, padding: '8px 18px', cursor: 'pointer' }}>← Back to Projects</button>
-      <h1 style={{ color: '#2563eb', marginBottom: 12 }}>{isPortfolio ? t('portfolio_project_title') : project.projectTitle}</h1>
-      <h3 style={{ color: '#555', marginBottom: 18 }}>{isPortfolio ? t('portfolio_project_subtitle') : project.projectSubtitle}</h3>
-      <img src={project.imgPath} alt={isPortfolio ? t('portfolio_project_title') : project.projectTitle} style={{ width: '100%', maxWidth: 650, borderRadius: 8, marginBottom: 24 }} />
+      <h1 style={{ color: '#2563eb', marginBottom: 12 }}>{t(project.projectTitle)}</h1>
+      <h3 style={{ color: '#555', marginBottom: 18 }}>{t(project.projectSubtitle)}</h3>
+      <p className="project-description" style={{ color: '#555', fontSize: '1.08rem', margin: '0 0 18px 0', minHeight: 40 }}>{t(project.description)}</p>
+      <img src={project.imgPath} alt={t(project.projectTitle)} style={{ width: '100%', maxWidth: 650, borderRadius: 8, marginBottom: 24 }} />
       <div style={{ marginBottom: 18 }}>
         <strong>{t('technologies_title') || 'Technologies:'}</strong>
         <ul style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '8px 0', padding: 0, listStyle: 'none' }}>
@@ -34,8 +43,8 @@ const ProjectDetails = () => {
         <div style={{ marginBottom: 18 }}>
           <strong>Features:</strong>
           <ul style={{ margin: '8px 0 0 18px' }}>
-            {isPortfolio
-              ? t('portfolio_project_features', { returnObjects: true }).map((feature, i) => <li key={i}>{feature}</li>)
+            {localizedFeatures
+              ? localizedFeatures.map((feature, i) => <li key={i}>{feature}</li>)
               : project.features.map((feature, i) => <li key={i}>{feature}</li>)}
           </ul>
         </div>
