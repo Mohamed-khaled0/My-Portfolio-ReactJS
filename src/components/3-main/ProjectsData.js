@@ -3,7 +3,7 @@
 let myProjects = [
   {
     projectTitle: "portfolio_project_title",
-    projectSubtitle: "A modern, responsive portfolio website built with ReactJS, deployed on Netlify, featuring localization, dark/light mode, and more.",
+    projectSubtitle: "A modern, responsive portfolio website built with ReactJS, deployed on Netlify, featuring localization,and more.",
     description: "This is my personal portfolio website, built with ReactJS and deployed using Netlify. It showcases my projects, skills, and experience with a modern, responsive design and advanced features.",
     category: ["react", "all"],
     liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
@@ -20,7 +20,7 @@ let myProjects = [
       "Contact Form: Integrated with Formspree for easy form submissions.",
       "Deployed with Netlify for fast and reliable hosting."
     ],
-    technologies: ["ReactJS", "HTML5", "CSS3", "Framer Motion", "Vite", "Formspree", "Netlify"]
+    technologies: ["ReactJS", "HTML5", "CSS3", "Framer Motion", "Vite", "Netlify"]
   },
   {
     projectTitle: "CRUDS ",
