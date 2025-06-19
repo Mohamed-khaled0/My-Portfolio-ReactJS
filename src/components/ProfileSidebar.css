@@ -102,4 +102,72 @@
   font-size: 0.95rem;
   margin-bottom: 4px;
   display: inline-block;
+}
+
+.profile-extra-info {
+  margin-top: 24px;
+  background: #f7faff;
+  border-radius: 10px;
+  padding: 16px 14px 10px 14px;
+  box-shadow: 0 1px 6px rgba(36,99,235,0.06);
+}
+.profile-extra-info h3 {
+  font-size: 1.15rem;
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: left;
+}
+.profile-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.profile-info-list > li {
+  position: relative;
+  padding-left: 18px;
+}
+.profile-info-list > li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+}
+.profile-info-list li strong {
+  color: #2563eb;
+  min-width: 120px;
+  font-weight: 600;
+}
+
+.profile-info-sublist {
+  list-style: none;
+  margin: 4px 0 8px 18px;
+  padding: 0;
+  font-size: 0.97rem;
+  color: #444;
+}
+.profile-info-sublist li {
+  margin-bottom: 2px;
+  padding-left: 0;
+  position: relative;
+  color: #444;
+}
+.profile-info-sublist li::before {
+  content: '-';
+  color: #2563eb;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 4px;
+}
+
+.profile-extra-info, .profile-info-list, .profile-info-sublist {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 } 

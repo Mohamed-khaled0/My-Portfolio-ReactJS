@@ -19,8 +19,45 @@ const ProfileSidebar = () => {
           <a href='https://github.com/Mohamed-khaled0' target='_blank' rel='noopener noreferrer'><FaGithub /></a>
           <a href='mailto:mohamedalshraby3@gmail.com'><FaEnvelope /></a>
         </div>
-        <div className='profile-skills'>
-          <Skills sidebarMode />
+        <div className='profile-extra-info'>
+          <h3>{t('skills_title')}</h3>
+          <ul className='profile-info-list'>
+            <li><strong>{t('languages')}:</strong>
+              <ul className='profile-info-sublist'>
+                {t('languages_value').split(',').map((lang, idx) => (
+                  <li key={idx}>{lang.trim()}</li>
+                ))}
+              </ul>
+            </li>
+            <li><strong>{t('software_network')}:</strong>
+              <ul className='profile-info-sublist'>
+                {t('software_network_value').split('–').map((item, idx) => (
+                  <li key={idx}>{item.trim()}</li>
+                ))}
+              </ul>
+            </li>
+            <li><strong>{t('web_technologies')}:</strong>
+              <ul className='profile-info-sublist'>
+                {t('web_technologies_value').split('–').map((item, idx) => (
+                  <li key={idx}>{item.trim()}</li>
+                ))}
+              </ul>
+            </li>
+            <li><strong>{t('tools_platforms')}:</strong>
+              <ul className='profile-info-sublist'>
+                {t('tools_platforms_value').split('–').map((item, idx) => (
+                  <li key={idx}>{item.trim()}</li>
+                ))}
+              </ul>
+            </li>
+            <li><strong>{t('personal_strengths')}:</strong>
+              <ul className='profile-info-sublist'>
+                {t('personal_strengths_value').split('–').map((item, idx) => (
+                  <li key={idx}>{item.trim()}</li>
+                ))}
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </aside>

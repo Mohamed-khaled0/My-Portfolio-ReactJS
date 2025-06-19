@@ -8,6 +8,17 @@
     "education": "Ausbildung",
     "contact": "Kontakt",
     "modeToggle": "Thema wechseln",
-    "based_in_gizeh_egypt": "Gizeh, Ägypten"
+    "based_in_gizeh_egypt": "Gizeh, Ägypten",
+    "skills_title": "Kenntnisse",
+    "languages": "Sprachen",
+    "languages_value": "Deutsch: B2, Englisch: Sehr gut, Arabisch: Muttersprache",
+    "software_network": "Software & Netzwerk",
+    "software_network_value": "CCNA (Subnetting, Firewall, VPN, VLAN, NAT, ACL, Routing-Protokolle)",
+    "web_technologies": "Web-Technologien",
+    "web_technologies_value": "HTML – CSS – JavaScript – Grundkenntnisse in React",
+    "tools_platforms": "Tools & Plattformen",
+    "tools_platforms_value": "Cisco Packet Tracer – Python & OOP – SQL – Git & GitHub – Microsoft Office",
+    "personal_strengths": "Persönliche Stärken",
+    "personal_strengths_value": "Kommunikationsfähigkeiten – Lernbereitschaft – Problemlösungsfähigkeiten"
   }
   
