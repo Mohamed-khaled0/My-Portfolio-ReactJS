@@ -22,6 +22,19 @@
       "Deployed with Netlify for fast and reliable hosting."
     ],
     "portfolio_project_description": "This is my personal portfolio website, built with ReactJS and deployed using Netlify. It showcases my projects, skills, and experience with a modern, responsive design and advanced features.",
+    "crypto_project_title": "Crypto Tracker",
+    "crypto_project_subtitle": "A modern cryptocurrency tracking app built with React, Firebase, and Tailwind CSS.",
+    "crypto_project_description": "A comprehensive cryptocurrency tracking application that provides real-time information about various cryptocurrencies, including prices, trends, and charts. Features user authentication and theme customization.",
+    "crypto_project_features": [
+      "Real-time cryptocurrency price tracking",
+      "User Authentication with Firebase",
+      "Dark/Light mode toggle with theme persistence",
+      "Responsive design for all device sizes",
+      "Interactive price charts and trends",
+      "Mobile-friendly navigation",
+      "Secure routing with Firebase authentication",
+      "Deployed on Firebase hosting"
+    ],
     "crud_project_title": "CRUDS",
     "crud_project_subtitle": "A simple Product Management System that allows users to manage products.",
     "crud_project_features": [

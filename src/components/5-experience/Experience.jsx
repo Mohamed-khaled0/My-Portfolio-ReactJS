@@ -25,18 +25,6 @@ const Experience = () => {
       githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks',
     },
     {
-      title: t('experience.mobileDeveloperIntern.title'),
-      company: t('experience.mobileDeveloperIntern.company'),
-      location: t('experience.mobileDeveloperIntern.location'),
-      date: t('experience.mobileDeveloperIntern.date'),
-      description: [
-        t('experience.mobileDeveloperIntern.description.0'),
-        t('experience.mobileDeveloperIntern.description.1')
-      ],
-      logo: '/images/experience/the-sparks-foundation-logo.webp',
-      githubLink: 'https://github.com/Mohamed-khaled0/E-Commerce-IOS-CodeAlpha-Internship',
-    },
-    {
       title: t('experience.itSupportSpecialist.title'),
       company: t('experience.itSupportSpecialist.company'),
       location: t('experience.itSupportSpecialist.location'),

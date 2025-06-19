@@ -21,6 +21,19 @@
       "Bereitgestellt mit Netlify für schnelles und zuverlässiges Hosting."
     ],
     "portfolio_project_description": "Dies ist meine persönliche Portfolio-Webseite, erstellt mit ReactJS und bereitgestellt über Netlify. Sie zeigt meine Projekte, Fähigkeiten und Erfahrungen in einem modernen, responsiven Design.",
+    "crypto_project_title": "Krypto-Tracker",
+    "crypto_project_subtitle": "Eine moderne Kryptowährung-Tracking-App, entwickelt mit React, Firebase und Tailwind CSS.",
+    "crypto_project_description": "Eine umfassende Kryptowährung-Tracking-Anwendung, die Echtzeit-Informationen über verschiedene Kryptowährungen bietet, einschließlich Preise, Trends und Diagramme. Bietet Benutzerauthentifizierung und Themenanpassung.",
+    "crypto_project_features": [
+      "Echtzeit-Kryptowährungspreis-Tracking",
+      "Benutzerauthentifizierung mit Firebase",
+      "Dark/Light-Modus-Umschaltung mit Theme-Persistenz",
+      "Responsives Design für alle Gerätegrößen",
+      "Interaktive Preisdiagramme und Trends",
+      "Mobile-freundliche Navigation",
+      "Sichere Routing mit Firebase-Authentifizierung",
+      "Bereitgestellt auf Firebase-Hosting"
+    ],
     "crud_project_title": "CRUDS",
     "crud_project_subtitle": "Ein einfaches Produktverwaltungssystem, das es Benutzern ermöglicht, Produkte zu verwalten.",
     "crud_project_features": [

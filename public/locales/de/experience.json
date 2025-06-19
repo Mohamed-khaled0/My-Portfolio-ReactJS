@@ -14,17 +14,6 @@
         ],
         "githubLink": "GitHub Repo"
       },
-      "mobileDeveloperIntern": {
-        "title": "Mobile Entwickler Praktikant",
-        "company": "CodeAlpha",
-        "location": "Remote",
-        "date": "Apr 2024 - Mai 2024",
-        "description": [
-          "- Entwickelte eine iOS-Anwendung namens 'Sweater Shop.'",
-          "- MVC-Architektur: Folgte dem Model-View-Controller (MVC) Designmuster, um sauberen und organisierten Code zu erhalten."
-        ],
-        "githubLink": "GitHub Repo"
-      },
       "businessAnalyticsIntern": {
         "title": "Praktikant in der Geschäftsanalyse",
         "company": "The Sparks Foundation",

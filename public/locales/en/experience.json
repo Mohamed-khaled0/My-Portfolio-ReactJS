@@ -14,17 +14,6 @@
         ],
         "githubLink": "GitHub Repo"
       },
-      "mobileDeveloperIntern": {
-        "title": "Mobile Developer Intern",
-        "company": "CodeAlpha",
-        "location": "Remote",
-        "date": "April 2024 - May 2024",
-        "description": [
-          "- Developed an iOS application called 'Sweater Shop.'",
-          "- MVC Architecture: Followed the Model-View-Controller (MVC) design pattern to maintain clean and organized code."
-        ],
-        "githubLink": "GitHub Repo"
-      },
       "businessAnalyticsIntern": {
         "title": "Business Analytics Intern",
         "company": "The Sparks Foundation",

@@ -12,7 +12,7 @@ const ProfileSidebar = () => {
       <div className='profile-card'>
         <img className='profile-photo' src='/images/personalphoto.webp' alt='Profile' style={{ width: 160, height: 160, objectFit: 'cover' }} />
         <h2 style={{ color: '#000' }}>Mohamed Elshrabay</h2>
-        <p className='profile-title'>Ex- Data Analyst Intern @ Udacity | ITI Intern</p>
+        <p className='profile-title'>{t('profile_title')}</p>
         <p className='profile-location'><FaMapMarkerAlt /> {t('based_in_gizeh_egypt')}</p>
         <div className='profile-socials'>
           <a href='https://www.linkedin.com/in/mohamed-khaled4/' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
