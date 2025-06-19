@@ -95,6 +95,9 @@ const Certifications = () => {
                   </a>
                 </h2>
                 <h3 className="cert-authority" style={{ color: '#222', textAlign: 'center' }}>{cert.authority}</h3>
+                {cert.description && (
+                  <p className="cert-description" style={{ color: '#444', fontSize: '1rem', margin: '8px 0', textAlign: 'center' }}>{cert.description}</p>
+                )}
                 <a href={cert.link} target="_blank" rel="noopener noreferrer" className="view-cert-btn">
                   View Certificate <FiExternalLink className="external-link-icon" />
                 </a>
