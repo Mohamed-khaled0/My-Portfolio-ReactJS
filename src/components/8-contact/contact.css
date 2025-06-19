@@ -33,6 +33,14 @@ section.contact-us #message {
     transition: 0.3s;
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+section.contact-us #name {
+    width: 30rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    box-sizing: border-box;
 }
 
 /* Light mode styles */
@@ -94,8 +102,8 @@ section.contact-us .submit {
 
 section.contact-us .submit:hover {
     background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-    transform: scale(1.09);
-    box-shadow: 0 4px 16px rgba(36,99,235,0.13);
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px rgba(36,99,235,0.10);
 }
 
 /* Success message style */
@@ -234,7 +242,7 @@ section.contact-us .submit {
 }
 section.contact-us .submit:hover {
   background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-  transform: scale(1.09);
+  transform: scale(1.01);
   box-shadow: 0 4px 16px rgba(36,99,235,0.13);
 }
 section.contact-us .animation {
