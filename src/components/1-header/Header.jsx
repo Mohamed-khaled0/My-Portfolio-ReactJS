@@ -4,15 +4,29 @@ import { FaHome, FaCode, FaBriefcase, FaGraduationCap, FaEnvelope, FaGlobe, FaBa
 import { MdBuild } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 import "./header.css";
+import { useLocation } from 'react-router-dom';
 
 export default function Header({ setActiveSection, activeSection }) {
   const { t, i18n } = useTranslation('header');
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
   useEffect(() => {
     setCurrentLanguage(i18n.language);
   }, [i18n.language]);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 600);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Hide header on project details page on mobile
+  if (isMobile && location.pathname.startsWith('/project/')) {
+    return null;
+  }
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);

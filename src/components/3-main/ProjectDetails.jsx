@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import myProjects from './ProjectsData';
 import { useTranslation } from 'react-i18next';
+import { FaGithub } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -40,7 +42,7 @@ const ProjectDetails = () => {
         </ul>
       </div>
       {project.features && project.features.length > 0 && (
-        <div style={{ marginBottom: 18 }}>
+        <div style={{ marginBottom: 10 }}>
           <strong>Features:</strong>
           <ul style={{ margin: '8px 0 0 18px' }}>
             {localizedFeatures
@@ -49,12 +51,19 @@ const ProjectDetails = () => {
           </ul>
         </div>
       )}
-      <div style={{ marginTop: 24, display: 'flex', gap: 16 }}>
+      {/* Project Links Row */}
+      <div style={{ display: 'flex', gap: 18, margin: '18px 0 0 0', justifyContent: 'center', flexWrap: 'wrap' }}>
         {project.liveDemo && (
-          <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%)', color: '#fff', borderRadius: 999, padding: '10px 22px', textDecoration: 'none', fontWeight: 500 }}>{t('live_demo') || 'Live Demo'}</a>
+          <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', background: 'linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%)', color: '#fff', borderRadius: 999, padding: '10px 22px', textDecoration: 'none', fontWeight: 500, fontSize: '1.05rem', gap: 8 }}>
+            <FaExternalLinkAlt style={{ fontSize: 18 }} />
+            {t('live_demo') || 'Live Demo'}
+          </a>
         )}
         {project.githubLink && (
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" style={{ background: '#222', color: '#fff', borderRadius: 999, padding: '10px 22px', textDecoration: 'none', fontWeight: 500 }}>{t('github') || 'GitHub'}</a>
+          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', background: '#222', color: '#fff', borderRadius: 999, padding: '10px 22px', textDecoration: 'none', fontWeight: 500, fontSize: '1.05rem', gap: 8 }}>
+            <FaGithub style={{ fontSize: 20 }} />
+            {t('github') || 'GitHub'}
+          </a>
         )}
         {project.githubRepos && (
           <a href={project.githubRepos} target="_blank" rel="noopener noreferrer" style={{ background: '#555', color: '#fff', borderRadius: 999, padding: '10px 22px', textDecoration: 'none', fontWeight: 500 }}>Other Repos</a>
