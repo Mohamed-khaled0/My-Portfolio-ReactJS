@@ -22,6 +22,19 @@
       "Deployed with Netlify for fast and reliable hosting."
     ],
     "portfolio_project_description": "This is my personal portfolio website, built with ReactJS and deployed using Netlify. It showcases my projects, skills, and experience with a modern, responsive design and advanced features.",
+    "ecommerce_project_title": "E-Commerce Website",
+    "ecommerce_project_subtitle": "A modern online store with comprehensive product catalog, user authentication, and built-in product comparison features.",
+    "ecommerce_project_description": "A full-featured E-Commerce platform that offers a wide variety of products with advanced features including product comparison, search functionality, user authentication, and a responsive design for optimal shopping experience.",
+    "ecommerce_project_features": [
+      "Home: User-friendly landing page with featured products and promotions",
+      "Shop: Browse and search through extensive product catalog with filters",
+      "Compare: Built-in product comparison tool to compare features and prices",
+      "Search: Advanced search functionality with category and price filters",
+      "Log In: User authentication and personalized shopping experience",
+      "Shopping Cart: Add, remove, and manage items in cart",
+      "Responsive Design: Works perfectly on all devices and screen sizes",
+      "Deployed on Netlify for fast and reliable hosting"
+    ],
     "crypto_project_title": "Crypto Tracker",
     "crypto_project_subtitle": "A modern cryptocurrency tracking app built with React, Firebase, and Tailwind CSS.",
     "crypto_project_description": "A comprehensive cryptocurrency tracking application that provides real-time information about various cryptocurrencies, including prices, trends, and charts. Features user authentication and theme customization.",
@@ -45,15 +58,6 @@
       "Store Data in Local Storage: Data persists even after refreshing the page.",
       "Responsive Design: A responsive UI built using HTML and CSS."
     ],
-    "crud_project_description": "A simple Product Management System that allows users to add, update, delete, and search products with persistent storage.",
-    "ecommerce_project_title": "E-Commerce Website",
-    "ecommerce_project_subtitle": "Online shop that offers a wide variety of products, ranging from electronics to fashion, with great deals and discounts.",
-    "ecommerce_project_features": [
-      "User-friendly interface for easy navigation.",
-      "Search functionality to find products quickly.",
-      "Shopping cart to manage selected items.",
-      "Responsive design for mobile and desktop compatibility."
-    ],
-    "ecommerce_project_description": "An online shop offering a wide variety of products, with a user-friendly interface, search, and shopping cart features."
+    "crud_project_description": "A simple Product Management System that allows users to add, update, delete, and search products with persistent storage."
   }
   
