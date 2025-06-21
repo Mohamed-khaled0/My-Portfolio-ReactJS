@@ -7,12 +7,12 @@
         "location": "Port Said, Egypt",
         "date": "August 2024 - September 2024",
         "description": [
-          "- HTML5, CSS, and JavaScript: Developed responsive and dynamic web pages.",
-          "- MySQL: Worked with database management, queries, and data manipulation.",
-          "- Collaborated with colleagues and mentors to enhance problem-solving and teamwork skills.",
-          "- Applied version control using Git to manage project versions and changes."
+          "Developed responsive and dynamic web pages using HTML5, CSS, and JavaScript.",
+          "Worked with MySQL for database management, including queries and data manipulation.",
+          "Collaborated with colleagues and mentors, enhancing problem-solving and teamwork skills.",
+          "Applied version control using Git and GitHub to manage project versions and track changes."
         ],
-        "githubLink": "GitHub Repo"
+        "githubLink": "https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks"
       },
       "businessAnalyticsIntern": {
         "title": "Business Analytics Intern",
@@ -29,14 +29,14 @@
       "itSupportSpecialist": {
         "title": "Technical Support Specialist",
         "company": "Shajarat Al-Durr",
-        "location": "New Cairo, Egypt",
+        "location": "New Kairo, Egypt",
         "date": "June 2022 – Dec 2023",
         "description": [
-          "- Supported staff with daily IT issues (printers, internet, email).",
-          "- Set up user accounts and email addresses.",
-          "- Performed minor maintenance and hardware tests (PCs, monitors, routers)."
+          "Provided daily IT support to staff for issues related to printers, internet, and email.",
+          "Set up new user accounts and managed email addresses.",
+          "Performed minor maintenance and conducted hardware tests on PCs, monitors, and routers."
         ],
-        "logo": "https://media.licdn.com/dms/image/v2/D560BAQHy2x1Q0NJ9ZA/company-logo_200_200/B56ZXcnttIGsAI-/0/1743163165610?e=1755734400&v=beta&t=r8GMqvLTndenhT7jbD_6ZqznAfZbAWH4KcH248d_WOs"
+        "logo": "/images/experience/shajarataldurr.webp"
       }
     }
   }

@@ -2,41 +2,41 @@
     "experience": {
       "title": "",
       "webDeveloperIntern": {
-        "title": "Web-Entwickler Praktikant",
-        "company": "Information Technology Institute ITI",
+        "title": "Praktikant als Webentwickler",
+        "company": "Information Technology Institute (ITI)",
         "location": "Port Said, Ägypten",
         "date": "August 2024 - September 2024",
         "description": [
-          "- HTML5, CSS und JavaScript: Entwickelte responsive und dynamische Webseiten.",
-          "- MySQL: Arbeitete mit Datenbankmanagement, Abfragen und Datenmanipulation.",
-          "- Zusammenarbeit mit Kollegen und Mentoren, um Problemlösungs- und Teamarbeitfähigkeiten zu verbessern.",
-          "- Versionierung mit Git angewendet, um Projektversionen und Änderungen zu verwalten."
+          "Entwicklung einer E-Commerce-Website mit ReactJS, die Produktkataloge und Benutzerauthentifizierung umfasst.",
+          "Implementierung von RESTful-APIs zur Kommunikation zwischen Frontend und Backend.",
+          "Zusammenarbeit in einem Team von 4 Entwicklern, aktive Teilnahme an Code-Reviews und agilen Meetings.",
+          "Gewinn von praktischer Erfahrung in der Versionskontrolle mit Git und GitHub."
         ],
-        "githubLink": "GitHub Repo"
-      },
-      "businessAnalyticsIntern": {
-        "title": "Praktikant in der Geschäftsanalyse",
-        "company": "The Sparks Foundation",
-        "location": "Remote",
-        "date": "Mai 2022 - Jun 2022",
-        "description": [
-          "- Anwendung von SQL und Microsoft Excel zur Datenverarbeitung und -analyse.",
-          "- Durchführung einer explorativen Datenanalyse zu Einzelhandelsdaten, um wichtige Erkenntnisse zu identifizieren.",
-          "- Erstellung eines interaktiven Tableau-Dashboards zur Visualisierung der Daten und Ergebnisse."
-        ],
-        "tableauLink": "Tableau"
+        "logo": "/images/experience/iti-logo.webp"
       },
       "itSupportSpecialist": {
         "title": "Spezialist für technischen Support",
         "company": "Shajarat Al-Durr",
         "location": "New Cairo, Ägypten",
-        "date": " June 2022 – Dec 2023",
+        "date": "Juni 2022 – Dez 2023",
         "description": [
-          "- Unterstützung der Mitarbeitenden bei alltäglichen IT-Problemen (Drucker, Internet, E-Mail).",
-          "- Einrichtung von Benutzerkonten und E-Mail-Adressen.",
-          "- Durchführung kleinerer Wartungs- und Hardwaretests (PCs, Monitore, Router)."
+          "Unterstützung der Mitarbeitenden bei alltäglichen IT-Problemen (Drucker, Internet, E-Mail).",
+          "Einrichtung von Benutzerkonten und E-Mail-Adressen.",
+          "Durchführung kleinerer Wartungs- und Hardwaretests (PCs, Monitore, Router)."
         ],
-        "logo": "https://media.licdn.com/dms/image/v2/D560BAQHy2x1Q0NJ9ZA/company-logo_200_200/B56ZXcnttIGsAI-/0/1743163165610?e=1755734400&v=beta&t=r8GMqvLTndenhT7jbD_6ZqznAfZbAWH4KcH248d_WOs"
+        "logo": "/images/experience/shajarataldurr.webp"
+      },
+      "webDeveloperAndDataAnalyst": {
+        "title": "Webentwickler und Datenanalyst",
+        "company": "Code Alpha",
+        "location": "Remote",
+        "date": "Jun 2023 - Jul 2023",
+        "description": [
+          "Erstellung eines Portfolio-Blogs mit HTML, CSS und JavaScript.",
+          "Entwicklung eines Hintergrundgenerators mit Farbverläufen.",
+          "Durchführung einer explorativen Datenanalyse zu Verkaufsdaten."
+        ],
+        "logo": "/images/experience/code-alpha-logo.webp"
       }
     }
   }

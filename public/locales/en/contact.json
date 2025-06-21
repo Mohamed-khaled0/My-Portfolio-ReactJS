@@ -1,13 +1,16 @@
 {
   "title": "Contact Me",
-  "subTitle": "My inbox is always open. Whether you have a question or want to share about any relevant job that suits my skills and experience, or just want to say hello, feel free to email me. I'll try my best to get back to you as soon as I can.",
+  "subTitle": "Have a question or want to work together? Feel free to reach out.",
   "emailPlaceholder": "Your Email",
   "namePlaceholder": "Your Name",
-  "messagePlaceholder": "Your message:",
-  "submitButton": "Submit",
-  "submitting": "Submitting ...",
-  "successMessage": "Your message has been sent successfully 👌",
-  "Please Enter Valid Email": "Please Enter a Valid Email",
-  "Please Enter Your Name": "Please Enter Your Name",
-  "Please Enter Your Message": "Please Enter Your Message"
+  "messagePlaceholder": "Your Message",
+  "submitButton": "Send Message",
+  "submitting": "Sending...",
+  "successMessage": "Your message has been sent successfully!",
+  "Please Enter Valid Email": "Please enter a valid email address.",
+  "Please Enter Your Name": "Please enter your name.",
+  "Please Enter Your Message": "Please enter your message.",
+  "emailLabel": "Email Address",
+  "nameLabel": "Full Name",
+  "messageLabel": "Message"
 }

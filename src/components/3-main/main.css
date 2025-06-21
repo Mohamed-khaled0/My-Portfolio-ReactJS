@@ -4,6 +4,7 @@
     align-items: center;
     gap: 2rem;
     padding-top: 32px;
+    padding: 3rem 1rem;
   }
   
   .projects-title {
@@ -48,64 +49,101 @@
   
   .projects-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
     width: 100%;
     justify-items: center;
   }
   
   .card {
-    background: #fff;
-    color: #222;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    border: 1px solid #e3e8f0;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 370px;
-    height: 540px; /* A fixed height for all cards */
-    text-align: center;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    overflow: hidden; /* Ensures content respects the border-radius */
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    cursor: pointer; /* Add cursor pointer on card hover */
   }
   
   .project-image-wrapper {
-    height: 170px; /* A fixed height for all images */
     width: 100%;
+    height: 220px; 
     overflow: hidden;
-    border-radius: 10px 10px 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
   }
   
   .project-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Show the full image without cropping */
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
+    object-fit: cover; /* This will fill the space, cropping the image to fit */
+    transition: none; 
   }
   
-  .card:hover {
-    border: 1px solid var(--blue);
-    scale: 1.01;
-    cursor: pointer;
+  .card:hover .project-image {
+    transform: none;
   }
   
   .box {
-    padding: 12px;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
   }
   
   .project-description {
-    margin: 8px 0 0 0;
-    color: #555;
-    font-size: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
     -webkit-box-orient: vertical;
+    flex-grow: 1; /* Allow description to take up available space */
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tag {
+    background-color: #e9ecef;
+    color: var(--text-secondary);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .read-more {
+    color: var(--primary-accent);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto; /* Pushes to the bottom */
+    align-self: flex-start; /* Aligns to the left */
+    padding: 0.5rem 0; /* Easier to click */
+  }
+  
+  .read-more:hover {
+    color: var(--primary-accent-dark);
+    text-decoration: underline;
   }
   
   .card .title {
@@ -221,27 +259,10 @@
     
 }
 
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0 8px 0;
-  justify-content: center;
-}
-
-.project-tag {
-  background: #f0f4ff;
-  color: #2563eb;
-  border-radius: 16px;
-  padding: 4px 14px;
-  font-size: 0.95rem;
-  margin-bottom: 4px;
-  display: inline-block;
-}
-
 .project-buttons {
   display: flex;
   gap: 10px;
+  margin-top: auto; /* Pushes the buttons to the bottom */
   margin: 12px 0 8px 0;
   flex-wrap: wrap;
   justify-content: center;
@@ -263,26 +284,20 @@
   color: #1d4ed8;
 }
 
-.read-more {
-  display: inline-block;
-  margin-top: 1rem; /* Position it right below the description */
-  align-self: center; /* Center the button horizontally */
-  color: #2563eb;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 1.01rem;
-  transition: color 0.2s;
-}
-.read-more:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
-}
-
 /* Remove dark mode variables and references */
 :root {
   --blue: #2563eb;
   --title: #222;
   --subtitle: #555;
+  --background-secondary: #fff;
+  --border-color: #e3e8f0;
+  --border-radius: 10px;
+  --shadow-sm: 0 2px 12px rgba(0,0,0,0.07);
+  --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+  --text-primary: #222;
+  --text-secondary: #555;
+  --primary-accent: #2563eb;
+  --primary-accent-dark: #1d4ed8;
 }
 
 body {

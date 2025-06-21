@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaGithub, FaBuilding } from 'react-icons/fa';
-import { AiOutlineBarChart } from 'react-icons/ai';
+import { FaCalendarAlt, FaMapMarkerAlt, FaGithub, FaBuilding } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './experience.css';
 
@@ -36,19 +35,7 @@ const Experience = () => {
       ],
       logo: t('experience.itSupportSpecialist.logo'),
     },
-    {
-      title: t('experience.businessAnalyticsIntern.title'),
-      company: t('experience.businessAnalyticsIntern.company'),
-      location: t('experience.businessAnalyticsIntern.location'),
-      date: t('experience.businessAnalyticsIntern.date'),
-      description: [
-        t('experience.businessAnalyticsIntern.description.0'),
-        t('experience.businessAnalyticsIntern.description.1'),
-        t('experience.businessAnalyticsIntern.description.2')
-      ],
-      logo: '/images/experience/code-alpha-logo.webp',
-      tableauLink: 'https://public.tableau.com/app/profile/mohamed.elshraby/viz/Superstore_16507269263970/Dashboard1',
-    },
+    
   ];
 
   return (
@@ -67,38 +54,35 @@ const Experience = () => {
               <div className="company-logo-wrapper">
                 <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" />
               </div>
-              <div>
+              <div className="experience-title-group">
                 <h3>{exp.title}</h3>
                 <p className="company">
-                  <FaBuilding className="icon-gray" /> {exp.company}
+                  <FaBuilding className="icon-gray" style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} /> {exp.company}
                 </p>
               </div>
             </div>
-            <div className="experience-details">
+            <div className="experience-meta">
               <span className="location">
                 <FaMapMarkerAlt className="icon-gray" /> {exp.location}
               </span>
-              <p className="date">
+              <span className="date">
                 <FaCalendarAlt className="icon-gray" /> {exp.date}
-              </p>
+              </span>
             </div>
-            <ul className="description">
-              {exp.description.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-            <div className="action-buttons">
-              {exp.githubLink && (
+            <div className="description">
+              <ul>
+                {exp.description.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+            {exp.githubLink && (
+              <div className="action-buttons">
                 <a href={exp.githubLink} target="_blank" rel="noopener noreferrer" className="github-btn" aria-label="GitHub">
-                  <FaGithub className="github-icon icon-gray" /> GitHub
+                  <FaGithub className="github-icon" /> GitHub
                 </a>
-              )}
-              {exp.tableauLink && (
-                <a href={exp.tableauLink} target="_blank" rel="noopener noreferrer" className="tableau-btn" aria-label="Tableau">
-                  <AiOutlineBarChart className="tableau-icon icon-gray" /> Tableau
-                </a>
-              )}
-            </div>
+              </div>
+            )}
           </motion.div>
         ))}
       </div>

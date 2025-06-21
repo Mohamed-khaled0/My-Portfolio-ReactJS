@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Suspense fallback="Loading...">
       <Router>
-        <App />
+    <App />
       </Router>
     </Suspense>
   </React.StrictMode>,

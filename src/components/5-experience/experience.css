@@ -24,97 +24,161 @@
 }
 
 .experience-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .experience-card {
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(36,99,235,0.08);
-    padding: 38px 24px;
-    background: #fff;
-    border-left: 6px solid #2563eb;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    color: #222;
-    margin-bottom: 32px;
-    transition: box-shadow 0.3s, border 0.3s;
+    transition: box-shadow 0.2s;
 }
 
 .experience-card:hover {
-    box-shadow: 0 6px 24px rgba(36,99,235,0.13);
-    border-left: 6px solid #1d4ed8;
+    box-shadow: var(--shadow-md);
 }
 
 .experience-header {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.1rem;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.experience-header h3 {
-    color: #2563eb;
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 6px;
+.company-logo-wrapper {
+    flex-shrink: 0;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px; /* Softer square shape */
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+}
+
+.experience-title-group h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.experience-title-group .company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-accent);
+}
+
+.experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding-left: calc(50px + 1rem); /* Align with text */
+}
+
+.experience-meta .location,
+.experience-meta .date {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.description ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.description li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.description li::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    color: var(--primary-accent);
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.action-buttons {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
 }
 
 /* New styles for the logo */
 .company-logo {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     object-fit: contain;
-    margin-right: 18px;
-    border-radius: 10px;
-    background: #f7faff;
-    border: 1.5px solid #e3e8f0;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+/* Specific rule for Shajarat Al-Durr logo to stretch */
+img.company-logo[src*="shajarataldurr"] {
+    object-fit: fill;
+   
 }
 
 .experience-details {
     margin: 0.5rem 0;
 }
 
-.company {
+.experience-details h3 {
+    font-size: 1.2rem;
     font-weight: 600;
-    color: #2563eb;
-    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
 }
 
-.location, .date {
-    color: #555;
-    font-size: 1.01rem;
+.company, .location, .date {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
 }
 
 .description {
-    margin-top: 1rem;
-    color: #222;
-    font-size: 1.01rem;
+    font-size: 1rem;
+    color: var(--text-primary);
 }
 
 /* Button for GitHub and Tableau */
-.action-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.action-buttons a {
-    background: #eef2ff;
-    color: #2563eb;
-    border: none;
+.github-btn, .tableau-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-accent);
+    color: #fff;
     border-radius: 999px;
+    padding: 0.5rem 1rem;
     font-weight: 500;
-    box-shadow: 0 1px 4px rgba(36,99,235,0.06);
-    transition: background 0.18s, color 0.18s, transform 0.13s;
+    text-decoration: none;
+    transition: background-color 0.2s;
 }
 
-.action-buttons a:hover {
-    background: #dbeafe;
-    color: #1d4ed8;
-    transform: scale(1.07);
-    border: none;
+.github-btn:hover, .tableau-btn:hover {
+    background-color: var(--primary-accent-dark);
 }
 
 .light .action-buttons a {
@@ -126,36 +190,6 @@
 .tableau-icon {
     font-size: 1.2rem;
     color: white; /* Adjust the icon color as needed */
-}
-
-.company-logo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 18px;
-}
-
-.github-btn, .tableau-btn {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    background: #eef2ff;
-    color: #2563eb;
-    border: none;
-    border-radius: 999px;
-    font-weight: 500;
-    box-shadow: 0 1px 4px rgba(36,99,235,0.06);
-    transition: background 0.18s, color 0.18s, transform 0.13s;
-    padding: 8px 18px;
-    font-size: 1rem;
-    text-decoration: none;
-    margin-right: 8px;
-}
-
-.github-btn:hover, .tableau-btn:hover {
-    background: #dbeafe;
-    color: #1d4ed8;
-    transform: scale(1.07);
 }
 
 @media (max-width: 600px) {
@@ -191,4 +225,8 @@
 
 .icon-gray {
   color: #555 !important;
+}
+
+.action-buttons .github-btn .github-icon {
+  color: #fff; /* Ensure GitHub icon is white */
 }

@@ -24,13 +24,13 @@
     "portfolio_project_description": "This is my personal portfolio website, built with ReactJS and deployed using Netlify. It showcases my projects, skills, and experience with a modern, responsive design and advanced features.",
     "ecommerce_project_title": "E-Commerce Website",
     "ecommerce_project_subtitle": "A modern online store with comprehensive product catalog, user authentication, and built-in product comparison features.",
-    "ecommerce_project_description": "A full-featured E-Commerce platform that offers a wide variety of products with advanced features including product comparison, search functionality, user authentication, and a responsive design for optimal shopping experience.",
+    "ecommerce_project_description": "A full-featured E-Commerce platform that offers a wide variety of products with advanced features including product comparison, search functionality...",
     "ecommerce_project_features": [
       "Home: User-friendly landing page with featured products and promotions",
       "Shop: Browse and search through extensive product catalog with filters",
       "Compare: Built-in product comparison tool to compare features and prices",
       "Search: Advanced search functionality with category and price filters",
-      "Log In: User authentication and personalized shopping experience",
+      "Log In: User  and personalized shopping experience",
       "Shopping Cart: Add, remove, and manage items in cart",
       "Responsive Design: Works perfectly on all devices and screen sizes",
       "Deployed on Netlify for fast and reliable hosting"

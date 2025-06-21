@@ -16,9 +16,18 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import ProjectDetails from './components/3-main/ProjectDetails';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState(() => {
+    // Get the saved section from localStorage, or default to 'home'
+    return localStorage.getItem('activeSection') || 'home';
+  });
+  
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  useEffect(() => {
+    // Save the active section to localStorage whenever it changes
+    localStorage.setItem('activeSection', activeSection);
+  }, [activeSection]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 600);

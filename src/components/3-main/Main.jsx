@@ -62,11 +62,11 @@ export default function Main() {
             onClick={() => handleCardClick(item.liveDemo)}
           >
             <div className="project-image-wrapper">
-              <img
-                src={item.imgPath}
-                alt={t(item.projectTitle)}
-                className="project-image"
-              />
+            <img
+              src={item.imgPath}
+              alt={t(item.projectTitle)}
+              className="project-image"
+            />
             </div>
             <div className="box">
               <h2 className="title">{t(item.projectTitle)}</h2>

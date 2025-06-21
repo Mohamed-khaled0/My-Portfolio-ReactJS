@@ -19,44 +19,29 @@ Table of Contents:
 */
 
 /* 1. Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* 2. Global Styles */
 html {
-  letter-spacing: 0.2px;
   scroll-behavior: smooth;
 }
 
 /* 3. Root Variables */
 :root {
-  --primary: rgb(17,24,39);
-  --secondary: rgb(17,24,39);
-  --border: rgba(63, 63, 70, 0.4);
-  --title: rgb(244 244 245);
-  --subtitle: rgb(161 161 170);
-  --bgHeader: rgb(39, 39, 42);
-  --blue: rgb(93, 188, 252);
-  --icon-hover: #d4d4d8;
-  --card:rgba(29,36,50 ,.6);
-  --header-color:rgb(7,12,24);
-  --container-padding: 4rem;
-
+  --background-primary: #f8f9fa; /* Light gray background */
+  --background-secondary: #ffffff; /* White for cards */
+  --primary-accent: #007bff; /* A vibrant blue */
+  --primary-accent-dark: #0056b3;
+  --text-primary: #212529; /* Dark gray for main text */
+  --text-secondary: #6c757d; /* Lighter gray for subtitles */
+  --border-color: #dee2e6; /* Subtle border color */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
 }
 
-/* 4. Light Theme Variables */
-.light {
-  --primary: rgb(250, 250, 250);
-  --secondary: rgb(255, 255, 255);
-  --border: rgba(202, 202, 202, 0.518);
-  --title: rgb(39 39 42);
-  --subtitle: rgb(82 82 91);
-  --bgHeader: rgb(253, 253, 253);
-  --blue: rgb(0, 149, 246);
-  --icon-hover: #333;
-  --card: rgb(255, 255, 255);
-  --header-color:rgb(255, 255, 255);
-
-}
+/* No dark mode for now to ensure a consistent, clean look.
+   Can be re-added later if needed. */
 
 /* 5. Reset Styles */
 * {
@@ -67,26 +52,52 @@ html {
 
 /* 6. Body Styles */
 body {
-  font-family: "Nunito", sans-serif;
-  color: #fff;
-  background-color: var(--primary);
-  transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: 'Inter', sans-serif; /* A more modern, professional font */
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+  line-height: 1.6;
+}
 
+/* Common container for main content sections */
+.section-container {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Common style for section titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-accent);
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
 }
 
 /* 7. Container Styles */
 .container {
   width: 80%;
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-color);
   margin: 0 auto;
-  background-color: var(--secondary);
+  background-color: var(--background-secondary);
   border-radius: 5px;
   padding: 0 var(--container-padding);
 }
 
 /* 8. Divider Styles */
 .divider {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-color);
   margin: 3rem 0;
   width: calc(100% + var(--container-padding) + var(--container-padding));
   margin-left: calc(var(--container-padding) * -1);
@@ -121,8 +132,8 @@ button {
   cursor: pointer;
 }
 
-button:disabled{
-  opacity: 0.4;
+button:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -150,7 +161,7 @@ button:disabled{
 
 /* 15. Scroll To Top Button Styles */
 .scroll2Top {
-  background-color:var(--header-color);
+  background-color:var(--primary-accent);
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
@@ -159,11 +170,11 @@ button:disabled{
   bottom: 2rem;
   right: 2%;
   border: 1px solid rgba(255, 255, 255, .3);
-  color: var(--title);
+  color: var(--text-primary);
 }
 
 .scroll2Top:hover {
-  background-color: rgba(25, 118, 210, 1);
+  background-color: var(--primary-accent-dark);
 }
 
 /* 16. Responsive Styles */

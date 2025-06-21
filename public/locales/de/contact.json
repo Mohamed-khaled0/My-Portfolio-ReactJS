@@ -1,13 +1,16 @@
 {
-  "title": "Kontaktiere Mich",
-  "subTitle": "Mein Posteingang ist immer offen. Ob Sie eine Frage haben oder über einen relevanten Job sprechen möchten, der zu meinen Fähigkeiten und Erfahrungen passt, oder einfach nur hallo sagen möchten, können Sie mir gerne eine E-Mail senden. Ich werde mein Bestes tun, um so schnell wie möglich zu antworten.",
-  "emailPlaceholder": "Deine E-Mail",
-  "namePlaceholder": "Dein Name",
-  "messagePlaceholder": "Deine Nachricht:",
-  "submitButton": "Absenden",
-  "submitting": "Wird gesendet ...",
-  "successMessage": "Deine Nachricht wurde erfolgreich gesendet 👌",
-  "Please Enter Valid Email": "Bitte gib eine gültige E-Mail ein",
-  "Please Enter Your Name": "Bitte gib deinen Namen ein",
-  "Please Enter Your Message": "Bitte gib deine Nachricht ein"
+  "title": "Kontaktieren Sie mich",
+  "subTitle": "Haben Sie eine Frage oder möchten Sie zusammenarbeiten? Zögern Sie nicht, mich zu kontaktieren.",
+  "emailPlaceholder": "Ihre E-Mail",
+  "namePlaceholder": "Ihr Name",
+  "messagePlaceholder": "Ihre Nachricht",
+  "submitButton": "Nachricht senden",
+  "submitting": "Wird gesendet...",
+  "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
+  "Please Enter Valid Email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "Please Enter Your Name": "Bitte geben Sie Ihren Namen ein.",
+  "Please Enter Your Message": "Bitte geben Sie Ihre Nachricht ein.",
+  "emailLabel": "E-Mail-Adresse",
+  "nameLabel": "Vollständiger Name",
+  "messageLabel": "Nachricht"
 }

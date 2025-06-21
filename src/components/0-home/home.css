@@ -7,11 +7,11 @@
 }
 
 .home-content {
-  background: #fff;
-  color: #333;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
   max-width: 800px;
   width: 100%;
   text-align: left;
@@ -19,7 +19,7 @@
 
 .home-name {
   font-size: 2.5rem;
-  color: #2563eb;
+  color: var(--primary-accent);
   margin-bottom: 1.5rem;
   text-align: center;
   font-weight: 700;
@@ -30,18 +30,18 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .readiness-section {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e3e8f0;
+  border-top: 1px solid var(--border-color);
 }
 
 .readiness-title {
   font-size: 1.5rem;
-  color: #2563eb;
+  color: var(--primary-accent);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -63,9 +63,9 @@
 }
 
 .readiness-icon {
-  color: #2563eb;
+  color: var(--primary-accent);
   font-size: 1.2em;
-  min-width: 20px; /* To ensure alignment */
+  min-width: 20px;
 }
 
 /* Responsive styles */

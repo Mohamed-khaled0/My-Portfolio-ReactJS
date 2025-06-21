@@ -171,86 +171,76 @@ section.contact-us .success-message {
 }
 
 section.contact-us {
-  background: none;
-  padding: 0;
+  padding: 3rem 1rem;
 }
+
 .contact-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(36,99,235,0.08);
-  border-left: 6px solid #2563eb;
-  padding: 38px 24px;
-  max-width: 900px;
-  margin: 32px auto 0 auto;
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.contact-content {
-  flex: 1;
-}
-section.contact-us .title {
-  font-size: 2.1rem;
-  color: #2563eb;
-  margin-bottom: 1rem;
-  text-align: left;
-  font-weight: 700;
-}
-section.contact-us .sub-title {
-  color: #555;
-  margin-bottom: 2rem;
-  line-height: 1.65rem;
-  text-align: left;
-}
-section.contact-us form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-section.contact-us #name,
-section.contact-us #email,
-section.contact-us #message {
-  background: #f7faff;
-  border: 1.5px solid #e3e8f0;
-  color: #222;
-  width: 100%;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+
+.contact-content .title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
-  box-shadow: 0 1px 4px rgba(36,99,235,0.04);
 }
-section.contact-us #message {
-  min-height: 9rem;
-  resize: vertical;
+
+.contact-content .sub-title {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
 }
-section.contact-us .submit {
-  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+
+.contact-us #name,
+.contact-us #email,
+.contact-us #message {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-primary);
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-us #name:focus,
+.contact-us #email:focus,
+.contact-us #message:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.contact-us .submit {
+  background-color: var(--primary-accent);
   color: #fff;
   border: none;
   border-radius: 999px;
-  padding: 12px 32px;
-  font-size: 1.08rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-top: 1.2rem;
-  box-shadow: 0 1px 4px rgba(36,99,235,0.08);
-  transition: background 0.18s, color 0.18s, transform 0.13s;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  transition: background-color 0.2s;
 }
-section.contact-us .submit:hover {
-  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-  transform: scale(1.01);
-  box-shadow: 0 4px 16px rgba(36,99,235,0.13);
+
+.contact-us .submit:hover {
+  background-color: var(--primary-accent-dark);
 }
+
 section.contact-us .animation {
   /* min-width: 260px;
   max-width: 320px;
   margin-left: 16px;
   margin-top: 18px; */
 }
+
 @media (max-width: 1000px) {
   .contact-card {
     flex-direction: column;
@@ -264,3 +254,116 @@ section.contact-us .animation {
     max-width: 220px;
   } */
 }
+
+/* Redesigned Contact Section Styles */
+.contact-us {
+  padding: 3rem 1rem;
+}
+
+.contact-form-container {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  margin: 0 auto; /* Center the form container */
+}
+
+.contact-form-container .title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-container .sub-title {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.contact-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form inputs and button styling from previous design - slightly adjusted */
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us input,
+.contact-us textarea {
+  all: unset;
+  background-color: var(--background-input);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  transition: 0.2s;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box; /* Important for padding */
+}
+
+.contact-us input:focus,
+.contact-us textarea:focus {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 2px var(--primary-accent-translucent);
+}
+
+.contact-us textarea {
+  min-height: 120px;
+  resize: vertical;
+  background-color: var(--success-translucent);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+}
+
+.contact-us .submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-us .submit:hover:not(:disabled) {
+  background: var(--primary-accent-dark);
+  transform: translateY(-2px);
+}
+.contact-us .submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.custom-error-message {
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+/* Success Message */
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--success);
+  margin-top: 1.5rem;
+  background-color: var(--success-translucent);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+}
+
+/* No media query needed as it's a single column layout now */

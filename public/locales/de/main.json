@@ -60,7 +60,7 @@
     "crud_project_description": "Ein einfaches Produktverwaltungssystem, das es Benutzern ermöglicht, Produkte hinzuzufügen, zu aktualisieren, zu löschen und zu durchsuchen – mit dauerhafter Speicherung.",
     "ecommerce_project_title": "E-Commerce-Website",
     "ecommerce_project_subtitle": "Ein moderner Online-Shop mit umfangreichem Produktkatalog, Benutzerauthentifizierung und integrierten Produktvergleichsfunktionen.",
-    "ecommerce_project_description": "Eine vollständige E-Commerce-Plattform, die eine große Auswahl an Produkten mit erweiterten Funktionen bietet, einschließlich Produktvergleich, Suchfunktionalität, Benutzerauthentifizierung und einem responsiven Design für optimale Einkaufserfahrung.",
+    "ecommerce_project_description": "Eine vollständige E-Commerce-Plattform, die eine große Auswahl an Produkten mit erweiterten Funktionen bietet, einschließlich Produktvergleich, Suchfunktionalität.",
     "ecommerce_project_features": [
       "Startseite: Benutzerfreundliche Landing Page mit ausgewählten Produkten und Angeboten",
       "Shop: Durchsuchen und suchen Sie im umfangreichen Produktkatalog mit Filtern",
