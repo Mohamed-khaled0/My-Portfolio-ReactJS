@@ -11,20 +11,13 @@ export default function Header({ setActiveSection, activeSection }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
   const location = useLocation();
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
   useEffect(() => {
     setCurrentLanguage(i18n.language);
   }, [i18n.language]);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 600);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Hide header on project details page on mobile
-  if (isMobile && location.pathname.startsWith('/project/')) {
+  // Hide header on project details page
+  if (location.pathname.startsWith('/project/')) {
     return null;
   }
 

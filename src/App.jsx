@@ -38,17 +38,17 @@ function App() {
   };
 
   return (
-    <div className='app-layout'>
+      <div className='app-layout'>
       {!hideSidebar && <ProfileSidebar />}
-      <div className='main-content'>
-        <Header setActiveSection={setActiveSection} activeSection={activeSection} />
-        <Routes>
-          <Route path="/" element={sectionComponents[activeSection]} />
-          <Route path="/project/:id" element={<ProjectDetails />} />
-        </Routes>
-        <Scroll2Top />
+        <div className='main-content'>
+          <Header setActiveSection={setActiveSection} activeSection={activeSection} />
+          <Routes>
+            <Route path="/" element={sectionComponents[activeSection]} />
+            <Route path="/project/:id" element={<ProjectDetails />} />
+          </Routes>
+          <Scroll2Top />
+        </div>
       </div>
-    </div>
   );
 }
 

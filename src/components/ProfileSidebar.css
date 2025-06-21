@@ -170,7 +170,7 @@
 .profile-extra-info, .profile-info-list, .profile-info-sublist {
   word-break: break-word;
   overflow-wrap: anywhere;
-}
+} 
 
 @media (max-width: 1200px) {
   .profile-sidebar {

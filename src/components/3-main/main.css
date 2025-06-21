@@ -60,31 +60,52 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     border: 1px solid #e3e8f0;
     border-radius: 10px;
-    width: 340px;
-    min-height: 420px;
+    width: 100%;
+    max-width: 370px;
+    height: 540px; /* A fixed height for all cards */
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 0 auto;
-    padding-bottom: 18px;
   }
   
-  .card img {
-    border-radius: 10px 10px 0 0;
+  .project-image-wrapper {
+    height: 170px; /* A fixed height for all images */
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Show the full image without cropping */
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
-    margin-bottom: 0 !important;
   }
   
   .card:hover {
     border: 1px solid var(--blue);
     scale: 1.01;
     cursor: pointer;
+  }
+  
+  .box {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-description {
+    margin: 8px 0 0 0;
+    color: #555;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
   }
   
   .card .title {
@@ -244,7 +265,8 @@
 
 .read-more {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 1rem; /* Position it right below the description */
+  align-self: center; /* Center the button horizontally */
   color: #2563eb;
   font-weight: 500;
   text-decoration: none;

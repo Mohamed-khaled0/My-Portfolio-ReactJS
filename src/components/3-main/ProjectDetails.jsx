@@ -4,6 +4,7 @@ import myProjects from './ProjectsData';
 import { useTranslation } from 'react-i18next';
 import { FaGithub } from 'react-icons/fa';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCheckCircle } from 'react-icons/fa';
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -42,17 +43,20 @@ const ProjectDetails = () => {
         </ul>
       </div>
       {project.features && project.features.length > 0 && (
-        <div style={{ marginBottom: 10 }}>
-          <strong>Features:</strong>
-          <ul style={{ margin: '8px 0 0 18px' }}>
-            {localizedFeatures
-              ? localizedFeatures.map((feature, i) => <li key={i}>{feature}</li>)
-              : project.features.map((feature, i) => <li key={i}>{feature}</li>)}
+        <div style={{ marginTop: 24, textAlign: 'left' }}>
+          <h4 style={{ color: '#2563eb', marginBottom: 12, fontSize: '1.2rem', fontWeight: 700 }}>Features</h4>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {(localizedFeatures || project.features).map((feature, i) => (
+              <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '1.05rem', color: '#333' }}>
+                <FaCheckCircle style={{ color: '#2563eb', minWidth: 18 }} />
+                <span>{feature}</span>
+              </li>
+            ))}
           </ul>
         </div>
       )}
       {/* Project Links Row */}
-      <div style={{ display: 'flex', gap: 18, margin: '18px 0 0 0', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: 18, margin: '24px 0 0 0', justifyContent: 'center', flexWrap: 'wrap' }}>
         {project.liveDemo && (
           <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', background: 'linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%)', color: '#fff', borderRadius: 999, padding: '10px 22px', textDecoration: 'none', fontWeight: 500, fontSize: '1.05rem', gap: 8 }}>
             <FaExternalLinkAlt style={{ fontSize: 18 }} />
