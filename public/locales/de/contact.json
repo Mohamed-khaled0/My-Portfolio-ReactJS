@@ -12,5 +12,10 @@
   "Please Enter Your Message": "Bitte geben Sie Ihre Nachricht ein.",
   "emailLabel": "E-Mail-Adresse",
   "nameLabel": "Vollständiger Name",
-  "messageLabel": "Nachricht"
+  "messageLabel": "Nachricht",
+  "info_title": "Kontaktinformationen",
+  "info_subtitle": "Sie können mich auch direkt über die folgenden Kanäle erreichen.",
+  "email_address": "mohamedalshraby3@gmail.com",
+  "phone_number": "+201118464136",
+  "address": ""
 }

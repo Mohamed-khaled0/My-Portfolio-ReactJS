@@ -12,5 +12,10 @@
   "Please Enter Your Message": "Please enter your message.",
   "emailLabel": "Email Address",
   "nameLabel": "Full Name",
-  "messageLabel": "Message"
+  "messageLabel": "Message",
+  "info_title": "Contact Information",
+  "info_subtitle": "You can also reach me directly through the following channels.",
+  "email_address": "mohamedalshraby3@gmail.com",
+  "phone_number": "+201118464136",
+  "address": ""
 }
