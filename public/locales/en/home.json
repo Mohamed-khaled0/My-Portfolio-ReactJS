@@ -1,0 +1,14 @@
+{
+  "page_title": "Home",
+  "welcome_title": "Welcome to My Portfolio",
+  "about_me_intro": "Hello! I'm Mohamed, a passionate web developer and IT specialist with a knack for creating elegant and efficient solutions. This space is a showcase of my journey, skills, and the projects I've poured my dedication into. Feel free to explore and get in touch!",
+  "full_name": "Mohamed Khaled Elsharaby",
+  "intro": "My name is Mohamed Khaled Elsharaby. I am 25 years old and have a Bachelor's degree in Computer Science (GPA 3.17 out of 4.0) from Thebes Academy in Egypt. My final project was a price-comparison web application and earned a grade of 4.0 out of 4.0.",
+  "ambition": "I want an apprenticeship as a Fachinformatiker for system integration. I also enjoy building web applications with PHP, MySQL, and React. Through my studies, CCNA certification, and IT support experience, I have good skills in networking, system administration, and IT infrastructure.",
+  "readiness_title": "Key Information",
+  "readiness_points": {
+    "languages": "I speak German at B1/B2 level and English fluently.",
+    "relocation": "I am ready to move to Germany soon.",
+    "documents": "All my documents are complete and certified."
+  }
+} 

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import { FaHome, FaCode, FaBriefcase, FaGraduationCap, FaEnvelope, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
+import { FaUser, FaCode, FaBriefcase, FaGraduationCap, FaEnvelope, FaGlobe, FaBars, FaTimes, FaCertificate } from "react-icons/fa";
 import { MdBuild } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 import "./header.css";
@@ -34,8 +34,9 @@ export default function Header({ setActiveSection, activeSection }) {
   return (
     <div className="header-centered">
       <div className="pill-header-bar">
+        <button className={`pill-tab${activeSection === 'home' ? ' active' : ''}`} onClick={() => setActiveSection('home')}><FaUser style={{marginRight: 6}} />{t('home')}</button>
         <button className={`pill-tab${activeSection === 'projects' ? ' active' : ''}`} onClick={() => setActiveSection('projects')}><FaCode style={{marginRight: 6}} />{t('projects')}</button>
-        <button className={`pill-tab${activeSection === 'certifications' ? ' active' : ''}`} onClick={() => setActiveSection('certifications')}><FaHome style={{marginRight: 6}} />{t('certifications')}</button>
+        <button className={`pill-tab${activeSection === 'certifications' ? ' active' : ''}`} onClick={() => setActiveSection('certifications')}><FaCertificate style={{marginRight: 6}} />{t('certifications')}</button>
         <button className={`pill-tab${activeSection === 'experience' ? ' active' : ''}`} onClick={() => setActiveSection('experience')}><FaBriefcase style={{marginRight: 6}} />{t('experience')}</button>
         <button className={`pill-tab${activeSection === 'education' ? ' active' : ''}`} onClick={() => setActiveSection('education')}><FaGraduationCap style={{marginRight: 6}} />{t('education')}</button>
         <button className={`pill-tab${activeSection === 'contact' ? ' active' : ''}`} onClick={() => setActiveSection('contact')}><FaEnvelope style={{marginRight: 6}} />{t('contact')}</button>
@@ -57,8 +58,9 @@ export default function Header({ setActiveSection, activeSection }) {
         <div className="mobile-nav-overlay" onClick={() => setShowMobileMenu(false)}>
           <div className="mobile-nav-menu" onClick={e => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setShowMobileMenu(false)}><FaTimes /></button>
+            <button className={`pill-tab${activeSection === 'home' ? ' active' : ''}`} onClick={() => handleNav('home')}><FaUser style={{marginRight: 6}} />{t('home')}</button>
             <button className={`pill-tab${activeSection === 'projects' ? ' active' : ''}`} onClick={() => handleNav('projects')}><FaCode style={{marginRight: 6}} />{t('projects')}</button>
-            <button className={`pill-tab${activeSection === 'certifications' ? ' active' : ''}`} onClick={() => handleNav('certifications')}><FaHome style={{marginRight: 6}} />{t('certifications')}</button>
+            <button className={`pill-tab${activeSection === 'certifications' ? ' active' : ''}`} onClick={() => handleNav('certifications')}><FaCertificate style={{marginRight: 6}} />{t('certifications')}</button>
             <button className={`pill-tab${activeSection === 'experience' ? ' active' : ''}`} onClick={() => handleNav('experience')}><FaBriefcase style={{marginRight: 6}} />{t('experience')}</button>
             <button className={`pill-tab${activeSection === 'education' ? ' active' : ''}`} onClick={() => handleNav('education')}><FaGraduationCap style={{marginRight: 6}} />{t('education')}</button>
             <button className={`pill-tab${activeSection === 'contact' ? ' active' : ''}`} onClick={() => handleNav('contact')}><FaEnvelope style={{marginRight: 6}} />{t('contact')}</button>

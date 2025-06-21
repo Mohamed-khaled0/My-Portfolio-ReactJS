@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import Home from './components/0-home/Home';
 import Hero from './components/2-hero/Hero'
 import Header from './components/1-header/Header'
 import Main from './components/3-main/Main'
@@ -15,7 +16,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import ProjectDetails from './components/3-main/ProjectDetails';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('projects');
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
@@ -30,6 +31,7 @@ function App() {
 
   // Map section keys to components
   const sectionComponents = {
+    home: <Home />,
     projects: <Main />,
     certifications: <Certifications />,
     experience: <Experience />,
