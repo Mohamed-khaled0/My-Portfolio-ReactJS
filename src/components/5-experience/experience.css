@@ -125,11 +125,9 @@
     border-top: 1px solid var(--border-color);
 }
 
-/* New styles for the logo */
 .company-logo {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     object-fit: contain;
     border: 1px solid var(--border-color);
     background-color: #fff;
