@@ -1,389 +1,142 @@
-/* ================ 
-    Table of Contents
-===================
-1- Header Styles 
-   1.1 General Layout 
-   1.2 Navigation 
-   1.3 Links 
-   1.4 Button Styles 
-2- Modal (Pop Up) Styles 
-   2.1 Background and Positioning 
-   2.2 Animation 
-   2.3 Modal Content 
-   2.4 Modal Links 
-3- Icon Button Styles 
-   3.1 General Styles 
-   3.2 Icon Menu Styles 
-   3.3 Hover Effects 
-   4- Language-switcher
-5- Media Queries (Responsive Design) 
-   4.1 Mobile Styles 
-   4.2 Tablet Styles 
-
-===================*/
-
-/* =================
-1- Header Styles 
-=================== */
-
-/* General Layout */
-header.flex {
-    justify-content: space-between;
-    padding: 0 3rem;
-    margin-top: 2rem;
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  padding: var(--space-4) 0;
 }
 
-/* Navigation */
-header.flex nav {
-    background-color: var(--header-color);
-    padding: 0.5rem 1rem;
-    border-radius: 55px;
-    box-shadow: 1px 1px 20px rgba(49, 48, 48, 0.2);
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
 }
 
-/* Links */
-header ul.flex {
-    gap: 16px;
-    color: white;
-}
-
-header ul li a {
-    color: var(--title);
-    opacity: 0.9;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-header ul li a:hover {
-    color: var(--blue);
-    opacity: 1;
-}
-
-/* Button Styles */
-header button {
-    font-size: 1.2rem;
-}
-
-/* =================
-2- Modal (Pop Up) Styles 
-=================== */
-
-/* Background and Positioning */
-header .fixed {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(40, 40, 48, 0.9);
-    z-index: 15;
-    backdrop-filter: blur(5px);
-}
-
-/* Animation */
-@keyframes mymove {
-    0% {
-        scale: 0;
-    }
-    60% {
-        scale: 1.2;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-/* Modal Content */
-header .fixed ul.modal {
-    animation: mymove 0.7s 1;
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    background-color: var(--secondary);
-}
-
-/* Modal Links */
-header .fixed ul.modal li {
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 0 0.7rem 0;
-}
-
-header ul li a span {
-    color: var(--subtitle);
-}
-
-header .fixed ul.modal li a {
-    font-size: 1rem;
-}
-
-header .fixed ul.modal li:last-child {
-    border: none;
-}
-
-header .fixed ul.modal li:first-child {
-    text-align: right;
-    border: none;
-    padding: 0.2rem 0 0rem 0;
-    margin-bottom: -1rem;
-}
-
-/* =================
-3- Icon Button Styles 
-=================== */
-
-/* General Styles */
-header .icon-menu,
-header button.mode {
-    background-color: var(--header-color);
-    height: 2.5rem;
-    width: 2.5rem;
-    justify-content: center;
-    border-radius: 50%;
-    text-align: center;
-    color: var(--subtitle);
-    border: 1px solid rgba(93, 188, 252, 0.2);
-    box-shadow: 1px 1px 20px rgba(93, 188, 252, 0.1);
-    transition: 0.3s;
-}
-
-header .icon-menu {
-    display: none;
-}
-
-header .icon-sun {
-    color: var(--blue);
-}
-
-/* Hover Effects */
-header .icon-menu:hover,
-header button.mode:hover {
-    color: var(--title);
-    border: 1px solid rgba(93, 188, 252, 0.5);
-}
-
-header ul li a span {
-    color: var(--subtitle);
-    transition: 0.3s;
-}
-
-header .icon-close {
-    font-size: 1.5rem;
-    color: var(--subtitle);
-    transition: 0.3s;
-}
-
-header .icon-close:hover {
-    color: crimson;
-    rotate: 180deg;
-}
-
-header ul.flex {
-    gap: 16px;
-    color: white;
-}
-
-header ul li a {
-    color: var(--title);
-    opacity: 0.9;
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-header ul li a:hover {
-    background-color: rgba(166, 160, 160, .2); 
-    color: var(--title); 
-    opacity: 1; 
-}
-
-header ul li a svg {
-    margin-right: 4px; /* Space between icon and text */
-}
-/* 4-  language-switcher */
-
-
-.language-switcher {
-    display: flex;
-    align-items: center; /* Ensure vertical alignment */
-  }
-  
-  .lang-button {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem; /* Adjust font size */
-    color: #ffffff; /* Or the desired text color */
-    transition: .3s;
-    color: var(--subtitle);
-  }
-  
-  .lang-button span {
-    margin-left: 5px;
-    font-size: 14px; /* Control the size of the language code */
-    transition: .3s;
-
-  }
-  
-  
-  .lang-button:hover {
-    color: var(--blue);
-    scale: 1.1;
-  }
-
-  
-/* =================
-5- Media Queries (Responsive Design) 
-=================== */
-
-/* Mobile Styles */
-@media (max-width: 790px) {
-    header.flex nav {
-        display: none; 
-        order: 2;
-    }
-
-
-    header .icon-menu {
-        display: block; /
-    }
-
-    header ul li a:hover {
-        background-color: transparent;
-        scale: 1.02;
-    }
-    
-    .lang-button {
-        padding: 0 ;
-      }
-}
-
-
-/* Tablet Styles */
-@media (max-width: 1200px) {
-    header ul li a {
-        font-size: 0.9rem; 
-    }
-
-    header ul li a svg {
-        display: none;
-    }
-
-    header ul li a {
-        padding: 0; 
-    }
-    header ul li a:hover {
-        background-color: transparent; 
-        color: var(--blue); 
-    }
-}
-
-@media (max-width: 1400px) {
-    header.flex {
-        padding: 0 1rem;
-        gap: 10px;
-    }
-    header.flex nav {
-        padding: 0;
-    }
-    header ul.flex{
-        padding: 0 .4rem 0 .5rem;
-    }
-
-    .lang-button {
-        font-size: 3rem; /* Adjust font size */
-        padding: 0 .5rem;
-      }
-}
-
-.header-centered {
-  padding: 1rem 0;
-}
-
-.pill-header-bar {
+.nav-pills {
   display: flex;
   align-items: center;
-  background-color: var(--background-secondary);
-  border-radius: 999px;
-  box-shadow: var(--shadow-md);
-  padding: 0.5rem;
-  gap: 0.5rem;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-sm);
+  gap: var(--space-1);
   width: fit-content;
   margin: 0 auto;
 }
 
-.pill-tab {
+.nav-pill {
   display: flex;
   align-items: center;
-  background: none;
-  border: none;
-  outline: none;
-  color: var(--text-primary);
-  font-size: 0.95rem;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
   font-weight: 500;
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
-.pill-tab:hover:not(.active) {
-  background-color: #e9ecef;
+.nav-pill:hover {
+  color: var(--text-primary);
+  background: var(--gray-100);
 }
 
-.pill-tab.active {
-  background-color: var(--primary-accent);
-  color: #ffffff;
+.nav-pill.active {
+  color: var(--white);
+  background: var(--primary);
+  box-shadow: var(--shadow-sm);
 }
 
-.pill-tab svg {
-  margin-right: 0.5rem;
-  font-size: 1.1em;
+.nav-pill svg {
+  width: 16px;
+  height: 16px;
 }
 
-.language-switcher {
-  border-left: 1px solid var(--border-color);
-  margin-left: 0.5rem;
-  padding-left: 1rem;
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border);
 }
 
 .lang-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
   color: var(--text-secondary);
-  transition: color 0.2s;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
 }
 
 .lang-button:hover {
-  color: var(--primary-accent);
+  color: var(--primary);
+  background: var(--gray-100);
 }
 
-/* Mobile Menu Styles */
-@media (max-width: 900px) {
-  .pill-header-bar {
+.lang-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 var(--space-4);
+  }
+  
+  .nav-pills {
     flex-wrap: wrap;
     justify-content: center;
-    border-radius: var(--border-radius);
-    padding: 1rem;
-    width: 95%;
+    padding: var(--space-3);
+    gap: var(--space-2);
   }
-
-  .pill-tab {
-    flex-grow: 1; /* Allow tabs to grow and fill space */
-    justify-content: center;
+  
+  .nav-pill {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.8rem;
   }
-
-  .language-switcher {
-    border-left: none;
+  
+  .nav-pill svg {
+    display: none;
+  }
+  
+  .language-toggle {
     margin-left: 0;
     padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-3);
+    margin-top: var(--space-3);
     width: 100%;
-    display: flex;
     justify-content: center;
-    padding-top: 0.5rem;
-    margin-top: 0.5rem;
-    border-top: 1px solid var(--border-color);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-pills {
+    width: 100%;
+    border-radius: var(--radius-lg);
+  }
+  
+  .nav-pill {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
   }
 }

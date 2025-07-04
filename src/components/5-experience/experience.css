@@ -1,230 +1,237 @@
-/* src/components/Experience.css */
+.experience-section {
+  padding: var(--space-16) var(--space-4);
+}
+
 .experience-container {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--title);
-    position: relative;
+.experience-timeline {
+  position: relative;
+  margin-top: var(--space-12);
 }
 
-.section-title::after {
-    display: none !important;
-    content: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    background: none !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
 }
 
-.experience-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+.experience-item {
+  position: relative;
+  margin-bottom: var(--space-12);
+  padding-left: var(--space-20);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-marker {
+  position: absolute;
+  left: 18px;
+  top: var(--space-6);
+  width: 24px;
+  height: 24px;
+  background: var(--primary);
+  border: 4px solid var(--surface);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  z-index: 1;
 }
 
 .experience-card {
-    background-color: var(--background-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.2s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  position: relative;
 }
 
 .experience-card:hover {
-    box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: var(--space-8);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid var(--surface);
 }
 
 .experience-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.company-logo-wrapper {
-    flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 
 .company-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px; /* Softer square shape */
-    object-fit: contain;
-    border: 1px solid var(--border-color);
-}
-
-.experience-title-group h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.experience-title-group .company {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--primary-accent);
-}
-
-.experience-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-    padding-left: calc(50px + 1rem); /* Align with text */
-}
-
-.experience-meta .location,
-.experience-meta .date {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.description ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-left: 0.5rem;
-}
-
-.description li {
-    position: relative;
-    padding-left: 1.2rem;
-    color: var(--text-secondary);
-}
-
-.description li::before {
-    content: '▪';
-    position: absolute;
-    left: 0;
-    color: var(--primary-accent);
-    font-size: 1.2em;
-    line-height: 1;
-}
-
-.action-buttons {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.company-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    border: 1px solid var(--border-color);
-    background-color: #fff;
-}
-
-/* Specific rule for Shajarat Al-Durr logo to stretch */
-img.company-logo[src*="shajarataldurr"] {
-    object-fit: fill;
-   
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  object-fit: contain;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: var(--space-2);
+  flex-shrink: 0;
 }
 
 .experience-details {
-    margin: 0.5rem 0;
+  flex: 1;
 }
 
-.experience-details h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
 }
 
-.company, .location, .date {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.75rem;
+.experience-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
 }
 
-.description {
-    font-size: 1rem;
-    color: var(--text-primary);
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
 }
 
-/* Button for GitHub and Tableau */
-.github-btn, .tableau-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--primary-accent);
-    color: #fff;
-    border-radius: 999px;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.2s;
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
-.github-btn:hover, .tableau-btn:hover {
-    background-color: var(--primary-accent-dark);
+.meta-icon {
+  color: var(--text-tertiary);
 }
 
-.light .action-buttons a {
-    color: white;
+.experience-description {
+  margin-bottom: var(--space-6);
 }
 
-/* Add GitHub and Tableau icon styling */
-.github-icon,
-.tableau-icon {
-    font-size: 1.2rem;
-    color: white; /* Adjust the icon color as needed */
+.description-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
-@media (max-width: 600px) {
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .experience-container {
-        padding: .5rem;
-    }
-    .experience-list {
-        gap: 1rem;
-    }
-    .experience-card {
-        padding: 20px 5px;
-        border-left: 4px solid #2563eb;
-    }
-    .company-logo {
-        width: 40px;
-        height: 40px;
-    }
-    .experience-header h3 {
-        font-size: 1.05rem;
-    }
-    .company, .location, .date, .description {
-        font-size: 0.97rem;
-    }
-    .action-buttons a {
-        font-size: 0.95rem;
-        padding: 0.4rem 0.7rem;
-    }
+.description-item {
+  position: relative;
+  padding-left: var(--space-6);
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-.icon-gray {
-  color: #555 !important;
+.description-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: var(--radius-full);
 }
 
-.action-buttons .github-btn .github-icon {
-  color: #fff; /* Ensure GitHub icon is white */
+.experience-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.action-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 15px;
+  }
+  
+  .experience-item {
+    padding-left: var(--space-12);
+  }
+  
+  .experience-marker {
+    left: 6px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .experience-card::before {
+    left: -9px;
+    border-right-width: 9px;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .experience-meta {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .experience-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: var(--space-12) var(--space-3);
+  }
+  
+  .experience-card {
+    padding: var(--space-6);
+  }
+  
+  .experience-title {
+    font-size: 1.125rem;
+  }
 }

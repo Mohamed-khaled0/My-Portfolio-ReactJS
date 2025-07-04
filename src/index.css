@@ -1,414 +1,422 @@
-/* 
-Table of Contents:
-1. Font Import
-2. Global Styles
-3. Root Variables
-4. Light Theme Variables
-5. Reset Styles
-6. Body Styles
-7. Container Styles
-8. Divider Styles
-9. List Styles
-10. Link Styles
-11. Flexbox Styles
-12. Border Styles
-13. Button Styles
-14. Scrollbar Styles
-15. Scroll To Top Button Styles
-16. Responsive Styles
-*/
+/* Modern Portfolio Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* 1. Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* 2. Global Styles */
-html {
-  scroll-behavior: smooth;
-}
-
-/* 3. Root Variables */
+/* Design Tokens */
 :root {
-  --background-primary: #f8f9fa; /* Light gray background */
-  --background-secondary: #ffffff; /* White for cards */
-  --primary-accent: #007bff; /* A vibrant blue */
-  --primary-accent-dark: #0056b3;
-  --text-primary: #212529; /* Dark gray for main text */
-  --text-secondary: #6c757d; /* Lighter gray for subtitles */
-  --border-color: #dee2e6; /* Subtle border color */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --border-radius: 12px;
+  /* Colors */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #3b82f6;
+  --secondary: #64748b;
+  --accent: #06b6d4;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  
+  /* Neutrals */
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  
+  /* Semantic Colors */
+  --background: var(--gray-50);
+  --surface: var(--white);
+  --surface-elevated: var(--white);
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-tertiary: var(--gray-500);
+  --border: var(--gray-200);
+  --border-light: var(--gray-100);
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* No dark mode for now to ensure a consistent, clean look.
-   Can be re-added later if needed. */
-
-/* 5. Reset Styles */
-* {
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* 6. Body Styles */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 body {
-  font-family: 'Inter', sans-serif; /* A more modern, professional font */
+  font-family: var(--font-sans);
+  font-weight: 400;
   color: var(--text-primary);
-  background-color: var(--background-primary);
+  background-color: var(--background);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Common container for main content sections */
+/* Typography Scale */
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--space-8) var(--space-6);
+  overflow-x: hidden;
+  min-width: 0;
+}
+
+/* Common Components */
 .section-container {
-  padding: 3rem 1rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: var(--space-16) var(--space-4);
 }
 
-/* Common style for section titles */
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--space-16);
   position: relative;
 }
 
 .section-title::after {
   content: '';
-  display: block;
+  position: absolute;
+  bottom: -var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background-color: var(--primary-accent);
-  border-radius: 2px;
-  margin: 0.5rem auto 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: var(--radius-full);
 }
 
-/* 7. Container Styles */
-.container {
-  width: 80%;
-  border: 2px solid var(--border-color);
-  margin: 0 auto;
-  background-color: var(--background-secondary);
-  border-radius: 5px;
-  padding: 0 var(--container-padding);
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  overflow: hidden;
 }
 
-/* 8. Divider Styles */
-.divider {
-  border-bottom: 1px solid var(--border-color);
-  margin: 3rem 0;
-  width: calc(100% + var(--container-padding) + var(--container-padding));
-  margin-left: calc(var(--container-padding) * -1);
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
-/* 9. List Styles */
-li {
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-300);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+  background: var(--gray-100);
+  color: var(--text-primary);
+}
+
+/* Form Elements */
+input, textarea, select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
+}
+
+/* Utilities */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+
+.bg-surface { background-color: var(--surface); }
+.bg-primary { background-color: var(--primary); }
+
+.border { border: 1px solid var(--border); }
+.border-light { border: 1px solid var(--border-light); }
+
+.rounded { border-radius: var(--radius); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-full); }
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow { box-shadow: var(--shadow); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* Scroll to Top Button */
+.scroll2Top {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: all var(--transition);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.scroll2Top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-400);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-12);
+  }
+  
+  .main-content {
+    padding: var(--space-4) var(--space-3);
+  }
+  
+  .scroll2Top {
+    width: 40px;
+    height: 40px;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Remove list styles */
+ul, ol {
   list-style: none;
 }
 
-/* 10. Link Styles */
+/* Link styles */
 a {
+  color: inherit;
   text-decoration: none;
-  color: initial;
-  transition: 0.2s;
+  transition: color var(--transition-fast);
 }
 
-/* 11. Flexbox Styles */
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-/* 12. Border Styles */
-.border {
-  border: 2px solid red;
-}
-
-/* 13. Button Styles */
+/* Button reset */
 button {
-  all: unset;
+  background: none;
+  border: none;
   cursor: pointer;
+  font-family: inherit;
 }
 
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-/* 14. Scrollbar Styles */
-::-webkit-scrollbar {
-  width: 0.8rem;
-}
-
-::-webkit-scrollbar-track {
-  border: 7px solid #292c3b;
-  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
-  background-color: #d4d4d8;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(93, 188, 252, 0.6);
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(93, 188, 252, 1);
-}
-
-/* 15. Scroll To Top Button Styles */
-.scroll2Top {
-  background-color:var(--primary-accent);
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  text-align: center;
-  position: fixed;
-  bottom: 2rem;
-  right: 2%;
-  border: 1px solid rgba(255, 255, 255, .3);
-  color: var(--text-primary);
-}
-
-.scroll2Top:hover {
-  background-color: var(--primary-accent-dark);
-}
-
-/* 16. Responsive Styles */
-@media (max-width: 1200px) {
-  .app-layout {
-    flex-direction: column;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-  }
-  .profile-sidebar {
-    width: 80vw;
-    max-width: 100vw;
-    min-width: 0;
-    border-right: none;
-    border-bottom: 1px solid #eee;
-    box-shadow: none;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 16px 8px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .main-content {
-    width: 100vw;
-    padding: 16px 0;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 900px) {
-  .profile-sidebar {
-    width: 75vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 98%;
-    padding: 0 1.7rem;
-  }
-
-  .scroll2Top {
-    opacity: .5;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-  }
-
-  .profile-sidebar {
-    width: 100vw;
-  }
-}
-
-.app-layout {
-  display: flex;
-  min-height: 100vh;
-  background: #fafbfc;
-}
-
-.profile-sidebar {
-  width: 340px;
-  min-width: 260px;
-  max-width: 360px;
-  background: #fff;
-  box-shadow: 2px 0 16px rgba(0,0,0,0.04);
-  padding: 32px 16px;
-  position: relative;
-  z-index: 2;
-  border-right: 1px solid #eee;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-content {
-  flex: 1;
-  padding: 40px 32px 32px 32px;
-  overflow-x: hidden;
-  min-width: 0;
-}
-
-.profile-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-photo {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-  border: 3px solid #e0e0e0;
-}
-
-.profile-title {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.profile-location {
-  color: #888;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.profile-socials {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 18px;
-}
-
-.profile-socials a {
-  color: #444;
-  font-size: 1.3rem;
-  transition: color 0.2s;
-}
-.profile-socials a:hover {
-  color: #3b82f6;
-}
-
-.profile-section-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  margin-bottom: 18px;
-}
-
-.profile-section-nav button {
-  background: none;
-  border: none;
-  padding: 10px 0;
-  font-size: 1.05rem;
-  color: #444;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.15s, color 0.15s;
-  width: 100%;
-}
-.profile-section-nav button.active,
-.profile-section-nav button:hover {
-  background: #f0f4ff;
-  color: #2563eb;
-}
-
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-  justify-content: center;
-}
-
-.skill-tag {
-  background: #f0f4ff;
-  color: #2563eb;
-  border-radius: 16px;
-  padding: 4px 14px;
-  font-size: 0.95rem;
-  margin-bottom: 4px;
-  display: inline-block;
-}
-
-@media (max-width: 900px) {
-  .app-layout {
-    flex-direction: column;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-  }
-  .profile-sidebar {
-    width: 60vw;
-    max-width: 100vw;
-    min-width: 0;
-    border-right: none;
-    border-bottom: 1px solid #eee;
-    box-shadow: none;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 16px 8px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .main-content {
-    width: 100vw;
-    padding: 16px 0;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-  .profile-card {
-    flex-direction: row;
-    align-items: center;
-    gap: 18px;
-  }
-}
-
-@media (max-width: 600px) {
-  .app-layout {
-    flex-direction: column;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-  }
-  .profile-sidebar {
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 0;
-    border-right: none;
-    border-bottom: 1px solid #eee;
-    box-shadow: none;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 8px 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .main-content {
-    width: 100vw;
-    padding: 8px 0;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
 }

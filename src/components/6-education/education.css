@@ -1,105 +1,171 @@
-/* Title for Education */
-#title {
-    color: var(--title);
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-}
-#title::after {
-    display: none !important;
-    content: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    background: none !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
-}
-
-/* Redesigned Education Section Styles */
 .education-section {
-  padding: 3rem 1rem;
+  padding: var(--space-16) var(--space-4);
+  background: var(--gray-50);
 }
 
-.education-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 800px;
+.education-container {
+  max-width: 900px;
   margin: 0 auto;
 }
 
+.education-grid {
+  display: grid;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
 .education-card {
-  background-color: var(--background-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
-  padding: 1.5rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  transition: box-shadow 0.2s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
 }
 
 .education-card:hover {
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.education-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
 }
 
 .education-icon {
-  flex-shrink: 0;
-  font-size: 2.5rem;
-  color: var(--primary-accent);
-  background-color: var(--primary-accent-translucent);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
 }
 
-.education-details h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+.education-content {
+  flex: 1;
+}
+
+.education-degree {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
 }
 
-.education-details .institution {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+.education-institution {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--space-4);
 }
 
-.education-details .meta {
+.education-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
 }
 
-.education-details .meta-item {
+.meta-item {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-}
-
-.education-details .description {
+  gap: var(--space-2);
+  font-size: 0.875rem;
   color: var(--text-secondary);
 }
 
-@media screen and (max-width: 600px) {
-  .education-card {
+.meta-icon {
+  color: var(--text-tertiary);
+  font-size: 1rem;
+}
+
+.education-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.education-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.highlight-badge {
+  background: var(--gray-100);
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.highlight-badge.primary {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .education-details .meta {
+  
+  .education-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+  
+  .education-degree {
+    font-size: 1.25rem;
+  }
+  
+  .education-institution {
+    font-size: 1rem;
+  }
+  
+  .education-meta {
     justify-content: center;
+    flex-direction: column;
+    gap: var(--space-3);
   }
 }
 
-
+@media (max-width: 480px) {
+  .education-section {
+    padding: var(--space-12) var(--space-3);
+  }
+  
+  .education-card {
+    padding: var(--space-6);
+  }
+  
+  .education-highlights {
+    justify-content: center;
+  }
+}

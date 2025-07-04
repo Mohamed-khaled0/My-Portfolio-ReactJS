@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
 import "./contact.css";
 import { useForm } from "@formspree/react";
 import Lottie from "lottie-react";
@@ -53,79 +51,109 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact-us">
-      <h2 className="section-title">{t('title')}</h2>
-      <div className="contact-layout">
-        <div className="contact-form-container">
-          <p className="sub-title">
-            {t('subTitle')}
-          </p>
-          <form onSubmit={handleFormSubmit} noValidate>
-            <label htmlFor="email">{t('emailLabel')}</label>
-            <input
-              placeholder={t('emailPlaceholder')}
-              autoComplete="off"
-              required
-              type="email"
-              name="email"
-              id="email"
-            />
-            {emailError && <p className="custom-error-message">{emailError}</p>}
-            
-            <label htmlFor="name">{t('nameLabel')}</label>
-            <input
-              placeholder={t('namePlaceholder')}
-              autoComplete="off"
-              required
-              type="text"
-              name="name"
-              id="name"
-            />
-            {nameError && <p className="custom-error-message">{nameError}</p>}
-
-            <label htmlFor="message">{t('messageLabel')}</label>
-            <textarea
-              required
-              name="message"
-              placeholder={t('messagePlaceholder')}
-              id="message"
-            />
-            {messageError && <p className="custom-error-message">{messageError}</p>}
-
-            <button type="submit" disabled={state.submitting} className="submit">
-              {state.submitting ? t('submitting') : (
-                <>
-                  <FiSend style={{ marginRight: "8px" }} />
-                  {t('submitButton')}
-                </>
-              )}
-            </button>
-            {state.succeeded && (
-              <p className="success-message">
-                <Lottie
-                  loop={false}
-                  style={{ height: 37 }}
-                  animationData={doneAnimation}
-                />
-                {t('successMessage')}
+    <section className="contact-section">
+      <div className="contact-container">
+        <h2 className="section-title">{t('title')}</h2>
+        
+        <div className="contact-grid">
+          <div className="contact-form-container">
+            <div className="contact-form-header">
+              <h3 className="contact-form-title">Send me a message</h3>
+              <p className="contact-form-subtitle">
+                {t('subTitle')}
               </p>
-            )}
-          </form>
-        </div>
+            </div>
+            
+            <form className="contact-form" onSubmit={handleFormSubmit} noValidate>
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">{t('nameLabel')}</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="form-input"
+                  placeholder={t('namePlaceholder')}
+                  autoComplete="name"
+                  required
+                />
+                {nameError && <div className="form-error">{nameError}</div>}
+              </div>
 
-        <div className="contact-info-container">
-          <h3>{t('info_title')}</h3>
-          <p>{t('info_subtitle')}</p>
-          <ul className="contact-info-list">
-            <li className="contact-info-item">
-              <FiMail className="icon" />
-              <span>{t('email_address')}</span>
-            </li>
-            <li className="contact-info-item">
-              <FiPhone className="icon" />
-              <span>{t('phone_number')}</span>
-            </li>
-          </ul>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">{t('emailLabel')}</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="form-input"
+                  placeholder={t('emailPlaceholder')}
+                  autoComplete="email"
+                  required
+                />
+                {emailError && <div className="form-error">{emailError}</div>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message" className="form-label">{t('messageLabel')}</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="form-textarea"
+                  placeholder={t('messagePlaceholder')}
+                  required
+                />
+                {messageError && <div className="form-error">{messageError}</div>}
+              </div>
+
+              <button type="submit" disabled={state.submitting} className="submit-button">
+                {state.submitting ? (
+                  <>
+                    <div className="spinner"></div>
+                    {t('submitting')}
+                  </>
+                ) : (
+                  <>
+                    <FiSend />
+                    {t('submitButton')}
+                  </>
+                )}
+              </button>
+
+              {state.succeeded && (
+                <div className="success-message">
+                  <Lottie
+                    loop={false}
+                    style={{ height: 32, width: 32 }}
+                    animationData={doneAnimation}
+                  />
+                  {t('successMessage')}
+                </div>
+              )}
+            </form>
+          </div>
+
+          <div className="contact-info-container">
+            <div className="contact-info-header">
+              <h3 className="contact-info-title">{t('info_title')}</h3>
+              <p className="contact-info-subtitle">{t('info_subtitle')}</p>
+            </div>
+            
+            <div className="contact-info-list">
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <FiMail />
+                </div>
+                <span className="contact-info-text">{t('email_address')}</span>
+              </div>
+              
+              <div className="contact-info-item">
+                <div className="contact-info-icon">
+                  <FiPhone />
+                </div>
+                <span className="contact-info-text">{t('phone_number')}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

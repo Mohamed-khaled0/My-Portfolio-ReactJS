@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { FaUser, FaCode, FaBriefcase, FaGraduationCap, FaEnvelope, FaGlobe, FaCertificate } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
@@ -24,28 +23,42 @@ export default function Header({ setActiveSection, activeSection }) {
     setCurrentLanguage(lng);
   };
 
+  const navItems = [
+    { key: 'home', icon: FaUser, label: t('home') },
+    { key: 'projects', icon: FaCode, label: t('projects') },
+    { key: 'certifications', icon: FaCertificate, label: t('certifications') },
+    { key: 'experience', icon: FaBriefcase, label: t('experience') },
+    { key: 'education', icon: FaGraduationCap, label: t('education') },
+    { key: 'contact', icon: FaEnvelope, label: t('contact') }
+  ];
+
   return (
-    <div className="header-centered">
-      <div className="pill-header-bar">
-        <button className={`pill-tab${activeSection === 'home' ? ' active' : ''}`} onClick={() => setActiveSection('home')}><FaUser style={{marginRight: 6}} />{t('home')}</button>
-        <button className={`pill-tab${activeSection === 'projects' ? ' active' : ''}`} onClick={() => setActiveSection('projects')}><FaCode style={{marginRight: 6}} />{t('projects')}</button>
-        <button className={`pill-tab${activeSection === 'certifications' ? ' active' : ''}`} onClick={() => setActiveSection('certifications')}><FaCertificate style={{marginRight: 6}} />{t('certifications')}</button>
-        <button className={`pill-tab${activeSection === 'experience' ? ' active' : ''}`} onClick={() => setActiveSection('experience')}><FaBriefcase style={{marginRight: 6}} />{t('experience')}</button>
-        <button className={`pill-tab${activeSection === 'education' ? ' active' : ''}`} onClick={() => setActiveSection('education')}><FaGraduationCap style={{marginRight: 6}} />{t('education')}</button>
-        <button className={`pill-tab${activeSection === 'contact' ? ' active' : ''}`} onClick={() => setActiveSection('contact')}><FaEnvelope style={{marginRight: 6}} />{t('contact')}</button>
-        <div className="language-switcher">
-          <button
-            className="lang-button"
-            onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
-            title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
-          >
-            <FaGlobe style={{ width: '20px' }} />
-            <span style={{ marginLeft: '5px' }}>
-              {currentLanguage === 'en' ? 'EN' : 'DE'}
-            </span>
-          </button>
-        </div>
+    <header className="header-container">
+      <div className="header-content">
+        <nav className="nav-pills">
+          {navItems.map(({ key, icon: Icon, label }) => (
+            <button
+              key={key}
+              className={`nav-pill ${activeSection === key ? 'active' : ''}`}
+              onClick={() => setActiveSection(key)}
+            >
+              <Icon />
+              <span>{label}</span>
+            </button>
+          ))}
+          
+          <div className="language-toggle">
+            <button
+              className="lang-button"
+              onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
+              title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
+            >
+              <FaGlobe />
+              <span>{currentLanguage === 'en' ? 'EN' : 'DE'}</span>
+            </button>
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }

@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import { FaUniversity, FaCalendarAlt, FaGraduationCap, FaSchool } from 'react-icons/fa';
+import { FaUniversity, FaCalendarAlt, FaGraduationCap, FaSchool, FaAward } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import './education.css';
 
 const Education = () => {
@@ -15,6 +15,7 @@ const Education = () => {
       date: t('yearRange'),
       gpa: t('gpa'),
       description: t('major'),
+      highlights: ['Computer Science', 'Top Grade Project', 'CCNA Certified']
     },
     {
       icon: <FaSchool />,
@@ -22,35 +23,65 @@ const Education = () => {
       institution: t('secondary_institution'),
       date: t('secondary_yearRange'),
       description: t('secondary_subjects'),
+      highlights: ['Science Track', 'Mathematics', 'Physics']
     }
   ];
 
   return (
-    <section id="education" className="education-section">
-      <h2 className="section-title">{t('title')}</h2>
-      <div className="education-list">
-        {educationData.map((edu, index) => (
-          <div className="education-card" key={index}>
-            <div className="education-icon">
-              {edu.icon}
-            </div>
-            <div className="education-details">
-              <h3>{edu.degree}</h3>
-              <p className="institution">{edu.institution}</p>
-              <div className="meta">
-                <span className="meta-item">
-                  <FaCalendarAlt /> {edu.date}
-                </span>
+    <section className="education-section">
+      <div className="education-container">
+        <h2 className="section-title">Education</h2>
+        
+        <div className="education-grid">
+          {educationData.map((edu, index) => (
+            <motion.div
+              key={index}
+              className="education-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <div className="education-header">
+                <div className="education-icon">
+                  {edu.icon}
+                </div>
+                <div className="education-content">
+                  <h3 className="education-degree">{edu.degree}</h3>
+                  <div className="education-institution">{edu.institution}</div>
+                </div>
+              </div>
+              
+              <div className="education-meta">
+                <div className="meta-item">
+                  <FaCalendarAlt className="meta-icon" />
+                  <span>{edu.date}</span>
+                </div>
                 {edu.gpa && (
-                  <span className="meta-item">
-                    <FaGraduationCap /> {edu.gpa}
-                  </span>
+                  <div className="meta-item">
+                    <FaAward className="meta-icon" />
+                    <span>{edu.gpa}</span>
+                  </div>
                 )}
               </div>
-              <p className="description">{edu.description}</p>
-            </div>
-          </div>
-        ))}
+              
+              <p className="education-description">{edu.description}</p>
+              
+              {edu.highlights && (
+                <div className="education-highlights">
+                  {edu.highlights.map((highlight, i) => (
+                    <span 
+                      key={i} 
+                      className={`highlight-badge ${i === 0 ? 'primary' : ''}`}
+                    >
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

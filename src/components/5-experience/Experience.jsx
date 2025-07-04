@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaMapMarkerAlt, FaGithub, FaBuilding } from 'react-icons/fa';
@@ -33,60 +32,81 @@ const Experience = () => {
         t('experience.itSupportSpecialist.description.1'),
         t('experience.itSupportSpecialist.description.2')
       ],
-      logo: t('experience.itSupportSpecialist.logo'),
+      logo: '/images/experience/shajarataldurr.webp',
     },
-    
   ];
 
   return (
-    <div className="experience-container">
-      <h2 id='experience' className="section-title">{t('experience.title')}</h2>
-      <div className="experience-list">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            className="experience-card"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <div className="experience-header">
-              <div className="company-logo-wrapper">
-                <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" />
+    <section className="experience-section">
+      <div className="experience-container">
+        <h2 className="section-title">Professional Experience</h2>
+        
+        <div className="experience-timeline">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              className="experience-item"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <div className="experience-marker"></div>
+              
+              <div className="experience-card">
+                <div className="experience-header">
+                  <img 
+                    src={exp.logo} 
+                    alt={`${exp.company} logo`} 
+                    className="company-logo" 
+                  />
+                  <div className="experience-details">
+                    <h3 className="experience-title">{exp.title}</h3>
+                    <div className="experience-company">
+                      <FaBuilding style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                      {exp.company}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="experience-meta">
+                  <div className="meta-item">
+                    <FaMapMarkerAlt className="meta-icon" />
+                    <span>{exp.location}</span>
+                  </div>
+                  <div className="meta-item">
+                    <FaCalendarAlt className="meta-icon" />
+                    <span>{exp.date}</span>
+                  </div>
+                </div>
+                
+                <div className="experience-description">
+                  <div className="description-list">
+                    {exp.description.map((point, i) => (
+                      <div key={i} className="description-item">{point}</div>
+                    ))}
+                  </div>
+                </div>
+                
+                {exp.githubLink && (
+                  <div className="experience-actions">
+                    <a 
+                      href={exp.githubLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="action-link"
+                    >
+                      <FaGithub />
+                      View Projects
+                    </a>
+                  </div>
+                )}
               </div>
-              <div className="experience-title-group">
-                <h3>{exp.title}</h3>
-                <p className="company">
-                  <FaBuilding className="icon-gray" style={{ marginRight: '0.5rem', verticalAlign: 'middle' }} /> {exp.company}
-                </p>
-              </div>
-            </div>
-            <div className="experience-meta">
-              <span className="location">
-                <FaMapMarkerAlt className="icon-gray" /> {exp.location}
-              </span>
-              <span className="date">
-                <FaCalendarAlt className="icon-gray" /> {exp.date}
-              </span>
-            </div>
-            <div className="description">
-              <ul>
-                {exp.description.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </div>
-            {exp.githubLink && (
-              <div className="action-buttons">
-                <a href={exp.githubLink} target="_blank" rel="noopener noreferrer" className="github-btn" aria-label="GitHub">
-                  <FaGithub className="github-icon" /> GitHub
-                </a>
-              </div>
-            )}
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

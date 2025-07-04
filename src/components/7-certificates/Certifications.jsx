@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "./certifications.css";
 import CertificationsData from "./CertificationsData";
@@ -24,99 +23,97 @@ const Certifications = () => {
     }
   };
 
-  const displayedCerts = showMore ? certificates : certificates.slice(0, 3);
+  const displayedCerts = showMore ? certificates : certificates.slice(0, 6);
+
+  const filterOptions = [
+    { key: "all", label: t("all") },
+    { key: "internships", label: t("internships") },
+    { key: "coursera", label: t("coursera") },
+    { key: "udacity", label: t("udacity") },
+    { key: "hackerrank", label: t("hackerrank") },
+    { key: "iti", label: t("iti") }
+  ];
 
   return (
-    <section id="certifications" className="certifications-section">
-      <h1 className="title">{t("certifications")}</h1>
-
-      {/* Filter Buttons */}
-      <div className="filter-buttons">
-        <button
-          onClick={() => handleFilter("all")}
-          className={currentCategory === "all" ? "active" : ""}
-        >
-          {t("all")}
-        </button>
-        <button
-          onClick={() => handleFilter("internships")}
-          className={currentCategory === "internships" ? "active" : ""}
-        >
-          {t("internships")}
-        </button>
-        <button
-          onClick={() => handleFilter("coursera")}
-          className={currentCategory === "coursera" ? "active" : ""}
-        >
-          {t("coursera")}
-        </button>
-        <button
-          onClick={() => handleFilter("udacity")}
-          className={currentCategory === "udacity" ? "active" : ""}
-        >
-          {t("udacity")}
-        </button>
-        <button
-          onClick={() => handleFilter("hackerrank")}
-          className={currentCategory === "hackerrank" ? "active" : ""}
-        >
-          {t("hackerrank")}
-        </button>
-        <button
-          onClick={() => handleFilter("iti")}
-          className={currentCategory === "iti" ? "active" : ""}
-        >
-          {t("iti")}
-        </button>
-      </div>
-
+    <section className="certifications-section">
       <div className="certifications-container">
-        <AnimatePresence>
-          {displayedCerts.map((cert, index) => (
-            <motion.div
-              className="certification-item"
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={cert.img}
-                  alt={`${cert.name}`}
-                  className="cert-img"
-                />
-              </a>
-              <div className="cert-details">
-                <h2 className="cert-name" style={{ color: '#2563eb', textAlign: 'center' }}>
-                  <a href={cert.link} target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb' }}>
-                    {cert.name}
-                  </a>
-                </h2>
-                <h3 className="cert-authority" style={{ color: '#222', textAlign: 'center' }}>{cert.authority}</h3>
-                {cert.description && (
-                  <p className="cert-description" style={{ color: '#444', fontSize: '1rem', margin: '8px 0', textAlign: 'center' }}>
-                    {t(cert.descKey || '', { defaultValue: cert.description }) || cert.description}
-                  </p>
-                )}
-                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="view-cert-btn">
-                  View Certificate <FiExternalLink className="external-link-icon" />
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
+        <h2 className="section-title">Certifications & Achievements</h2>
 
-      {/* Show More Button */}
-      {certificates.length > 3 && (
-        <div className="show-more-container">
-          <button onClick={() => setShowMore(!showMore)} className="show-more-btn">
-            {showMore ? t("show_less") : t("show_more")}
-          </button>
+        <div className="filter-tabs">
+          {filterOptions.map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => handleFilter(key)}
+              className={`filter-tab ${currentCategory === key ? 'active' : ''}`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
-      )}
+
+        <div className="certifications-grid">
+          <AnimatePresence>
+            {displayedCerts.map((cert, index) => (
+              <motion.article
+                key={`${cert.name}-${index}`}
+                className="certification-card"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                onClick={() => window.open(cert.link, '_blank')}
+              >
+                <div className="cert-image-container">
+                  <img
+                    src={cert.img}
+                    alt={cert.name}
+                    className="cert-image"
+                  />
+                  <div className="cert-overlay">
+                    <span>View Certificate</span>
+                  </div>
+                </div>
+                
+                <div className="cert-content">
+                  <div className="cert-header">
+                    <h3 className="cert-name">{cert.name}</h3>
+                    <div className="cert-authority">{cert.authority}</div>
+                    <div className="cert-date">{cert.date}</div>
+                  </div>
+                  
+                  {cert.description && (
+                    <p className="cert-description">
+                      {t(cert.descKey || '', { defaultValue: cert.description }) || cert.description}
+                    </p>
+                  )}
+                  
+                  <a 
+                    href={cert.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="cert-action"
+                    onClick={e => e.stopPropagation()}
+                  >
+                    <span>View Certificate</span>
+                    <FiExternalLink />
+                  </a>
+                </div>
+              </motion.article>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        {certificates.length > 6 && (
+          <div className="show-more-container">
+            <button 
+              onClick={() => setShowMore(!showMore)} 
+              className="show-more-btn"
+            >
+              {showMore ? t("show_less") : t("show_more")}
+            </button>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

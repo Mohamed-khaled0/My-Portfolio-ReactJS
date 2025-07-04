@@ -9,25 +9,33 @@ const Home = () => {
 
   return (
     <section className="home-section">
-      <div className="home-content">
-        <h1 className="home-name">{t('full_name')}</h1>
-        <p className="intro-text">{t('intro')}</p>
-        <p className="ambition-text">{t('ambition')}</p>
-        
-        <div className="readiness-section">
-          <h2 className="readiness-title">{t('readiness_title')}</h2>
-          <ul className="readiness-list">
-            {readinessPoints && Object.keys(readinessPoints).map(key => (
-              <li key={key} className="readiness-item">
-                <FaCheckCircle className="readiness-icon" />
-                <span>{readinessPoints[key]}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="home-container">
+        <div className="home-content">
+          <div className="home-header">
+            <h1 className="home-name">{t('full_name')}</h1>
+            <p className="home-subtitle">Computer Science Graduate & IT Specialist</p>
+          </div>
+          
+          <div className="home-body">
+            <p className="intro-text">{t('intro')}</p>
+            <p className="ambition-text">{t('ambition')}</p>
+          </div>
+          
+          <div className="readiness-section">
+            <h2 className="readiness-title">{t('readiness_title')}</h2>
+            <div className="readiness-list">
+              {readinessPoints && Object.keys(readinessPoints).map(key => (
+                <div key={key} className="readiness-item">
+                  <FaCheckCircle className="readiness-icon" />
+                  <span className="readiness-text">{readinessPoints[key]}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Home; 
+export default Home;
