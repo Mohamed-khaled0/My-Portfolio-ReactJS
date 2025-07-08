@@ -1,32 +1,54 @@
 .experience-section {
-  padding: var(--space-16) var(--space-4);
+  padding: var(--space-20) var(--space-6);
+  position: relative;
+}
+
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+  z-index: -1;
 }
 
 .experience-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .experience-timeline {
   position: relative;
-  margin-top: var(--space-12);
+  margin-top: var(--space-16);
 }
 
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: 40px;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--primary), var(--accent));
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-light));
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
 
 .experience-item {
   position: relative;
-  margin-bottom: var(--space-12);
-  padding-left: var(--space-20);
+  margin-bottom: var(--space-16);
+  padding-left: var(--space-24);
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: experienceReveal 0.8s ease-out forwards;
 }
+
+.experience-item:nth-child(1) { animation-delay: 0.1s; }
+.experience-item:nth-child(2) { animation-delay: 0.3s; }
+.experience-item:nth-child(3) { animation-delay: 0.5s; }
 
 .experience-item:last-child {
   margin-bottom: 0;
@@ -34,61 +56,117 @@
 
 .experience-marker {
   position: absolute;
-  left: 18px;
-  top: var(--space-6);
-  width: 24px;
-  height: 24px;
-  background: var(--primary);
+  left: 24px;
+  top: var(--space-8);
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
   border: 4px solid var(--surface);
   border-radius: var(--radius-full);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   z-index: 1;
+  transition: all var(--transition);
+}
+
+.experience-marker::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: -1;
+}
+
+.experience-item:hover .experience-marker::before {
+  opacity: 0.2;
+}
+
+.experience-marker::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: var(--radius-full);
 }
 
 .experience-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-8);
-  box-shadow: var(--shadow);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-md);
   transition: all var(--transition);
   position: relative;
-}
-
-.experience-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary);
+  overflow: hidden;
 }
 
 .experience-card::before {
   content: '';
   position: absolute;
-  left: -12px;
-  top: var(--space-8);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent);
+}
+
+.experience-card::after {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: var(--space-10);
   width: 0;
   height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 12px solid var(--surface);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 16px solid var(--surface);
+  transition: border-right-color var(--transition);
+}
+
+.experience-card:hover::after {
+  border-right-color: var(--surface);
 }
 
 .experience-header {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
 }
 
 .company-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: var(--radius-lg);
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-xl);
   object-fit: contain;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  padding: var(--space-2);
+  border: 2px solid var(--border);
+  background: var(--surface-elevated);
+  padding: var(--space-3);
   flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.experience-card:hover .company-logo {
+  border-color: var(--accent);
+  transform: scale(1.05);
 }
 
 .experience-details {
@@ -96,125 +174,182 @@
 }
 
 .experience-title {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
 }
 
 .experience-company {
-  font-size: 1rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
-  color: var(--primary);
-  margin-bottom: var(--space-2);
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .experience-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
-  font-size: 0.875rem;
+  gap: var(--space-6);
+  font-size: var(--font-size-sm);
   color: var(--text-secondary);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
 }
 
 .meta-item {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  background: var(--surface-elevated);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+
+.meta-item:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
 .meta-icon {
-  color: var(--text-tertiary);
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.meta-item:hover .meta-icon {
+  color: white;
 }
 
 .experience-description {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
 }
 
 .description-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .description-item {
   position: relative;
-  padding-left: var(--space-6);
+  padding-left: var(--space-8);
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: var(--font-size-base);
+  transition: all var(--transition);
 }
 
 .description-item::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.7em;
-  width: 6px;
-  height: 6px;
-  background: var(--primary);
+  top: 0.8em;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
   border-radius: var(--radius-full);
+  transition: all var(--transition);
+}
+
+.description-item:hover {
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.description-item:hover::before {
+  background: var(--accent-light);
+  transform: scale(1.2);
 }
 
 .experience-actions {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .action-link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  background: var(--primary);
-  color: var(--white);
+  padding: var(--space-3) var(--space-6);
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  color: white;
   border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.action-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left var(--transition-slow);
+}
+
+.action-link:hover::before {
+  left: 100%;
 }
 
 .action-link:hover {
-  background: var(--primary-dark);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .experience-section {
+    padding: var(--space-16) var(--space-4);
+  }
+  
   .experience-timeline::before {
-    left: 15px;
+    left: 20px;
   }
   
   .experience-item {
-    padding-left: var(--space-12);
+    padding-left: var(--space-16);
   }
   
   .experience-marker {
-    left: 6px;
-    width: 18px;
-    height: 18px;
+    left: 8px;
+    width: 24px;
+    height: 24px;
   }
   
-  .experience-card::before {
-    left: -9px;
-    border-right-width: 9px;
+  .experience-card::after {
+    left: -12px;
+    border-right-width: 12px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
   }
   
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: var(--space-4);
   }
   
   .company-logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    align-self: center;
   }
   
   .experience-meta {
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
   
   .experience-actions {
@@ -232,6 +367,48 @@
   }
   
   .experience-title {
-    font-size: 1.125rem;
+    font-size: var(--font-size-lg);
+  }
+  
+  .experience-company {
+    font-size: var(--font-size-base);
+  }
+  
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes experienceReveal {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .experience-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Focus improvements */
+.action-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .experience-timeline::before {
+    background: var(--text-primary);
+  }
+  
+  .experience-marker {
+    background: var(--text-primary);
   }
 }
