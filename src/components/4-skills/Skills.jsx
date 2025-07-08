@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiTailwindcss, SiTypescript, SiPostman, SiFlutter, SiDart, SiPython } from 'react-icons/si';
 import { 
   FaHtml5, 
   FaCss3Alt, 
@@ -13,63 +11,104 @@ import {
   FaNetworkWired,
   FaWindows,
   FaServer,
+  FaLanguage,
+  FaTools,
+  FaCode,
+  FaBrain
 } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { SiTailwindcss, SiPostman, SiPython, SiMysql } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 import './skills.css';
 
-
-const skillsData = [
-  { name: 'HTML', icon: <FaHtml5 size={50} style={{ color: '#E44D26' }} /> },
-  { name: 'CSS', icon: <FaCss3Alt size={50} style={{ color: '#1572B6' }} /> },
-  { name: 'Tailwind', icon: <SiTailwindcss size={50} style={{ color: '#38B2AC' }} /> },
-  { name: 'JavaScript', icon: <FaJs size={50} style={{ color: '#F7DF1E' }} /> },
-  { name: 'React', icon: <FaReact size={50} style={{ color: '#61DAFB' }} /> },
-  { name: 'MySQL', icon: <FaDatabase size={50} style={{ color: '#4479A1' }} /> },
-  { name: 'Postman', icon: <SiPostman size={50} style={{ color: '#FF6C37' }} /> },
-  { name: 'Git', icon: <FaGit size={50} style={{ color: '#F05032' }} /> },
-  { name: 'GitHub', icon: <FaGithub size={50} style={{ color: '#181717' }} /> },
-  { name: 'CCNA', icon: <FaNetworkWired size={50} style={{ color: '#0077b6' }} /> },
-  { name: 'Cisco Packet Tracer', icon: <FaNetworkWired size={50} style={{ color: '#00BFFF' }} /> },
-  { name: 'Python', icon: <SiPython size={50} style={{ color: '#3776AB' }} /> },
-  { name: 'SQL', icon: <FaDatabase size={50} style={{ color: '#4DB33D' }} /> },
-  { name: 'Microsoft Office', icon: <FaWindows size={50} style={{ color: '#ea3e23' }} /> },
-  { name: 'Microsoft Server', icon: <FaServer size={50} style={{ color: '#0077b6' }} /> },
-];
-
 const Skills = ({ sidebarMode }) => {
-  const { t } = useTranslation('skills'); // Specify 'skills' namespace
+  const { t } = useTranslation('skills');
+
+  const skillsCategories = [
+    {
+      title: 'Languages',
+      icon: <FaLanguage />,
+      skills: [
+        { name: 'German (B2)', icon: <FaLanguage /> },
+        { name: 'English (Fluent)', icon: <FaLanguage /> },
+        { name: 'Arabic (Native)', icon: <FaLanguage /> }
+      ]
+    },
+    {
+      title: 'Web Technologies',
+      icon: <FaCode />,
+      skills: [
+        { name: 'HTML5', icon: <FaHtml5 /> },
+        { name: 'CSS3', icon: <FaCss3Alt /> },
+        { name: 'JavaScript', icon: <FaJs /> },
+        { name: 'React', icon: <FaReact /> },
+        { name: 'Tailwind CSS', icon: <SiTailwindcss /> }
+      ]
+    },
+    {
+      title: 'Software & Network',
+      icon: <FaNetworkWired />,
+      skills: [
+        { name: 'CCNA Certified', icon: <FaNetworkWired /> },
+        { name: 'Cisco Packet Tracer', icon: <FaNetworkWired /> },
+        { name: 'Network Configuration', icon: <FaServer /> }
+      ]
+    },
+    {
+      title: 'Tools & Platforms',
+      icon: <FaTools />,
+      skills: [
+        { name: 'Python', icon: <SiPython /> },
+        { name: 'MySQL', icon: <SiMysql /> },
+        { name: 'Git & GitHub', icon: <FaGithub /> },
+        { name: 'Postman', icon: <SiPostman /> },
+        { name: 'Microsoft Office', icon: <FaWindows /> }
+      ]
+    }
+  ];
 
   if (sidebarMode) {
-    // Render as tags for sidebar
     return (
       <div>
         <div className="skills-section-title">Skills</div>
         <div className="skills-tags">
-          {skillsData.map((skill, index) => (
-            <span key={index} className="skill-tag">{skill.name}</span>
-          ))}
+          {skillsCategories.flatMap(category => 
+            category.skills.map((skill, index) => (
+              <span key={index} className="skill-tag">{skill.name}</span>
+            ))
+          )}
         </div>
       </div>
     );
   }
 
   return (
-    <section id="skills">
-      <div className="skills-section-title">Skills</div>
+    <section className="skills-section">
       <div className="skills-container">
-        {skillsData.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="skill-card"
-            initial={{ scale: 0.8, opacity: 0 }} 
-            animate={{ scale: 1, opacity: 1 }} 
-            transition={{ duration: 0.3, delay: index * 0.1 }} 
-            whileHover={{ scale: 1.1 }} 
-          >
-            {skill.icon}
-            <p>{skill.name}</p>
-          </motion.div>
-        ))}
+        <h2 className="section-title">Skills & Expertise</h2>
+        
+        <div className="skills-grid">
+          {skillsCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="skill-category">
+              <div className="skill-category-header">
+                <div className="skill-category-icon">
+                  {category.icon}
+                </div>
+                <h3 className="skill-category-title">{category.title}</h3>
+              </div>
+              
+              <div className="skills-list">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="skill-item">
+                    <div className="skill-icon">
+                      {skill.icon}
+                    </div>
+                    <span className="skill-name">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
