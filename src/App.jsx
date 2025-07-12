@@ -1,15 +1,16 @@
-import Home from './components/0-home/Home';
-import Header from './components/1-header/Header'
-import Main from './components/3-main/Main'
-import Contact from './components/8-contact/Contact'
-import Scroll2Top from './components/Scroll2Top.jsx';
-import Certifications from './components/7-certificates/Certifications'
-import Education from './components/6-education/Education'
-import Experience from './components/5-experience/Experience'
-import Skills from './components/4-skills/Skills'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import ProjectDetails from './components/3-main/ProjectDetails';
+import Header from './components/1-header/Header';
+import Hero from './components/0-hero/Hero';
+import About from './components/2-about/About';
+import Skills from './components/3-skills/Skills';
+import Projects from './components/4-projects/Projects';
+import Experience from './components/5-experience/Experience';
+import Certifications from './components/6-certifications/Certifications';
+import Contact from './components/7-contact/Contact';
+import Footer from './components/8-footer/Footer';
+import ProjectDetails from './components/4-projects/ProjectDetails';
+import Scroll2Top from './components/Scroll2Top';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -18,8 +19,8 @@ function App() {
   // Handle scroll-based section detection
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'skills', 'certifications', 'experience', 'education', 'contact'];
-      const scrollPosition = window.scrollY + 100; // Offset for header
+      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+      const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -30,10 +31,9 @@ function App() {
       }
     };
 
-    // Only add scroll listener on main page
     if (location.pathname === '/') {
       window.addEventListener('scroll', handleScroll);
-      handleScroll(); // Check initial position
+      handleScroll();
     }
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -44,7 +44,7 @@ function App() {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 80; // Account for fixed header
+      const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
       
       window.scrollTo({
@@ -55,48 +55,51 @@ function App() {
   };
 
   return (
-    <div className='single-column-layout'>
+    <div className="app">
       <Header 
         setActiveSection={handleNavigation} 
         activeSection={activeSection} 
       />
-      <main className='main-content'>
+      
+      <main className="main-content">
         <Routes>
           <Route path="/" element={
-            <div className="sections-container">
-              <section id="home" className="section-wrapper home-section-wrapper">
-                <Home />
+            <>
+              <section id="home" className="section">
+                <Hero />
               </section>
               
-              <section id="projects" className="section-wrapper projects-section-wrapper">
-                <Main />
+              <section id="about" className="section">
+                <About />
               </section>
               
-              <section id="skills" className="section-wrapper skills-section-wrapper">
+              <section id="skills" className="section">
                 <Skills />
               </section>
               
-              <section id="certifications" className="section-wrapper certifications-section-wrapper">
-                <Certifications />
+              <section id="projects" className="section">
+                <Projects />
               </section>
               
-              <section id="experience" className="section-wrapper experience-section-wrapper">
+              <section id="experience" className="section">
                 <Experience />
               </section>
               
-              <section id="education" className="section-wrapper education-section-wrapper">
-                <Education />
+              <section id="certifications" className="section">
+                <Certifications />
               </section>
               
-              <section id="contact" className="section-wrapper contact-section-wrapper">
+              <section id="contact" className="section">
                 <Contact />
               </section>
-            </div>
+            </>
           } />
           <Route path="/project/:id" element={<ProjectDetails />} />
         </Routes>
-        <Scroll2Top />
       </main>
+      
+      <Footer />
+      <Scroll2Top />
     </div>
   );
 }
