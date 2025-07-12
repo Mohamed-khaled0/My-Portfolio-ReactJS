@@ -26,6 +26,7 @@ export default function Header({ setActiveSection, activeSection }) {
   const navItems = [
     { key: 'home', icon: FaUser, label: t('home') },
     { key: 'projects', icon: FaCode, label: t('projects') },
+    { key: 'skills', icon: FaCertificate, label: t('skills') },
     { key: 'certifications', icon: FaCertificate, label: t('certifications') },
     { key: 'experience', icon: FaBriefcase, label: t('experience') },
     { key: 'education', icon: FaGraduationCap, label: t('education') },
@@ -41,6 +42,7 @@ export default function Header({ setActiveSection, activeSection }) {
               key={key}
               className={`nav-pill ${activeSection === key ? 'active' : ''}`}
               onClick={() => setActiveSection(key)}
+              aria-label={`Navigate to ${label}`}
             >
               <Icon />
               <span>{label}</span>
@@ -52,6 +54,7 @@ export default function Header({ setActiveSection, activeSection }) {
               className="lang-button"
               onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
               title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
+              aria-label={`Switch language to ${currentLanguage === 'en' ? 'German' : 'English'}`}
             >
               <FaGlobe />
               <span>{currentLanguage === 'en' ? 'EN' : 'DE'}</span>

@@ -9,6 +9,9 @@
   border-bottom: 1px solid var(--border);
   padding: var(--space-4) 0;
   transition: all var(--transition);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
 }
 
 .header-container::before {
@@ -31,6 +34,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-8);
+  width: 100%;
 }
 
 .nav-pills {

@@ -12,54 +12,83 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import ProjectDetails from './components/3-main/ProjectDetails';
 
 function App() {
-  const [activeSection, setActiveSection] = useState(() => {
-    return localStorage.getItem('activeSection') || 'home';
-  });
-  
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
 
+  // Handle scroll-based section detection
   useEffect(() => {
-    localStorage.setItem('activeSection', activeSection);
-  }, [activeSection]);
+    const handleScroll = () => {
+      const sections = ['home', 'projects', 'skills', 'certifications', 'experience', 'education', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for header
 
-  // Single column layout - no sidebar
-  const sectionComponents = {
-    home: <Home />,
-    projects: <Main />,
-    skills: <Skills />,
-    certifications: <Certifications />,
-    experience: <Experience />,
-    education: <Education />,
-    contact: <Contact />,
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    // Only add scroll listener on main page
+    if (location.pathname === '/') {
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Check initial position
+    }
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
+
+  // Handle navigation clicks with smooth scrolling
+  const handleNavigation = (sectionId) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 80; // Account for fixed header
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
     <div className='single-column-layout'>
-      <Header setActiveSection={setActiveSection} activeSection={activeSection} />
+      <Header 
+        setActiveSection={handleNavigation} 
+        activeSection={activeSection} 
+      />
       <main className='main-content'>
         <Routes>
           <Route path="/" element={
             <div className="sections-container">
-              {/* Render all sections in order for single-page flow */}
-              <section id="home" className={activeSection === 'home' ? 'active-section' : ''}>
+              <section id="home" className="section-wrapper home-section-wrapper">
                 <Home />
               </section>
-              <section id="projects" className={activeSection === 'projects' ? 'active-section' : ''}>
+              
+              <section id="projects" className="section-wrapper projects-section-wrapper">
                 <Main />
               </section>
-              <section id="skills" className={activeSection === 'skills' ? 'active-section' : ''}>
+              
+              <section id="skills" className="section-wrapper skills-section-wrapper">
                 <Skills />
               </section>
-              <section id="certifications" className={activeSection === 'certifications' ? 'active-section' : ''}>
+              
+              <section id="certifications" className="section-wrapper certifications-section-wrapper">
                 <Certifications />
               </section>
-              <section id="experience" className={activeSection === 'experience' ? 'active-section' : ''}>
+              
+              <section id="experience" className="section-wrapper experience-section-wrapper">
                 <Experience />
               </section>
-              <section id="education" className={activeSection === 'education' ? 'active-section' : ''}>
+              
+              <section id="education" className="section-wrapper education-section-wrapper">
                 <Education />
               </section>
-              <section id="contact" className={activeSection === 'contact' ? 'active-section' : ''}>
+              
+              <section id="contact" className="section-wrapper contact-section-wrapper">
                 <Contact />
               </section>
             </div>
