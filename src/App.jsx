@@ -5,8 +5,6 @@ import Hero from './components/0-hero/Hero';
 import About from './components/2-about/About';
 import Skills from './components/3-skills/Skills';
 import Projects from './components/4-projects/Projects';
-import Experience from './components/5-experience/Experience';
-import Certifications from './components/7-certificates/Certifications';
 import Contact from './components/8-contact/Contact';
 import Footer from './components/8-footer/Footer';
 import ProjectDetails from './components/4-projects/ProjectDetails';
@@ -19,7 +17,7 @@ function App() {
   // Handle scroll-based section detection
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -79,14 +77,6 @@ function App() {
               
               <section id="projects" className="section">
                 <Projects />
-              </section>
-              
-              <section id="experience" className="section">
-                <Experience />
-              </section>
-              
-              <section id="certifications" className="section">
-                <Certifications />
               </section>
               
               <section id="contact" className="section">

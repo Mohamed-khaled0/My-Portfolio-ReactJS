@@ -1,65 +1,78 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  FaAws, 
-  FaMicrosoft, 
-  FaGoogle, 
-  FaNetworkWired, 
-  FaDocker, 
-  FaPython, 
-  FaReact, 
-  FaPhp,
-  FaServer,
-  FaCloud,
-  FaCogs,
-  FaCode
+  FaUser, 
+  FaBrain, 
+  FaCloud, 
+  FaCode, 
+  FaChartBar,
+  FaGraduationCap,
+  FaCertificate
 } from 'react-icons/fa';
-import { SiKubernetes, SiTerraform, SiAnsible } from 'react-icons/si';
-import { useTranslation } from 'react-i18next';
 import './skills.css';
 
 const Skills = () => {
-  const { t } = useTranslation('skills');
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-
   const skillCategories = [
     {
-      title: 'Cloud Platforms',
+      title: 'Background',
+      icon: <FaUser />,
+      skills: [
+        'As a Senior Data Scientist and Cloud Solutions Architect with 6 AWS certifications, I specialize in developing cutting-edge AI/ML solutions and GenAI innovations. My expertise spans cloud architecture, machine learning, and building scalable AI solutions that drive business value.'
+      ]
+    },
+    {
+      title: 'AI & Machine Learning',
+      icon: <FaBrain />,
+      skills: [
+        'Neural Networks',
+        'Reinforcement Learning',
+        'Deep Learning', 
+        'Generative AI',
+        'Computer Vision',
+        'LLM Fine-Tuning',
+        'Casual Inference',
+        'Neuro-symbolic AI'
+      ]
+    },
+    {
+      title: 'Cloud Architecture & MLOps',
       icon: <FaCloud />,
-      color: 'var(--primary)',
       skills: [
-        { name: 'AWS', icon: <FaAws />, level: 85, years: '2+' },
-        { name: 'Azure', icon: <FaMicrosoft />, level: 70, years: '1+' },
-        { name: 'GCP', icon: <FaGoogle />, level: 60, years: '1+' }
+        'AWS SageMaker',
+        'Docker/Kubernetes',
+        'CloudFormation',
+        'Vector DBs',
+        'CICD',
+        'Docker',
+        'GPU Acceleration',
+        'Grafana'
       ]
     },
     {
-      title: 'Networking',
-      icon: <FaNetworkWired />,
-      color: 'var(--accent)',
-      skills: [
-        { name: 'CCNA', icon: <FaNetworkWired />, level: 90, years: '3+' },
-        { name: 'VLAN', icon: <FaServer />, level: 85, years: '2+' },
-        { name: 'Routing', icon: <FaCogs />, level: 80, years: '2+' }
-      ]
-    },
-    {
-      title: 'DevOps Tools',
-      icon: <FaCogs />,
-      color: 'var(--success)',
-      skills: [
-        { name: 'Docker', icon: <FaDocker />, level: 80, years: '2+' },
-        { name: 'Kubernetes', icon: <SiKubernetes />, level: 70, years: '1+' },
-        { name: 'Terraform', icon: <SiTerraform />, level: 75, years: '1+' }
-      ]
-    },
-    {
-      title: 'Languages & Frameworks',
+      title: 'Programming',
       icon: <FaCode />,
-      color: 'var(--warning)',
       skills: [
-        { name: 'Python', icon: <FaPython />, level: 85, years: '3+' },
-        { name: 'PHP', icon: <FaPhp />, level: 80, years: '2+' },
-        { name: 'React', icon: <FaReact />, level: 75, years: '2+' }
+        'Python',
+        'Java',
+        'TypeScript',
+        'TensorFlow',
+        'PyTorch',
+        'LangChain',
+        'Hugging Face Transformers',
+        'Pandas',
+        'NumPy'
+      ]
+    },
+    {
+      title: 'Data Science',
+      icon: <FaChartBar />,
+      skills: [
+        'Feature Engineering',
+        'Dimensionality Reduction',
+        'Clustering',
+        'Statistical Modeling',
+        'Policy Dash',
+        'Databases',
+        'A/B Testing'
       ]
     }
   ];
@@ -67,69 +80,37 @@ const Skills = () => {
   return (
     <section className="skills">
       <div className="container">
-        <h2 className="section-title">Skills & Expertise</h2>
-        
         <div className="skills-grid">
-          {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="skill-category">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="skill-category">
               <div className="category-header">
-                <div 
-                  className="category-icon"
-                  style={{ background: category.color }}
-                >
+                <div className="category-icon">
                   {category.icon}
                 </div>
                 <h3 className="category-title">{category.title}</h3>
               </div>
               
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div 
-                    key={skillIndex} 
-                    className="skill-item"
-                    onMouseEnter={() => setHoveredSkill(`${categoryIndex}-${skillIndex}`)}
-                    onMouseLeave={() => setHoveredSkill(null)}
-                  >
-                    <div className="skill-info">
-                      <div className="skill-header">
-                        <div className="skill-icon">
-                          {skill.icon}
-                        </div>
-                        <span className="skill-name">{skill.name}</span>
-                      </div>
-                      
-                      <div className="skill-meta">
-                        <span className="skill-level">{skill.level}%</span>
-                        {hoveredSkill === `${categoryIndex}-${skillIndex}` && (
-                          <span className="skill-years">{skill.years} years</span>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div className="skill-progress">
-                      <div 
-                        className="skill-progress-bar"
-                        style={{ 
-                          width: `${skill.level}%`,
-                          background: category.color
-                        }}
-                      ></div>
-                    </div>
+              <div className="category-skills">
+                {category.title === 'Background' ? (
+                  <p className="background-text">{category.skills[0]}</p>
+                ) : (
+                  <div className="skills-tags">
+                    {category.skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="skill-tag">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
             </div>
           ))}
         </div>
         
-        <div className="skills-summary">
-          <div className="summary-card">
-            <h3 className="summary-title">Technical Proficiency</h3>
-            <p className="summary-text">
-              Specialized in cloud infrastructure design, network configuration, and DevOps automation. 
-              Experienced in building scalable, secure systems using modern cloud-native technologies.
-            </p>
-          </div>
+        <div className="skills-footer">
+          <button className="btn btn-outline">
+            Learn More About Me
+          </button>
         </div>
       </div>
     </section>

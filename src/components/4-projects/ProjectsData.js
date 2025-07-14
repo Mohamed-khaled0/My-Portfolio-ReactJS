@@ -2,37 +2,37 @@
 
 let myProjects = [
   {
-    projectTitle: "portfolio_project_title",
-    projectSubtitle: "portfolio_project_subtitle",
-    description: "portfolio_project_description",
-    category: ["react", "all"],
-    liveDemo: "https://mohamed-khaled-portfilio.netlify.app/",
-    githubLink: "https://github.com/Mohamed-khaled0/My-Portfolio-ReactJS",
+    projectTitle: "Stardex - Explore GitHub Stars Intelligently",
+    projectSubtitle: "Featured Project",
+    description: "Stardex is a powerful web app that lets you search, filter, and categorize GitHub stars intelligently. The platform aims to boost developer productivity with intelligent AI-powered exploration.",
+    category: ["AI", "all"],
+    liveDemo: "https://stardex-ai.netlify.app/",
+    githubLink: "https://github.com/bjorn-melin/stardex",
     imgPath: "/images/portfolio.webp",
-    features: ["portfolio_project_features"],
-    technologies: ["ReactJS", "HTML5", "CSS3", "Framer Motion", "Vite", "Netlify"]
+    features: ["AI-powered search", "Intelligent categorization", "GitHub integration"],
+    technologies: ["Machine Learning", "Python", "React", "AI", "Clustering", "AWS S3", "FastAPI", "Hierarchical Clustering", "AWS Lambda", "GitHub API", "Text Embeddings", "AWS CDK", "Universities"]
   },
   {
-    projectTitle: "ecommerce_project_title",
-    projectSubtitle: "ecommerce_project_subtitle",
-    description: "ecommerce_project_description",
-    category: ["react", "all"],
-    liveDemo: "https://prisetracker.netlify.app/",
-    githubLink: "https://github.com/Mohamed-khaled0/Hardware-Price-Tracker",
+    projectTitle: "PolyAgent Research Intelligence",
+    projectSubtitle: "Featured Project", 
+    description: "A multi-agent AI research and report generation platform. Enter any topic, and PolyAgent leverages orchestrated AI agents to research topics with advanced LLMs, agentic a front-end.",
+    category: ["AI", "all"],
+    liveDemo: "https://polyagent-research.netlify.app/",
+    githubLink: "https://github.com/bjorn-melin/polyagent",
     imgPath: "/images/pricetracker.webp",
-    features: ["ecommerce_project_features"],
-    technologies: ["ReactJS", "HTML5", "CSS3", "JavaScript", "Netlify"]
+    features: ["Multi-agent AI system", "Research automation", "Report generation"],
+    technologies: ["Machine Learning", "AI", "GenAI", "Promethus", "Multi Agent Systems", "AI Research", "AI Agents", "LangGraph", "ZapAI", "Large Language Models", "AI Engineering", "GitHub"]
   },
   {
-    projectTitle: "crypto_project_title",
-    projectSubtitle: "crypto_project_subtitle",
-    description: "crypto_project_description",
-    category: ["react", "all"],
-    liveDemo: "https://crypto-6f014.web.app/",
-    githubLink: "https://github.com/Mohamed-khaled0/Crypto-React-Firebase-App",
+    projectTitle: "AiScout",
+    projectSubtitle: "Featured Project",
+    description: "Real-time AI/ML content aggregator and discovery platform. Automatically curates cutting-edge research papers, repositories, articles, and discussions about the latest in machine learning and LLM, from ChatGPT with React, Python, and AWS.",
+    category: ["AI", "all"],
+    liveDemo: "https://aiscout-platform.netlify.app/",
+    githubLink: "https://github.com/bjorn-melin/aiscout", 
     imgPath: "/images/crypto.webp",
-    features: ["crypto_project_features"],
-    technologies: ["ReactJS", "Firebase", "Tailwind CSS", "Context API", "Chart.js"]
+    features: ["Content aggregation", "Real-time updates", "AI/ML focus"],
+    technologies: ["React", "Real-Time", "AI", "ML", "Technology", "AI Research", "Content Discovery", "PyTorch", "FastAPI", "Zeal", "TensorFlow/R", "GitHub"]
   }
 ];
 
