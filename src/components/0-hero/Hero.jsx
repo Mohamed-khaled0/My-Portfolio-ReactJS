@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './hero.css';
 
 const Hero = () => {
+  const { t } = useTranslation('hero');
+
   const handleViewProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
@@ -35,17 +38,19 @@ const Hero = () => {
           <div className="hero-image">
             <img 
               src="/images/personalphoto.webp" 
-              alt="Bjorn Melin" 
+              alt="Mohamed Khaled Elsharaby" 
               className="profile-photo"
             />
           </div>
           
           <div className="hero-text">
-            <h1 className="hero-title">Hi, I'm Bjorn Melin</h1>
+            <h1 className="hero-title">{t('greeting')}</h1>
             <p className="hero-subtitle">
-              Senior Data Scientist | Cloud Solutions Architect | 6x AWS Certified<br />
-              | AI/ML & GenAI Innovator
+              {t('profession')}
             </p>
+            <div className="hero-description">
+              <p>{t('description')}</p>
+            </div>
             
             <div className="hero-actions">
               <button 

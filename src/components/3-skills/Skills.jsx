@@ -1,85 +1,59 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
-  FaUser, 
-  FaBrain, 
-  FaCloud, 
+  FaLanguage, 
+  FaNetworkWired, 
   FaCode, 
-  FaChartBar,
-  FaGraduationCap,
-  FaCertificate
+  FaTools,
+  FaBrain,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaPython,
+  FaDatabase,
+  FaGit
 } from 'react-icons/fa';
 import './skills.css';
 
 const Skills = () => {
+  const { t } = useTranslation('skills');
+
   const skillCategories = [
     {
-      title: 'Background',
-      icon: <FaUser />,
-      skills: [
-        'As a Senior Data Scientist and Cloud Solutions Architect with 6 AWS certifications, I specialize in developing cutting-edge AI/ML solutions and GenAI innovations. My expertise spans cloud architecture, machine learning, and building scalable AI solutions that drive business value.'
-      ]
+      title: 'Languages',
+      icon: <FaLanguage />,
+      description: t('languages')
     },
     {
-      title: 'AI & Machine Learning',
-      icon: <FaBrain />,
-      skills: [
-        'Neural Networks',
-        'Reinforcement Learning',
-        'Deep Learning', 
-        'Generative AI',
-        'Computer Vision',
-        'LLM Fine-Tuning',
-        'Casual Inference',
-        'Neuro-symbolic AI'
-      ]
+      title: 'Software & Network',
+      icon: <FaNetworkWired />,
+      description: t('software_network')
     },
     {
-      title: 'Cloud Architecture & MLOps',
-      icon: <FaCloud />,
-      skills: [
-        'AWS SageMaker',
-        'Docker/Kubernetes',
-        'CloudFormation',
-        'Vector DBs',
-        'CICD',
-        'Docker',
-        'GPU Acceleration',
-        'Grafana'
-      ]
-    },
-    {
-      title: 'Programming',
+      title: 'Web Technologies',
       icon: <FaCode />,
-      skills: [
-        'Python',
-        'Java',
-        'TypeScript',
-        'TensorFlow',
-        'PyTorch',
-        'LangChain',
-        'Hugging Face Transformers',
-        'Pandas',
-        'NumPy'
-      ]
+      description: t('web_technologies')
     },
     {
-      title: 'Data Science',
-      icon: <FaChartBar />,
-      skills: [
-        'Feature Engineering',
-        'Dimensionality Reduction',
-        'Clustering',
-        'Statistical Modeling',
-        'Policy Dash',
-        'Databases',
-        'A/B Testing'
-      ]
+      title: 'Tools & Platforms',
+      icon: <FaTools />,
+      description: t('tools_platforms')
+    },
+    {
+      title: 'Personal Strengths',
+      icon: <FaBrain />,
+      description: t('strengths')
     }
   ];
 
   return (
     <section className="skills">
       <div className="container">
+        <div className="skills-header">
+          <h2 className="skills-title">{t('title')}</h2>
+        </div>
+        
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
             <div key={index} className="skill-category">
@@ -91,26 +65,16 @@ const Skills = () => {
               </div>
               
               <div className="category-skills">
-                {category.title === 'Background' ? (
-                  <p className="background-text">{category.skills[0]}</p>
-                ) : (
-                  <div className="skills-tags">
-                    {category.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="skill-tag">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <p className="skill-description">{category.description}</p>
               </div>
             </div>
           ))}
         </div>
         
         <div className="skills-footer">
-          <button className="btn btn-outline">
-            Learn More About Me
-          </button>
+          <p className="skills-note">
+            Ready to apply these skills in a Fachinformatiker apprenticeship focused on system integration
+          </p>
         </div>
       </div>
     </section>
