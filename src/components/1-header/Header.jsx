@@ -50,7 +50,7 @@ export default function Header({ setActiveSection, activeSection }) {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header glass ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="header-content">
           {/* Logo */}
@@ -64,7 +64,7 @@ export default function Header({ setActiveSection, activeSection }) {
             {navItems.map(({ key, icon: Icon, label }) => (
               <button
                 key={key}
-                className={`nav-item ${activeSection === key ? 'active' : ''}`}
+                className={`nav-item glass-nav ${activeSection === key ? 'active' : ''}`}
                 onClick={() => handleNavClick(key)}
                 aria-label={`Navigate to ${label}`}
               >
@@ -76,18 +76,25 @@ export default function Header({ setActiveSection, activeSection }) {
 
           {/* Language Switcher & Mobile Menu */}
           <div className="header-actions">
-            <button
-              className="lang-toggle"
-              onClick={() => changeLanguage(currentLanguage === 'en' ? 'de' : 'en')}
-              title={currentLanguage === 'en' ? 'Switch to Deutsch' : 'Switch to English'}
-              aria-label={`Switch language to ${currentLanguage === 'en' ? 'German' : 'English'}`}
-            >
-              <FaGlobe />
-              <span>{currentLanguage.toUpperCase()}</span>
-            </button>
+            <div className="lang-toggle glass">
+              <button
+                className={currentLanguage === 'en' ? 'active' : ''}
+                onClick={() => changeLanguage('en')}
+                aria-label="Switch to English"
+              >
+                EN
+              </button>
+              <button
+                className={currentLanguage === 'de' ? 'active' : ''}
+                onClick={() => changeLanguage('de')}
+                aria-label="Switch to German"
+              >
+                DE
+              </button>
+            </div>
 
             <button
-              className="mobile-menu-toggle"
+              className="mobile-menu-toggle glass"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -97,7 +104,7 @@ export default function Header({ setActiveSection, activeSection }) {
         </div>
 
         {/* Mobile Navigation */}
-        <nav className={`nav-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
+        <nav className={`nav-mobile glass ${isMobileMenuOpen ? 'open' : ''}`}>
           {navItems.map(({ key, icon: Icon, label }) => (
             <button
               key={key}
