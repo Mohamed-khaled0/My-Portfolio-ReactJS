@@ -1,73 +1,105 @@
-import Home from './components/0-home/Home';
-import Header from './components/1-header/Header'
-import Main from './components/3-main/Main'
-import Contact from './components/8-contact/Contact'
-import Scroll2Top from './components/Scroll2Top.jsx';
-import Certifications from './components/7-certificates/Certifications'
-import Education from './components/6-education/Education'
-import Experience from './components/5-experience/Experience'
-import Skills from './components/4-skills/Skills'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import ProjectDetails from './components/3-main/ProjectDetails';
+import Header from './components/1-header/Header';
+import Hero from './components/0-hero/Hero';
+import About from './components/2-about/About';
+import Skills from './components/3-skills/Skills';
+import Projects from './components/4-projects/Projects';
+import Experience from './components/5-experience/Experience';
+import Certifications from './components/7-certificates/Certifications';
+import Contact from './components/8-contact/Contact';
+import Footer from './components/8-footer/Footer';
+import ProjectDetails from './components/4-projects/ProjectDetails';
+import Scroll2Top from './components/Scroll2Top';
 
 function App() {
-  const [activeSection, setActiveSection] = useState(() => {
-    return localStorage.getItem('activeSection') || 'home';
-  });
-  
+  const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
 
+  // Handle scroll-based section detection
   useEffect(() => {
-    localStorage.setItem('activeSection', activeSection);
-  }, [activeSection]);
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+      const scrollPosition = window.scrollY + 100;
 
-  // Single column layout - no sidebar
-  const sectionComponents = {
-    home: <Home />,
-    projects: <Main />,
-    skills: <Skills />,
-    certifications: <Certifications />,
-    experience: <Experience />,
-    education: <Education />,
-    contact: <Contact />,
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    if (location.pathname === '/') {
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+    }
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
+
+  // Handle navigation clicks with smooth scrolling
+  const handleNavigation = (sectionId) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
-    <div className='single-column-layout'>
-      <Header setActiveSection={setActiveSection} activeSection={activeSection} />
-      <main className='main-content'>
+    <div className="app">
+      <Header 
+        setActiveSection={handleNavigation} 
+        activeSection={activeSection} 
+      />
+      
+      <main className="main-content">
         <Routes>
           <Route path="/" element={
-            <div className="sections-container">
-              {/* Render all sections in order for single-page flow */}
-              <section id="home" className={activeSection === 'home' ? 'active-section' : ''}>
-                <Home />
+            <>
+              <section id="home" className="section">
+                <Hero />
               </section>
-              <section id="projects" className={activeSection === 'projects' ? 'active-section' : ''}>
-                <Main />
+              
+              <section id="about" className="section">
+                <About />
               </section>
-              <section id="skills" className={activeSection === 'skills' ? 'active-section' : ''}>
+              
+              <section id="skills" className="section">
                 <Skills />
               </section>
-              <section id="certifications" className={activeSection === 'certifications' ? 'active-section' : ''}>
-                <Certifications />
+              
+              <section id="projects" className="section">
+                <Projects />
               </section>
-              <section id="experience" className={activeSection === 'experience' ? 'active-section' : ''}>
+              
+              <section id="experience" className="section">
                 <Experience />
               </section>
-              <section id="education" className={activeSection === 'education' ? 'active-section' : ''}>
-                <Education />
+              
+              <section id="certifications" className="section">
+                <Certifications />
               </section>
-              <section id="contact" className={activeSection === 'contact' ? 'active-section' : ''}>
+              
+              <section id="contact" className="section">
                 <Contact />
               </section>
-            </div>
+            </>
           } />
           <Route path="/project/:id" element={<ProjectDetails />} />
         </Routes>
-        <Scroll2Top />
       </main>
+      
+      <Footer />
+      <Scroll2Top />
     </div>
   );
 }

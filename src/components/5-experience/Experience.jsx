@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaMapMarkerAlt, FaGithub, FaBuilding } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt, FaGithub, FaBuilding, FaChevronRight } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './experience.css';
 
@@ -21,6 +20,8 @@ const Experience = () => {
       ],
       logo: '/images/experience/iti-logo.webp',
       githubLink: 'https://github.com/Mohamed-khaled0/ITI-Summer-Internship-Tasks',
+      type: 'internship',
+      featured: true
     },
     {
       title: t('experience.itSupportSpecialist.title'),
@@ -33,6 +34,8 @@ const Experience = () => {
         t('experience.itSupportSpecialist.description.2')
       ],
       logo: '/images/experience/shajarataldurr.webp',
+      type: 'full-time',
+      featured: false
     },
   ];
 
@@ -43,47 +46,64 @@ const Experience = () => {
         
         <div className="experience-timeline">
           {experiences.map((exp, index) => (
-            <motion.div
+            <div
               key={index}
-              className="experience-item"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className={`experience-item glass-strong animate-fade-in-up ${exp.featured ? 'featured' : ''}`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="experience-marker"></div>
+              <div className="experience-marker glass">
+                <div className="marker-dot"></div>
+              </div>
               
-              <div className="experience-card">
+              <div className="experience-card glass">
                 <div className="experience-header">
-                  <img 
-                    src={exp.logo} 
-                    alt={`${exp.company} logo`} 
-                    className="company-logo" 
-                  />
+                  <div className="company-logo-container glass">
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`} 
+                      className="company-logo" 
+                    />
+                  </div>
+                  
                   <div className="experience-details">
+                    <div className="experience-meta">
+                      <span className={`experience-type glass ${exp.type}`}>
+                        {exp.type === 'internship' ? 'Internship' : 'Full-time'}
+                      </span>
+                      {exp.featured && (
+                        <span className="featured-badge glass">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    
                     <h3 className="experience-title">{exp.title}</h3>
+                    
                     <div className="experience-company">
-                      <FaBuilding style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                      <FaBuilding className="company-icon" />
                       {exp.company}
                     </div>
-                  </div>
-                </div>
-                
-                <div className="experience-meta">
-                  <div className="meta-item">
-                    <FaMapMarkerAlt className="meta-icon" />
-                    <span>{exp.location}</span>
-                  </div>
-                  <div className="meta-item">
-                    <FaCalendarAlt className="meta-icon" />
-                    <span>{exp.date}</span>
+                    
+                    <div className="experience-info">
+                      <div className="info-item glass">
+                        <FaMapMarkerAlt className="info-icon" />
+                        <span>{exp.location}</span>
+                      </div>
+                      <div className="info-item glass">
+                        <FaCalendarAlt className="info-icon" />
+                        <span>{exp.date}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="experience-description">
                   <div className="description-list">
                     {exp.description.map((point, i) => (
-                      <div key={i} className="description-item">{point}</div>
+                      <div key={i} className="description-item glass">
+                        <FaChevronRight className="description-icon" />
+                        <span>{point}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -94,7 +114,7 @@ const Experience = () => {
                       href={exp.githubLink} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="action-link"
+                      className="action-link btn-primary"
                     >
                       <FaGithub />
                       View Projects
@@ -102,7 +122,7 @@ const Experience = () => {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
