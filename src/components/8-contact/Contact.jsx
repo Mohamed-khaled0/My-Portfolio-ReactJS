@@ -50,50 +50,11 @@ const Contact = () => {
     }
   };
 
-  const contactInfo = [
-    {
-      icon: <FiMail />,
-      label: 'Email',
-      value: t('email_address'),
-      href: `mailto:${t('email_address')}`,
-      color: 'var(--primary)'
-    },
-    {
-      icon: <FiPhone />,
-      label: 'Phone',
-      value: t('phone_number'),
-      href: `tel:${t('phone_number')}`,
-      color: 'var(--accent)'
-    },
-    {
-      icon: <FiMapPin />,
-      label: 'Location',
-      value: 'Giza, Egypt',
-      href: '#',
-      color: 'var(--warning)'
-    },
-    {
-      icon: <FiLinkedin />,
-      label: 'LinkedIn',
-      value: 'Mohamed Khaled',
-      href: 'https://linkedin.com/in/mohamed-khaled',
-      color: '#0077B5'
-    },
-    {
-      icon: <FiGithub />,
-      label: 'GitHub',
-      value: 'Mohamed-khaled0',
-      href: 'https://github.com/Mohamed-khaled0',
-      color: '#333'
-    }
-  ];
-
   return (
     <section className="contact-section">
       <div className="contact-container">
         <h2 className="section-title">{t('title')}</h2>
-        
-        <div className="contact-grid">
+        <div className="contact-grid" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="contact-form-container glass-strong animate-fade-in-up">
             <div className="contact-form-header">
               <div className="form-icon glass">
@@ -104,7 +65,6 @@ const Contact = () => {
                 {t('subTitle')}
               </p>
             </div>
-            
             <form className="contact-form" onSubmit={handleFormSubmit} noValidate>
               <div className="form-group">
                 <label htmlFor="name" className="form-label">{t('nameLabel')}</label>
@@ -121,7 +81,6 @@ const Contact = () => {
                 </div>
                 {nameError && <div className="form-error">{nameError}</div>}
               </div>
-
               <div className="form-group">
                 <label htmlFor="email" className="form-label">{t('emailLabel')}</label>
                 <div className="input-container">
@@ -137,7 +96,6 @@ const Contact = () => {
                 </div>
                 {emailError && <div className="form-error">{emailError}</div>}
               </div>
-
               <div className="form-group">
                 <label htmlFor="message" className="form-label">{t('messageLabel')}</label>
                 <div className="input-container">
@@ -151,7 +109,6 @@ const Contact = () => {
                 </div>
                 {messageError && <div className="form-error">{messageError}</div>}
               </div>
-
               <button type="submit" disabled={state.submitting} className="submit-button btn-primary">
                 {state.submitting ? (
                   <>
@@ -165,7 +122,6 @@ const Contact = () => {
                   </>
                 )}
               </button>
-
               {state.succeeded && (
                 <div className="success-message glass">
                   <Lottie
@@ -177,37 +133,6 @@ const Contact = () => {
                 </div>
               )}
             </form>
-          </div>
-
-          <div className="contact-info-container glass-strong animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="contact-info-header">
-              <div className="info-icon glass">
-                <FiMail />
-              </div>
-              <h3 className="contact-info-title">{t('info_title')}</h3>
-              <p className="contact-info-subtitle">{t('info_subtitle')}</p>
-            </div>
-            
-            <div className="contact-info-list">
-              {contactInfo.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="contact-info-item glass"
-                  target={item.href.startsWith('http') ? '_blank' : '_self'}
-                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                  style={{ '--item-color': item.color }}
-                >
-                  <div className="contact-info-icon" style={{ color: item.color }}>
-                    {item.icon}
-                  </div>
-                  <div className="contact-info-content">
-                    <div className="contact-info-label">{item.label}</div>
-                    <div className="contact-info-value">{item.value}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>

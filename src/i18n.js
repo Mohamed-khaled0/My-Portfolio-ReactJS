@@ -11,8 +11,8 @@ i18n
   // Pass the i18n instance to react-i18next
   .use(initReactI18next)
   .init({
-    fallbackLng: 'de', // Fallback language
-    lng: 'de', // Default language
+    fallbackLng: 'en', // Fallback language
+    lng: 'en', // Default language
     debug: true, // Set to false in production
 
     interpolation: {

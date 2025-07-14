@@ -1,6 +1,6 @@
-# Portfolio Template
+# Mohamed Khaled | Portfolio
 
-This is a **modern web developer portfolio template** built using **React.js, HTML, CSS, and Framer Motion**. It showcases a professional layout, animations, and dynamic theme switching for developers looking to present their skills and projects.
+This is a **modern data analyst and computer science graduate portfolio** built by **Mohamed Khaled** using **React.js, HTML, CSS, and Framer Motion**. It showcases Mohamed's professional layout, animations, and dynamic theme switching for presenting skills and projects.
 
 ## Table of Contents
 1. [Features](#features)
