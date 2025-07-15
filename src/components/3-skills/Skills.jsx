@@ -7,10 +7,9 @@ import {
   FaBrain,
   FaCode,
   FaSearch,
-  FaCalculator,
-  FaMicrosoft
+  FaCalculator
 } from 'react-icons/fa';
-import { SiTableau, SiJupyter, SiPandas, SiNumpy, SiScikitlearn } from 'react-icons/si';
+import { SiTableau, SiPowerbi, SiJupyter, SiPandas, SiNumpy, SiScikitlearn } from 'react-icons/si';
 import './skills.css';
 
 const Skills = () => {
@@ -34,7 +33,7 @@ const Skills = () => {
       color: '#e97627',
       skills: [
         { name: 'Tableau', icon: <SiTableau />, level: 'Advanced' },
-        { name: 'Power BI', icon: <FaMicrosoft />, level: 'Intermediate' },
+        { name: 'Power BI', icon: <SiPowerbi />, level: 'Intermediate' },
         { name: 'Matplotlib', icon: <FaChartBar />, level: 'Advanced' },
         { name: 'Seaborn', icon: <FaChartBar />, level: 'Advanced' }
       ]
